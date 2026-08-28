@@ -61,7 +61,24 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
   - **Code Challenge 1 (CC1)** — jauh lebih ringan dari perkiraan sebelumnya: cuma **4 soal LeetCode** (3 Easy @20 poin + 1 Medium @40 poin = 100 poin, soal dipilih bebas). Bukti: link akun LeetCode + screenshot status "Accepted" per soal, submit via Google Form. **Deadline: Kamis, 2026-09-03.** Independen dari progress modul di repo ini — boleh dikerjakan kapan saja, tidak perlu nunggu modul beres, dan bisa diselesaikan setelah Exam 1.
 - **Assessment learning curve (revisi 2026-08-29, setelah scope CC diklarifikasi):** Pemahaman konsep BAGUS dan makin cepat — sesi pertama berhasil membereskan gap fondasi (assignment operator vs fungsi vs tipe data, method vs fungsi) yang sebelumnya bikin banyak hal terasa random. Begitu fondasi itu klik, soal berikutnya (nested tuple, tuple methods) langsung dijawab benar tanpa perlu diulang.
   - Risiko waktu **masih ada tapi lebih terkendali** dari penilaian sebelumnya, karena CC1 (4 soal LeetCode) ternyata beban ringan dan **terpisah** dari materi Exam 1 — jadi sisa waktu belajar (29-31 Agustus) bisa fokus **hampir sepenuhnya** ke penguatan materi Exam: lanjutan `collection-data-type`, `conditional-and-loop-statements`, `object-oriented-programming`, `python-function-and-file-handling`, `python-modular-programming`, plus dua modul SQL (`9 - Introduction to Databases and SQL`, `10 - SQL Working with Multiple Tables`). Modul `data-manipulation-pandas-numpy` prioritas lebih rendah kalau memang di luar cakupan "modul 1".
-  - **Catatan penting:** perlu dicek apakah "modul 1" yang dimaksud Exam 1 itu **sama persis** dengan seluruh isi kedua repo, atau cuma sebagian (nomor folder SQL di repo ini mulai dari "9" dan "10", kemungkinan itu penomoran modul keseluruhan program, bukan "modul 1"). Ini penting dicek supaya waktu belajar 2 hari tersisa nggak salah sasaran ke materi yang ternyata di luar cakupan Exam 1.
+  - **UPDATE 2026-08-29 (sore) — sumber baru ditemukan, pertanyaan di atas terjawab:** ada file `CLAUDE.MD.md` di root repo ini (~658KB), rangkuman lengkap dari notes Obsidian milik tutor, isinya **13 sesi Module 1**:
+    1. Introduction to DS, Python, Statistics, SQL, Git & GitHub
+    2. Intro to Git & GitHub
+    3. Conditional & Loop Statement
+    4. Data Types Collection Notes
+    5. Python Function & File Handling
+    6. Hackerrank Exercise
+    7. Object Oriented Programming
+    8. Python & Modular Programming
+    9. Intro to Database & SQL
+    10. SQL Working With Multiple Tables
+    11. Statistics Fundamental
+    12. Python Data Manipulation With Pandas and Numpy
+    13. Data Visualization
+    - **Konfirmasi:** Sesi 9 & 10 di sini memang sama dengan folder `9 -...` dan `10 -...` di `sql-exercise-materials-`.
+    - **Relasi dengan repo kode:** menurut user, file `.py`/`.sql` di kedua repo exercise itu **bukan kurikulum terpisah** — itu adalah "papan tulis & kertas latihan" (demo + skeleton exercise) yang dipakai tutor pas ngajar sesi-sesi di atas. Jadi satu kesatuan: `CLAUDE.MD.md` = catatan konsep, file kode = praktik langsung, untuk sesi yang sama.
+    - **Gap penting:** Sesi **2 (Git & GitHub)**, **11 (Statistics Fundamental)**, dan **13 (Data Visualization)** **tidak punya file kode sama sekali** di kedua repo — satu-satunya sumber belajar untuk 3 sesi ini adalah `CLAUDE.MD.md`. Sesi **1** & **6 (Hackerrank)** juga sebagian besar cuma ada di notes, bukan file kode terstruktur.
+  - **Prioritas belajar direvisi (per keputusan user, 2026-08-29 sore):** dahulukan sesi yang **sama sekali belum tersentuh** — Sesi 2, 11, 13 (baca dari `CLAUDE.MD.md`, breadth-first karena exam MCQ) — baru lanjut sesi yang punya pasangan notes+kode (mulai dari Sesi 4/`collection-data-type` yang sedang jalan, lalu 3, 5, 7, 8, 9, 10, 12) sambil gabungkan baca notes + jalanin kode.
   - **Rekomendasi pacing:**
     1. Karena Exam 1 **pilihan ganda** (bukan praktik nulis kode), prioritaskan **breadth dulu** — pastikan semua topik di scope kesentuh minimal di level konsep, baru dalami yang terasa lemah. Jangan lama-lama di satu file kalau polanya sudah familiar.
     2. Dua kecepatan belajar: topik baru/asing → tetap pelan (predict-then-verify + breakdown fondasi seperti sesi ini). Topik yang mirip yang sudah dikuasai (misal `set`/`dictionary` setelah paham `list`/`tuple`) → dipercepat, soal ringkas tanpa breakdown fondasi ulang.
