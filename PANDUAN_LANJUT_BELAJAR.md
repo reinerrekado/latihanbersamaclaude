@@ -96,18 +96,12 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
     - Jadwal ini fleksibel: kalau progress lebih cepat dari estimasi (user commit "bisa lebih" dari 4 jam), boleh tarik maju sesi hari berikutnya.
   - **Progress eksekusi jadwal (quiz-first di Claude Code, malam 2026-08-29 lanjut ke 2026-08-30):**
     - ✅ **Sesi 2 (Git & GitHub) — SELESAI, solid.** Quiz 10 soal cold (~40-50%), gap ditambal (commit=snapshot bukan eksekusi; staged≠masuk main; unmodified≠tidak bisa diubah; `--no-ff`=nambah commit bukan mempercepat; urutan `remote add origin`→`push -u origin main`), retest 5 soal kunci = 4/5 benar (1 typo kecil `-u` doang). Tidak perlu diulang, cukup spot-check kalau ragu nanti.
-    - 🟡 **Sesi 11 (Statistics Fundamental) — quiz sudah diberikan (14 soal), gap sudah ditambal semua, RETEST BELUM DILAKUKAN** (user istirahat dulu). Gap signifikan yang perlu diretest saat lanjut:
-      - Salah paham "2 cabang statistika" = Descriptive vs Inferential (bukan kualitatif/kuantitatif, itu beda topik/klasifikasi variabel)
-      - Contoh ordinal yang salah (angka polos "1,2,3" bukan ordinal, harus label bertingkat kayak SD/SMP/SMA)
-      - **Interval vs Ratio arahnya salah total** — bedanya soal titik nol mutlak (0°C masih ada fisisnya vs 0cm = nggak eksis), BUKAN soal "ukuran vs frekuensi", dan sebab-akibatnya: karena nggak ada nol mutlak → makanya kali/bagi nggak masuk akal (bukan sebaliknya)
-      - Median vs Mean: alasannya "median TIDAK terpengaruh outlier" (bukan "buat melihat anomali")
-      - IQR formula & outlier bound (`Q1-1.5×IQR`, `Q3+1.5×IQR`) — lupa total
-      - Empirical Rule 68-95-99.7% — lupa total
-      - P-value >0.05 = normal, <0.05 = tidak normal — lupa total
-      - **Stratified vs Cluster sampling ketuker** (Stratified = ambil dari SETIAP strata; Cluster = pilih BEBERAPA cluster aja lalu sensus penuh) — ini classic MCQ trap
-      - Chart buat data numerik itu **Histogram/Boxplot/Scatterplot, BUKAN Bar Chart** (Bar Chart itu kategorikal, bareng Pie Chart)
-      - Imbalanced data, precision/recall vs accuracy, down/up-sampling — lupa total
-      - **Action item sesi berikutnya:** retest ke-9 poin di atas dulu sebelum lanjut ke Sesi 13, karena ini sesi paling banyak gap-nya sejauh ini.
+    - ✅ **Sesi 11 (Statistics Fundamental) — SELESAI, solid (2026-08-30).** Quiz 14 soal cold (skor rendah, wajar karena materi paling asing), gap ditambal, retest ULANG SEMUA sukses:
+      - 2 cabang statistika (Descriptive vs Inferential) ✅, contoh ordinal (Easy/Medium/Hard) ✅, Median vs Mean (robust ke outlier) ✅, Stratified vs Cluster ✅ — langsung benar begitu ditambal.
+      - Interval vs Ratio: konsep fisis (0°C tetap ada vs 0cm=nggak eksis) sebenarnya udah kena dari awal, cuma LABEL Ratio/Interval-nya kebalik — setelah diluruskan langsung paham.
+      - IQR & outlier bound, Empirical Rule (68-95-99.7%), P-Value >< 0.05, Imbalanced Data (accuracy menyesatkan karena model asal-nebak kelas mayoritas tetap dapat skor tinggi, gantinya precision/recall) — semua di-retest pakai angka baru dan **berhasil dikerjakan mandiri**, termasuk nemuin sendiri insight tambahan bahwa batas bawah/atas outlier itu **tandanya (plus/minus) nggak tetap**, tergantung skala data (bukan aturan baku).
+      - Chart numerik: Box Plot juga valid, Histogram default kalau cuma mau lihat 1 variabel.
+      - **Kesimpulan:** sesi paling berat & paling banyak gap sejauh ini, tapi begitu ditambal SEMUA nempel di retest tanpa terkecuali — pola "quiz dulu, baru tambal" ini terbukti kuat bahkan buat materi yang sama sekali asing (bukan cuma coding).
   - **Rekomendasi pacing:**
     1. Karena Exam 1 **pilihan ganda** (bukan praktik nulis kode), prioritaskan **breadth dulu** — pastikan semua topik di scope kesentuh minimal di level konsep, baru dalami yang terasa lemah. Jangan lama-lama di satu file kalau polanya sudah familiar.
     2. Dua kecepatan belajar: topik baru/asing → tetap pelan (predict-then-verify + breakdown fondasi seperti sesi ini). Topik yang mirip yang sudah dikuasai (misal `set`/`dictionary` setelah paham `list`/`tuple`) → dipercepat, soal ringkas tanpa breakdown fondasi ulang.
