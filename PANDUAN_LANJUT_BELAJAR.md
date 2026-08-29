@@ -49,7 +49,7 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 *(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik `.py`/`.sql` di repo itu **jalur latihan paralel** — cara dosen aslinya ngajar sesi ini live di kelas, ngukur skill nulis/jalanin kode beneran, bukan sekadar recall konsep. Nggak jadi syarat centang di sini karena Exam 1 sifatnya MCQ, tapi progressnya tetap dicatat di sub-baris karena relevan buat CC1 LeetCode & pemahaman yang lebih dalam.)*
 
-**Progress: 5 / 13 sesi solid (~38%)**
+**Progress: 6 / 13 sesi solid (~46%)**
 
 - [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
 - [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
@@ -63,7 +63,7 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 - [ ] Sesi 10 — SQL Working With Multiple Tables
 - [x] Sesi 11 — Statistics Fundamental *(quiz+retest Claude Code, solid)*
 - [ ] Sesi 12 — Python Data Manipulation With Pandas and Numpy
-- [ ] Sesi 13 — Data Visualization
+- [x] Sesi 13 — Data Visualization *(quiz+retest Claude Code, solid, 2026-08-30. Retest sudah pakai soal Bahasa Inggris sesuai keputusan.)*
 
 ### Checklist Code Challenge 1 (terpisah, deadline 2026-09-03)
 
@@ -75,15 +75,17 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 ---
 
-- **Update terakhir:** 2026-08-29
-- **Sedang di file:** `python-exercise-materials/collection-data-type/06_indexing_and_slicing.py`
+- **Update terakhir:** 2026-08-30
+- **Sedang di file:** `python-exercise-materials/collection-data-type/08_set_methods.py` (file 06 & 07 sudah kelar solid di sesi 2026-08-30).
 - **Progress modul collection-data-type (1 dari 6 modul python):**
   - ✅ `01_python_list_basics.py` — selesai
   - ✅ `02_python_list_methods.py` — selesai
   - ✅ `03_list_comprehension.py` — selesai (termasuk latihan tambahan filter ganjil +100)
   - ✅ `04_python_tuple.py` — selesai (creation, indexing, immutability, tuple kosong, nested tuple, trik koma 1 item)
   - ✅ `05_tuple_methods.py` — selesai (`.count()`, `.index()`, `len()`, error saat value tidak ditemukan)
-  - ⬜ `06_indexing_and_slicing.py` s.d. `12_dictionary_access_update.py` — belum dimulai (7 file lagi)
+  - ✅ `06_indexing_and_slicing.py` — selesai (2026-08-30). Gap sempat muncul: negative index dikira error (padahal valid), slicing multi-item step=1 sempat cuma ambil item awal+akhir doang (skip tengah) — ditambal pakai walkthrough index-by-index eksplisit, retest berkali-kali sampai konsisten benar (termasuk kasus step=2). Indexing vs slicing out-of-range (error vs `[]`) sudah solid dari sebelumnya, tetap benar.
+  - ✅ `07_python_set.py` — selesai (2026-08-30). Gap: `{}` kosong dikira set (padahal dict — jebakan utama file ini, sempat 2x salah sebelum nempel), alasan set nggak bisa di-index (bukan soal "bukan list", tapi karena unordered), arah sebab-akibat mutable/immutable vs hashable sempat kebalik (list dikira BISA jadi dict key karena "mutable" — harusnya sebaliknya, mutable=unhashable=tidak bisa). Konsep frozenset (kenapa perlu buat nested set) berhasil dijelaskan pakai jembatan ke tuple immutability (Sesi 4) yang sudah dikuasai.
+  - ⬜ `08_set_methods.py` s.d. `12_dictionary_access_update.py` — belum dimulai (5 file lagi)
 - **Modul python lain yang BELUM disentuh sama sekali:** `conditional-and-loop-statements` (11 file), `data-manipulation-pandas-numpy` (11 file, butuh pandas/numpy), `object-oriented-programming` (4 file), `python-function-and-file-handling` (5 file), `python-modular-programming` (9 bagian, proyek multi-file)
 - **SQL (`sql-exercise-materials-`) belum disentuh sama sekali:** modul "9 - Introduction to Databases and SQL" (14 file demo + exercises) dan modul "10 - SQL Working with Multiple Tables" (6 file demo + exercises)
 - **Jadwal & scope resmi (dari dokumen briefing, update 2026-08-29):**
@@ -134,6 +136,11 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
       - Chart numerik: Box Plot juga valid, Histogram default kalau cuma mau lihat 1 variabel.
       - **Kesimpulan:** sesi paling berat & paling banyak gap sejauh ini, tapi begitu ditambal SEMUA nempel di retest tanpa terkecuali — pola "quiz dulu, baru tambal" ini terbukti kuat bahkan buat materi yang sama sekali asing (bukan cuma coding).
     - **Kalibrasi waktu:** Sesi 2 + Sesi 11 kelar dalam ~2,5 jam wall-clock, tapi ~30 menit di antaranya distraksi (beresin komputer) — jadi **waktu efektif murni belajar sekitar ~2 jam** buat 2 sesi (1 ringan + 1 terberat). Ini lebih cepat dari estimasi awal, sinyal bagus buat proyeksi sisa waktu.
+    - ✅ **Sesi 13 (Data Visualization) — SELESAI, solid (2026-08-30).** Chat Claude Code sebelumnya sempat "hilang" (bukan lintas perangkat, kemungkinan sesi baru/nggak ke-resume) — lanjut dari nol di sesi baru langsung baca `RANGKUMAN_MODULE_1.md` Bab 1-5 Sesi 13, quiz 12 soal cold dulu.
+      - Quiz pertama skor rendah (~1,5/12) — banyak konsep KEBALIK arahnya, pola serupa Sesi 11 (interval/ratio): 4 kategori visualisasi (jawaban ngarang "observation/anomaly detection" padahal harusnya Comparison/Composition/**Relationship**/**Distribution**), arah skewness Box Plot (median deket Q1=right-skewed vs Q3=left-skewed, sempat kebalik beberapa kali sebelum nempel), formula IQR vs batas whisker (IQR = Q3-Q1 SAJA, pengali 1.5× baru dipakai di langkah batas whisker — sempat digabung jadi satu langkah), Stacked Bar (periode sedikit) vs Stacked Area (periode banyak) bukan soal "ada/tiada time series", 3 kondisi pie chart dilarang (waktu/fluktuasi, kategori >5, nilai berdekatan — cuma dapat 1/3), Histogram vs Bar Chart (batang nempel vs ada jeda, bukan soal "afinitas ke frekuensi"), alasan drop `PassengerId` sebelum correlation heatmap (karena cuma id/nomor urut tanpa makna kuantitatif, bukan soal "kebanyakan variabel"), solusi 2 variabel beda skala jauh (secondary Y-axis, BUKAN "jangan digabung di 1 grafik" — masalahnya skala, bukan soal ada/tiada korelasi).
+      - **Analogi yang berhasil bikin klik soal arah skewness** (setelah analogi pertama "ekor ke kanan" gagal ngena imajinasi user): kasus gaji karyawan biasa (numpuk rendah) vs segelintir direktur (gaji ekstrem tinggi) → **"skew ikut arah si minoritas ekstrem yang nyempil, bukan arah kerumunan mayoritas."** Dikaitkan ke konsep Sesi 11 yang sudah solid (Mean gampang ketarik outlier, Median enggak) sebagai jembatan. Setelah itu retest soal skor pensiun & ujian langsung benar mandiri, termasuk nemuin sendiri kontradiksi kecil di jawaban sendiri (median deket Q1 vs Q3) begitu ditunjukkan.
+      - Retest 7 soal (3 di antaranya full Bahasa Inggris, sesuai keputusan mulai Sesi 13) → 5/7 langsung solid, 2 sisanya (urutan Q1/Q3 selalu Q1=kecil/bawah terlepas dari skew arah manapun, dan IQR vs batas whisker jangan digabung) diluruskan sekali lagi dengan 2 soal angka baru → **langsung benar semua.**
+      - **Kesimpulan:** pola "quiz dulu (skor rendah wajar) → tambal gap dengan analogi konkret yang dikaitkan ke konsep lama yang sudah solid → retest" tetap konsisten berhasil, bahkan untuk materi visual/abstrak yang beda karakter dari coding maupun statistik murni. Kalau satu analogi nggak "klik" (ekor ke kanan), ganti ke analogi yang lebih konkret & personal (gaji direktur) — jangan diulang analogi yang sama dengan kata-kata beda.
   - **Rekomendasi pacing:**
     1. Karena Exam 1 **pilihan ganda** (bukan praktik nulis kode), prioritaskan **breadth dulu** — pastikan semua topik di scope kesentuh minimal di level konsep, baru dalami yang terasa lemah. Jangan lama-lama di satu file kalau polanya sudah familiar.
     2. Dua kecepatan belajar: topik baru/asing → tetap pelan (predict-then-verify + breakdown fondasi seperti sesi ini). Topik yang mirip yang sudah dikuasai (misal `set`/`dictionary` setelah paham `list`/`tuple`) → dipercepat, soal ringkas tanpa breakdown fondasi ulang.
