@@ -45,6 +45,36 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 *(diperbarui tiap akhir sesi — jangan dihapus, cukup ditimpa isinya)*
 
+### Checklist Materi Exam 1 (13 Sesi Module 1)
+
+*(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik itu bonus penguatan, bukan syarat centang — lihat sub-baris di sesi yang masih jalan.)*
+
+**Progress: 3 / 13 sesi solid (~23%)**
+
+- [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
+- [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
+- [ ] Sesi 3 — Conditional & Loop Statement *(konsep solid dari self-test web; kode `conditional-and-loop-statements/` 0/11 file)*
+- [ ] Sesi 4 — Data Types Collection Notes *(konsep solid dari self-test web; kode `collection-data-type/` 5/12 file: 01-05 selesai)*
+- [ ] Sesi 5 — Python Function & File Handling
+- [ ] Sesi 6 — Hackerrank Exercise
+- [ ] Sesi 7 — Object Oriented Programming
+- [ ] Sesi 8 — Python & Modular Programming
+- [ ] Sesi 9 — Intro to Database & SQL
+- [ ] Sesi 10 — SQL Working With Multiple Tables
+- [x] Sesi 11 — Statistics Fundamental *(quiz+retest Claude Code, solid)*
+- [ ] Sesi 12 — Python Data Manipulation With Pandas and Numpy
+- [ ] Sesi 13 — Data Visualization
+
+### Checklist Code Challenge 1 (terpisah, deadline 2026-09-03)
+
+- [ ] Soal Easy #1 (LeetCode, Accepted)
+- [ ] Soal Easy #2 (LeetCode, Accepted)
+- [ ] Soal Easy #3 (LeetCode, Accepted)
+- [ ] Soal Medium #1 (LeetCode, Accepted)
+- [ ] Submit link akun LeetCode + screenshot Accepted via Google Form
+
+---
+
 - **Update terakhir:** 2026-08-29
 - **Sedang di file:** `python-exercise-materials/collection-data-type/06_indexing_and_slicing.py`
 - **Progress modul collection-data-type (1 dari 6 modul python):**
