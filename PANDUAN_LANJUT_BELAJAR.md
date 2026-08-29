@@ -47,14 +47,14 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 ### Checklist Materi Exam 1 (13 Sesi Module 1)
 
-*(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik itu bonus penguatan, bukan syarat centang — lihat sub-baris di sesi yang masih jalan.)*
+*(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik `.py`/`.sql` di repo itu **jalur latihan paralel** — cara dosen aslinya ngajar sesi ini live di kelas, ngukur skill nulis/jalanin kode beneran, bukan sekadar recall konsep. Nggak jadi syarat centang di sini karena Exam 1 sifatnya MCQ, tapi progressnya tetap dicatat di sub-baris karena relevan buat CC1 LeetCode & pemahaman yang lebih dalam.)*
 
 **Progress: 5 / 13 sesi solid (~38%)**
 
 - [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
 - [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
-- [x] Sesi 3 — Conditional & Loop Statement *(konsep solid, self-test web 50%→ditambal→retest sukses; kode praktik `conditional-and-loop-statements/` masih 0/11 file — opsional buat penguatan, bukan syarat centang)*
-- [x] Sesi 4 — Data Types Collection Notes *(konsep solid, self-test web 30%→ditambal→retest sukses; kode praktik `collection-data-type/` 5/12 file selesai — opsional buat penguatan, bukan syarat centang)*
+- [x] Sesi 3 — Conditional & Loop Statement *(konsep solid, self-test web 50%→ditambal→retest sukses. Jalur paralel — kode praktik `conditional-and-loop-statements/`: 0/11 file)*
+- [x] Sesi 4 — Data Types Collection Notes *(konsep solid, self-test web 30%→ditambal→retest sukses. Jalur paralel — kode praktik `collection-data-type/`: 5/12 file selesai)*
 - [ ] Sesi 5 — Python Function & File Handling
 - [ ] Sesi 6 — Hackerrank Exercise
 - [ ] Sesi 7 — Object Oriented Programming
