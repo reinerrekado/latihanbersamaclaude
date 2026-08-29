@@ -49,12 +49,12 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 *(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik itu bonus penguatan, bukan syarat centang — lihat sub-baris di sesi yang masih jalan.)*
 
-**Progress: 3 / 13 sesi solid (~23%)**
+**Progress: 5 / 13 sesi solid (~38%)**
 
 - [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
 - [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
-- [ ] Sesi 3 — Conditional & Loop Statement *(konsep solid dari self-test web; kode `conditional-and-loop-statements/` 0/11 file)*
-- [ ] Sesi 4 — Data Types Collection Notes *(konsep solid dari self-test web; kode `collection-data-type/` 5/12 file: 01-05 selesai)*
+- [x] Sesi 3 — Conditional & Loop Statement *(konsep solid, self-test web 50%→ditambal→retest sukses; kode praktik `conditional-and-loop-statements/` masih 0/11 file — opsional buat penguatan, bukan syarat centang)*
+- [x] Sesi 4 — Data Types Collection Notes *(konsep solid, self-test web 30%→ditambal→retest sukses; kode praktik `collection-data-type/` 5/12 file selesai — opsional buat penguatan, bukan syarat centang)*
 - [ ] Sesi 5 — Python Function & File Handling
 - [ ] Sesi 6 — Hackerrank Exercise
 - [ ] Sesi 7 — Object Oriented Programming
