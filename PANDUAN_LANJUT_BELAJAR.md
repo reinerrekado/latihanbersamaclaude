@@ -67,11 +67,11 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 ### Checklist Code Challenge 1 (terpisah, deadline 2026-09-03)
 
-- [ ] Soal Easy #1 (LeetCode, Accepted)
+- [x] Soal Easy #1 (LeetCode, Accepted) — *Convert the Temperature, Accepted 2026-08-30, bukti sudah dikirim ke form*
 - [ ] Soal Easy #2 (LeetCode, Accepted)
 - [ ] Soal Easy #3 (LeetCode, Accepted)
 - [ ] Soal Medium #1 (LeetCode, Accepted)
-- [ ] Submit link akun LeetCode + screenshot Accepted via Google Form
+- [ ] Submit link akun LeetCode + screenshot Accepted via Google Form *(sebagian sudah — bukti Soal Easy #1 sudah terkirim; centang penuh setelah semua 4 soal beres)*
 
 ---
 
