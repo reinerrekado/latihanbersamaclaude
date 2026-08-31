@@ -28,6 +28,38 @@
 
 ---
 
+## 🧠 Peta Pola Kesalahan Pribadi (baca ini PALING TERAKHIR sebelum exam)
+
+*Ditulis 2026-09-01 berdasarkan analisis SEMUA sesi belajar hari ini — bukan teori umum, tapi pola nyata yang berulang di jawabanmu sendiri. Kalau waktu mepet banget, skim BAGIAN INI doang masih worth it.*
+
+### Pola #1: "Ambil 2 ujung doang, skip yang di tengah" — paling sering berulang
+
+Muncul di: slicing List (`[0:3]` dikira cuma ambil index 0&2), dan `.iloc` Pandas (`[0:4]` dikira `0,2,3` atau `1,3`). Ini 1 pola pikir yang sama: ngebayangin "rentang A ke B" sebagai **2 titik**, padahal harusnya **jalur berkelanjutan**.
+
+> 🪜 **Analogi pengunci:** "naik dari anak tangga 2 ke anak tangga 5" — kamu WAJIB injak 3 dan 4 juga, nggak bisa loncat dari 2 langsung ke 5.
+>
+> **Aturan universal (berlaku sama persis di List, Tuple, String, `range()`, `.iloc`):** `[start:stop]` = SEMUA posisi dari `start` sampai TEPAT SEBELUM `stop`. Nggak ada yang boleh dilompatin (kecuali emang ada `step` > 1 yang eksplisit ditulis).
+
+### Pola #2: Konsep berpasangan yang MIRIP strukturnya → gampang KEBALIK arahnya
+
+| Pasangan | Yang sering ketuker | Cara benarnya |
+|---|---|---|
+| `GROUP BY` vs `HAVING` | Dikira `HAVING` yang mengelompokkan | `GROUP BY` = **kelompokkan** dulu. `HAVING` = **saring** hasil kelompok. (G duluan abjad = duluan eksekusi juga) |
+| Self JOIN alias | Dikira alias OPSIONAL | Alias (`T1`/`T2`) itu **WAJIB MUTLAK** di Self JOIN — tanpa itu, SQL ERROR |
+| `.max()` vs `.argmax()` | Dikira `argmax()` ngasih NILAI | `.max()` = **nilainya**. `.argmax()` = **posisi/index**-nya (kata "arg" = "at which position") |
+| Arah skewness (Box Plot) | Dikira ikut arah MAYORITAS | Nama skew ikut arah **EKOR/MINORITAS EKSTREM**, bukan kerumunan mayoritas |
+| IQR vs batas outlier | Dikira pengali `1.5×` masuk rumus IQR | `IQR` = `Q3-Q1` SAJA. `1.5×` cuma dipakai di LANGKAH BERIKUTNYA (batas outlier) |
+| Interval vs Ratio | Label ketuker (mana yang boleh negatif) | **Interval** = boleh negatif, 0 relatif (Suhu °C). **Ratio** = TIDAK boleh negatif, 0 mutlak (Tinggi badan) |
+| Alias `as` — 2 alasan beda | Nyampur alasan "hindari bentrok" vs "konvensi" | `model_modul` = hindari bentrok nama. `pd`/`np` = MURNI konvensi biar ringkas, nggak ada bentrok |
+
+**Strategi pas ujian:** begitu ketemu soal yang "berasa familiar tapi ragu arahnya" — itu sinyal soal jenis Pola #2. STOP, jangan tebak reflex, coba inget 1 contoh konkret dari tabel di atas dulu.
+
+### Pola #3: Jawab pakai istilah sistem yang SALAH (SQL vs Pandas ketuker)
+
+Pas ditanya soal method Pandas buat "kelompokkan per kategori", sempat jawab pakai keyword SQL (`FROM`/`WHERE`) padahal yang dicari `.groupby()`. Ini kejadian karena SQL dan Pandas sering diajarin BERDAMPINGAN (konsepnya emang mirip: `GROUP BY`↔`.groupby()`, `SELECT`↔pemilihan kolom) — **kalau soal nyebut "Pandas"/"DataFrame", jawab pakai method (`.something()`), BUKAN keyword SQL.**
+
+---
+
 ## Sesi 1 — Intro to DS, Python, Statistics, SQL, Git & GitHub
 
 ### AI vs Software Tradisional
