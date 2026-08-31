@@ -17,11 +17,11 @@
 | 5 | Python Function & File Handling | ✅ Solid (quiz+retest, 2026-08-31) |
 | 6 | Hackerrank Exercise | ✅ Solid (quiz+retest, 2026-08-31) |
 | 7 | Object Oriented Programming | ✅ Solid (quiz+retest, 2026-08-31) |
-| 8 | Python & Modular Programming | 🆕 Belum divalidasi quiz |
+| 8 | Python & Modular Programming | ✅ Solid (quiz+retest, 2026-09-01) |
 | 9 | Intro to Database & SQL | ✅ Solid (quiz+retest, 2026-08-31) |
 | 10 | SQL Working With Multiple Tables | ✅ Solid (quiz+retest, 2026-08-31) |
 | 11 | Statistics Fundamental | ✅ Solid (quiz+retest) |
-| 12 | Pandas & NumPy | 🆕 Belum divalidasi quiz |
+| 12 | Pandas & NumPy | ✅ Solid (quiz+retest, 2026-09-01 — SEMUA 13 SESI TUNTAS!) |
 | 13 | Data Visualization | ✅ Solid (quiz+retest) |
 
 **Cara pakai cheat sheet ini:** untuk sesi yang masih 🆕, ini bacaan PERTAMA kamu — jangan cuma diskim sekali, lebih baik dibaca 2x lalu coba tutup dan recall poin-poin `⚠️ Trap` dari ingatan. Untuk sesi ✅, cukup skim cepat buat refresh sebelum exam.

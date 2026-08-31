@@ -49,7 +49,7 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 *(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik `.py`/`.sql` di repo itu **jalur latihan paralel** — cara dosen aslinya ngajar sesi ini live di kelas, ngukur skill nulis/jalanin kode beneran, bukan sekadar recall konsep. Nggak jadi syarat centang di sini karena Exam 1 sifatnya MCQ, tapi progressnya tetap dicatat di sub-baris karena relevan buat CC1 LeetCode & pemahaman yang lebih dalam.)*
 
-**Progress: 11 / 13 sesi solid (~85%)**
+**Progress: 13 / 13 sesi solid (100%) — TUNTAS di hari H Exam! 🎉**
 
 - [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
 - [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
@@ -58,11 +58,11 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 - [x] Sesi 5 — Python Function & File Handling *(quiz+retest Claude Code, solid, 2026-08-31, retest langsung 3/3 benar)*
 - [x] Sesi 6 — Hackerrank Exercise *(quiz+retest Claude Code, solid, 2026-08-31)*
 - [x] Sesi 7 — Object Oriented Programming *(quiz+retest Claude Code, solid, 2026-08-31, via iPad Remote Control)*
-- [ ] Sesi 8 — Python & Modular Programming
+- [x] Sesi 8 — Python & Modular Programming *(quiz+retest Claude Code, solid, 2026-09-01)*
 - [x] Sesi 9 — Intro to Database & SQL *(quiz+retest Claude Code, solid, 2026-08-31, termasuk subquery — verifikasi baca langsung RANGKUMAN_MODULE_1.md)*
 - [x] Sesi 10 — SQL Working With Multiple Tables *(quiz+retest Claude Code, solid, 2026-08-31, termasuk JOIN — verifikasi baca langsung RANGKUMAN_MODULE_1.md)*
 - [x] Sesi 11 — Statistics Fundamental *(quiz+retest Claude Code, solid)*
-- [ ] Sesi 12 — Python Data Manipulation With Pandas and Numpy
+- [x] Sesi 12 — Python Data Manipulation With Pandas and Numpy *(quiz+retest Claude Code, solid, 2026-09-01 — sesi terakhir, semua 13 sesi tuntas)*
 - [x] Sesi 13 — Data Visualization *(quiz+retest Claude Code, solid, 2026-08-30. Retest sudah pakai soal Bahasa Inggris sesuai keputusan.)*
 
 ### Checklist Code Challenge 1 (terpisah, deadline 2026-09-03)
@@ -121,7 +121,10 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
   - ✅ **Sesi 6 (Hackerrank) — SOLID (2026-08-31).** Runner-Up Score pattern, Company Logo (sort by count desc + tie-break abjad) — retest 3 soal, 1 miss: `map()` dikira LANGSUNG hasilkan list (lupa sifat *lazy*-nya, padahal baru diproses pas di-`list()`). Ditambal + 1 soal tambahan (Counter tie-break baru) → langsung benar.
   - ✅ **Sesi 5 (Function & File Handling) — SOLID, retest LANGSUNG 3/3 benar (2026-08-31).** Scope/`global` keyword (`UnboundLocalError` kalau assignment tanpa `global`), nested function (nggak bisa diakses dari luar), file mode `"w"` (timpa total). Konfirmasi prediksi: sesi ini emang cepat karena banyak overlap sama praktik Tugas Besar 2 hari ini (def/parameter/return udah dikuasai duluan).
   - **Perubahan metode TAMBAHAN (2026-08-31, dari user):** (1) setiap penjelasan HARUS ada contoh kode konkret per kasus/variant (bukan cuma tabel/prosa) — dikonfirmasi 2x oleh user, disimpan di memory `feedback_examples_when_teaching`. (2) Penjelasan harus **kronologis** (urutan proses beneran kejadian, bukan definisi/kesimpulan duluan) — user eksplisit minta di-challenge kalau kepermintaan ini berlebihan, tapi dikonfirmasi masuk akal karena udah kebukti works di 2 kali contoh (resep masakan buat function, GROUP BY/HAVING trace angka). Disimpan di memory `feedback_chronological_explanation`.
-  - **TODO lanjutan:** cuma **Sesi 8 (Modular Programming)** dan **Sesi 12 (Pandas/Numpy)** yang masih 100% belum di-quiz — 2 sesi terakhir sebelum semua 13 sesi tersentuh minimal sekali.
+  - ✅ **Sesi 8 (Modular Programming) — SOLID (2026-09-01, dini hari/pagi).** Modular vs monolitik, import (seluruh modul vs spesifik), Project>Package>Module + `__init__.py` wajib, name guard `if __name__=="__main__"` (nggak nge-block definisi function/class, cuma eksekusi top-level), alias `as` (2 alasan beda: hindari bentrok nama vs murni konvensi ringkas — sempat ketuker, ditambal). Retest 3/3 benar setelah 1x koreksi (nama fungsi itu cuma LABEL, Python nggak "ngerti" arti kata "tambah"/"add" — user nanya duluan sebelum lanjut, bagus).
+  - ✅ **Sesi 12 (Pandas/Numpy) — SOLID, SESI TERAKHIR, SEMUA 13 SESI TUNTAS (2026-09-01 pagi, hari H Exam).** NumPy vs List (homogen+cepat), `arange` (kasih step) vs `linspace` (kasih jumlah elemen), slicing array = VIEW bukan copy (beda dari List biasa — sempat salah hitung index tapi konsep VIEW-nya kejawab benar), `.loc` (inklusif) vs `.iloc` (eksklusif), `.groupby()` (setara `GROUP BY` SQL), `.argmax()` (posisi, BUKAN nilai — sempat ketuker sama `.max()`).
+    - **Catatan penting soal fatigue:** di tengah sesi ini, pola lama "ambil ujung slice doang" (dari Sesi 4 pagi) SEMPAT MUNCUL LAGI di `.iloc` (jawab "0 dan 3" utk `iloc[0:3]`, lalu "1 dan 3" utk `iloc[1:4]`) — bukan gap konsep baru, tapi tanda kelelahan setelah maraton belajar panjang (dari OOP+SQL 2 jam kemarin malam, lanjut Sesi 8+12 dini hari/pagi tanpa jeda panjang). Ditambal pakai walkthrough tabel index eksplisit + user ngisi sendiri (bukan cuma dikasih tau), akhirnya solid lagi di 2 percobaan terakhir. **Pelajaran:** kalau pola error yang harusnya udah solid tiba-tiba muncul lagi, itu sinyal cek energi/fokus dulu, bukan langsung anggap gap baru.
+  - **PROGRESS FINAL EXAM 1: 13/13 sesi solid (100%)** — tercapai tepat di hari H Exam (Selasa 2026-09-01, sebelum 19:30 WIB). Sisa waktu sebelum exam sebaiknya dipakai buat: (1) istirahat cukup (jangan begadang lanjut push lebih jauh), (2) skim ulang cheat sheet + bagian "⚠️ Trap" tiap sesi sebagai buffer review ringan, BUKAN sesi belajar berat baru.
 
 - **Modul python lain yang BELUM disentuh sama sekali:** `conditional-and-loop-statements` (11 file), `data-manipulation-pandas-numpy` (11 file, butuh pandas/numpy), `object-oriented-programming` (4 file), `python-function-and-file-handling` (5 file), `python-modular-programming` (9 bagian, proyek multi-file)
 - **SQL (`sql-exercise-materials-`) belum disentuh sama sekali:** modul "9 - Introduction to Databases and SQL" (14 file demo + exercises) dan modul "10 - SQL Working with Multiple Tables" (6 file demo + exercises)
