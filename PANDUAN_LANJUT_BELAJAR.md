@@ -49,18 +49,18 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 *(centang = konsep sesi sudah divalidasi quiz+retest solid, cukup buat exam pilihan ganda. Kode praktik `.py`/`.sql` di repo itu **jalur latihan paralel** — cara dosen aslinya ngajar sesi ini live di kelas, ngukur skill nulis/jalanin kode beneran, bukan sekadar recall konsep. Nggak jadi syarat centang di sini karena Exam 1 sifatnya MCQ, tapi progressnya tetap dicatat di sub-baris karena relevan buat CC1 LeetCode & pemahaman yang lebih dalam.)*
 
-**Progress: 6 / 13 sesi solid (~46%)**
+**Progress: 11 / 13 sesi solid (~85%)**
 
 - [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
 - [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
 - [x] Sesi 3 — Conditional & Loop Statement *(konsep solid, self-test web 50%→ditambal→retest sukses. Jalur paralel — kode praktik `conditional-and-loop-statements/`: 0/11 file)*
-- [x] Sesi 4 — Data Types Collection Notes *(konsep solid, self-test web 30%→ditambal→retest sukses. Jalur paralel — kode praktik `collection-data-type/`: 5/12 file selesai)*
-- [ ] Sesi 5 — Python Function & File Handling
-- [ ] Sesi 6 — Hackerrank Exercise
-- [ ] Sesi 7 — Object Oriented Programming
+- [x] Sesi 4 — Data Types Collection Notes *(konsep solid, self-test web 30%→ditambal→retest sukses. Jalur paralel — kode praktik `collection-data-type/`: 12/12 file SELESAI TOTAL)*
+- [x] Sesi 5 — Python Function & File Handling *(quiz+retest Claude Code, solid, 2026-08-31, retest langsung 3/3 benar)*
+- [x] Sesi 6 — Hackerrank Exercise *(quiz+retest Claude Code, solid, 2026-08-31)*
+- [x] Sesi 7 — Object Oriented Programming *(quiz+retest Claude Code, solid, 2026-08-31, via iPad Remote Control)*
 - [ ] Sesi 8 — Python & Modular Programming
-- [ ] Sesi 9 — Intro to Database & SQL
-- [ ] Sesi 10 — SQL Working With Multiple Tables
+- [x] Sesi 9 — Intro to Database & SQL *(quiz+retest Claude Code, solid, 2026-08-31, termasuk subquery — verifikasi baca langsung RANGKUMAN_MODULE_1.md)*
+- [x] Sesi 10 — SQL Working With Multiple Tables *(quiz+retest Claude Code, solid, 2026-08-31, termasuk JOIN — verifikasi baca langsung RANGKUMAN_MODULE_1.md)*
 - [x] Sesi 11 — Statistics Fundamental *(quiz+retest Claude Code, solid)*
 - [ ] Sesi 12 — Python Data Manipulation With Pandas and Numpy
 - [x] Sesi 13 — Data Visualization *(quiz+retest Claude Code, solid, 2026-08-30. Retest sudah pakai soal Bahasa Inggris sesuai keputusan.)*
@@ -117,7 +117,11 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
   - ✅ **Sesi 7 (OOP) — SOLID, sudah di-retest (2026-08-31, lanjut dari iPad via Remote Control).** Dijelasin lengkap (class/object, `__init__`, `self`, inheritance, `super().__init__()`, `if __name__=="__main__"`, list sbg class bawaan). Retest pertama: 3/7 langsung benar (analogi cetakan kue, `__init__` auto-jalan, object independen), tapi 3 meleset — mekanisme `self` (dikira soal "urutan penulisan", bukan soal CARA MANGGIL via titik), efek hapus `super().__init__()` (dikira `Vehicle`/parent yang kehilangan atribut, padahal cuma OBJECT CHILD itu yang nggak dapet atribut → `AttributeError`, parent class tetap utuh), arah inheritance method (dikira `honk()` "milik child", padahal itu milik PARENT yang diwariskan). Retest ke-2 pakai kasus baru: 2/3 langsung benar (super()/AttributeError, kenapa child akses method parent), 1 masih kabur (`self` mechanism) — ditambal pakai perbandingan "1 kode dipakai gantian vs 2 salinan kode", retest ke-3 berhasil ("cuma 1 kode yang sama, dipakai gantian, `self` yang bedain"). **Kesimpulan: OOP solid, nggak perlu diulang dari nol lagi.**
   - ✅ **Sesi 9 (SQL) — SOLID SEMUA termasuk subquery.** DB vs DBMS, DDL vs DML, WHERE vs HAVING (sempat GROUP BY/HAVING KETUKER PERANNYA 2x — dikira HAVING yang "mengelompokkan", padahal itu tugas GROUP BY; ditambal pakai 3 contoh konkret berurutan — departemen/gaji, siswa/nilai, toko/penjualan — baru clean di percobaan ke-3), aggregate vs scalar function, dan **Subquery (WHERE/SELECT/FROM)** — sempat coba nulis subquery tanpa bungkus kurung/nesting yang benar (nyampur "AVG FROM karyawan" langsung ke WHERE tanpa nested SELECT terpisah), ditambal dengan breakdown 3-langkah (outer query dengan angka dummy → subquery mandiri → gabungkan) baru langsung benar. Alias wajib buat Derived Table di `FROM` juga sudah solid (paham konsekuensinya = SQL ERROR kalau lupa, bukan cuma "nggak ditampilkan").
   - **Verifikasi tambahan (2026-08-31):** atas permintaan user ("harusnya dipakai semua agar anda kaya"), Sesi 9 & 10 `RANGKUMAN_MODULE_1.md` dibaca PENUH langsung oleh Claude (bukan cuma lewat ringkasan subagent lagi) — dikonfirmasi cheat sheet SUDAH akurat, nggak ada koreksi. Bonus ditemukan: latihan konkret database `world` (9 soal) & `Sakila` (10 soal) dengan jawaban lengkap di source — bagus buat latihan pola soal real, belum dipakai.
-  - **TODO lanjutan:** (1) lanjut ke topik JOIN (Sesi 10) yang belum di-quiz sama sekali (baru dijelasin garis besar via cheat sheet), (2) sesi 5,6,8,12 masih 100% belum disentuh sama sekali (baru ada di cheat sheet doang).
+  - ✅ **Sesi 10 (SQL JOIN) — SOLID (2026-08-31).** PK vs FK, Implicit vs Explicit JOIN, Cartesian Product bahaya, INNER/LEFT/RIGHT/FULL JOIN — retest 4/4 langsung benar KECUALI Self JOIN (dikira cuma "Inner Join biasa", dan dikira alias TIDAK dibutuhkan — padahal kebalik, alias itu MUTLAK di Self JOIN). Ditambal + retest ulang → benar (paham konsekuensi hapus alias = SQL ERROR "Not unique table/alias", bukan sekadar "database bingung" secara umum).
+  - ✅ **Sesi 6 (Hackerrank) — SOLID (2026-08-31).** Runner-Up Score pattern, Company Logo (sort by count desc + tie-break abjad) — retest 3 soal, 1 miss: `map()` dikira LANGSUNG hasilkan list (lupa sifat *lazy*-nya, padahal baru diproses pas di-`list()`). Ditambal + 1 soal tambahan (Counter tie-break baru) → langsung benar.
+  - ✅ **Sesi 5 (Function & File Handling) — SOLID, retest LANGSUNG 3/3 benar (2026-08-31).** Scope/`global` keyword (`UnboundLocalError` kalau assignment tanpa `global`), nested function (nggak bisa diakses dari luar), file mode `"w"` (timpa total). Konfirmasi prediksi: sesi ini emang cepat karena banyak overlap sama praktik Tugas Besar 2 hari ini (def/parameter/return udah dikuasai duluan).
+  - **Perubahan metode TAMBAHAN (2026-08-31, dari user):** (1) setiap penjelasan HARUS ada contoh kode konkret per kasus/variant (bukan cuma tabel/prosa) — dikonfirmasi 2x oleh user, disimpan di memory `feedback_examples_when_teaching`. (2) Penjelasan harus **kronologis** (urutan proses beneran kejadian, bukan definisi/kesimpulan duluan) — user eksplisit minta di-challenge kalau kepermintaan ini berlebihan, tapi dikonfirmasi masuk akal karena udah kebukti works di 2 kali contoh (resep masakan buat function, GROUP BY/HAVING trace angka). Disimpan di memory `feedback_chronological_explanation`.
+  - **TODO lanjutan:** cuma **Sesi 8 (Modular Programming)** dan **Sesi 12 (Pandas/Numpy)** yang masih 100% belum di-quiz — 2 sesi terakhir sebelum semua 13 sesi tersentuh minimal sekali.
 
 - **Modul python lain yang BELUM disentuh sama sekali:** `conditional-and-loop-statements` (11 file), `data-manipulation-pandas-numpy` (11 file, butuh pandas/numpy), `object-oriented-programming` (4 file), `python-function-and-file-handling` (5 file), `python-modular-programming` (9 bagian, proyek multi-file)
 - **SQL (`sql-exercise-materials-`) belum disentuh sama sekali:** modul "9 - Introduction to Databases and SQL" (14 file demo + exercises) dan modul "10 - SQL Working with Multiple Tables" (6 file demo + exercises)

@@ -14,12 +14,12 @@
 | 2 | Intro Git & GitHub | ✅ Solid (quiz+retest) |
 | 3 | Conditional & Loop | ✅ Solid |
 | 4 | Data Types Collection | ✅ Solid |
-| 5 | Python Function & File Handling | 🆕 Belum divalidasi quiz — cheat sheet ini exposure pertama |
-| 6 | Hackerrank Exercise | 🆕 Belum divalidasi quiz |
-| 7 | Object Oriented Programming | 🆕 Belum divalidasi quiz |
+| 5 | Python Function & File Handling | ✅ Solid (quiz+retest, 2026-08-31) |
+| 6 | Hackerrank Exercise | ✅ Solid (quiz+retest, 2026-08-31) |
+| 7 | Object Oriented Programming | ✅ Solid (quiz+retest, 2026-08-31) |
 | 8 | Python & Modular Programming | 🆕 Belum divalidasi quiz |
-| 9 | Intro to Database & SQL | 🆕 Belum divalidasi quiz |
-| 10 | SQL Working With Multiple Tables | 🆕 Belum divalidasi quiz |
+| 9 | Intro to Database & SQL | ✅ Solid (quiz+retest, 2026-08-31) |
+| 10 | SQL Working With Multiple Tables | ✅ Solid (quiz+retest, 2026-08-31) |
 | 11 | Statistics Fundamental | ✅ Solid (quiz+retest) |
 | 12 | Pandas & NumPy | 🆕 Belum divalidasi quiz |
 | 13 | Data Visualization | ✅ Solid (quiz+retest) |
@@ -454,7 +454,12 @@ result = sorted(letter_counter.items(), key=lambda x: (-x[1], x[0]))
 | `sorted(x, key=...)` | Urutkan, bisa custom key pakai `lambda` |
 | `.items()` | Ambil pasangan key-value dari dict |
 
-> ⚠️ **Trap paling sering ditanya:** `map()` bersifat **lazy** — proses konversi tidak langsung jalan, baru dieksekusi saat hasilnya benar-benar dipakai (dikonversi ke `list`/`set`).
+> ⚠️ **Trap paling sering ditanya:** `map()` bersifat **lazy** — proses konversi tidak langsung jalan, baru dieksekusi saat hasilnya benar-benar dipakai (dikonversi ke `list`/`set`). Buktinya:
+> ```python
+> hasil = map(str, [1,2,3])
+> print(hasil)          # <map object at 0x...> — BUKAN ['1','2','3']!
+> print(list(hasil))    # ['1', '2', '3'] — baru sekarang beneran diproses
+> ```
 
 > ⚠️ **Trap:** `set()` **krusial** untuk soal runner-up/nilai-kedua — kalau ada skor tertinggi yang duplikat, tanpa `set()` juara kedua yang asli bisa tidak ketemu.
 
@@ -684,7 +689,13 @@ class RegressionModel(MachineLearningModel):
 
 ### Self JOIN
 - Join tabel dengan dirinya sendiri, WAJIB 2 alias berbeda (`T1`, `T2`).
-> ⚠️ **Trap:** Kondisi `<>` (tidak sama dengan) MUTLAK perlu di Self JOIN — tanpa itu, tiap baris berpasangan dengan dirinya sendiri.
+```sql
+SELECT K1.nama, K2.nama, K1.gaji
+FROM karyawan K1
+JOIN karyawan K2
+  ON K1.karyawan_id <> K2.karyawan_id AND K1.gaji = K2.gaji;
+```
+> ⚠️ **Trap:** Kondisi `<>` (tidak sama dengan) MUTLAK perlu di Self JOIN — tanpa itu, tiap baris berpasangan dengan dirinya sendiri. Alias (`K1`/`K2`) juga MUTLAK, bukan opsional seperti di JOIN biasa — tanpa alias, `FROM karyawan JOIN karyawan ON ...` langsung **SQL ERROR** ("Not unique table/alias") karena database nggak bisa bedain "karyawan yang mana" dirujuk di tiap kolom.
 
 ### Clause Execution Order — JEBAKAN UJIAN KLASIK
 | Urutan Penulisan | Urutan Eksekusi Logis |
