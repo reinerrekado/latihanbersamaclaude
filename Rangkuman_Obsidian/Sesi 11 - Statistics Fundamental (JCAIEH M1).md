@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-11, statistics, descriptive-statistics, inferential-statistics, sampling, central-tendency, spread, iqr, normal-distribution, empirical-rule, skewness, imbalanced-data]
+tags: [jcaieh/module1, sesi-11, statistics, descriptive-statistics, inferential-statistics, sampling, central-tendency, spread, iqr, normal-distribution, empirical-rule, skewness, imbalanced-data, jcaieh/module1/sesi11]
+bootcamp: JCAIEH
+module: 1
+session: 11
 aliases: ["Sesi 11", "Statistics Fundamental", "Statistika Fundamental"]
 ---
 
@@ -48,7 +51,7 @@ aliases: ["Sesi 11", "Statistics Fundamental", "Statistika Fundamental"]
 #### A. Alur Kerja Statistika
 
 1. **Design** — Tahap perencanaan penelitian dan pengumpulan data. Aktivitas utama meliputi memformulasikan masalah penelitian (_formulate research problem_), mendefinisikan populasi dan sampel (_define population and sample_), serta melakukan pengumpulan data (_data collection_).
-2. **Description** — Tahap merangkum dan mengeksplorasi data yang telah dikumpulkan. Aktivitas utama meliputi pembuatan visualisasi data dalam bentuk ringkasan grafis (_graphical summary_), ringkasan numerik (_numerical summary_), dan ringkasan tabel (_table summary_). Lihat [[Sesi 13 - Data Visualization]] untuk toolkit visualnya.
+2. **Description** — Tahap merangkum dan mengeksplorasi data yang telah dikumpulkan. Aktivitas utama meliputi pembuatan visualisasi data dalam bentuk ringkasan grafis (_graphical summary_), ringkasan numerik (_numerical summary_), dan ringkasan tabel (_table summary_). Lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] untuk toolkit visualnya.
 3. **Inference** — Tahap membuat prediksi dan melakukan generalisasi mengenai fenomena yang direpresentasikan oleh data tersebut. Aktivitas utama adalah menggunakan metode yang tepat untuk memecahkan masalah penelitian (_solve the problem_) dan melaporkan hasilnya (_report the result_).
 
 > [!tip] Audio Insight — Rincian tiap tahap Design → Description → Inference
@@ -113,7 +116,7 @@ class StatisticsFundamental:
         - Kolom-kolom seperti _Name_ (judul buku), _Author_ (penulis), _User Rating_, _Reviews_, _Price_, _Year_, dan _Genre_ mewakili variabel yang diukur dari setiap buku tersebut.
 
 > [!tip] Audio Insight — Definisi "data" versi statistika vs database
-> Dosen menjelaskan bahwa di luar pemahaman database relasional konvensional, statistik mendefinisikan data secara spesifik sebagai unit observasi individual. Dalam analisis data praktis, sangat krusial untuk langsung mengidentifikasi baris sebagai representasi dari unit observasi tunggal dan kolom sebagai dimensi variabelnya sebelum melakukan manipulasi data lebih lanjut. Konsep baris = observasi, kolom = variabel ini persis sama dengan struktur tabel di [[Sesi 09 - Intro to Database and SQL]] dan `DataFrame` pada [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
+> Dosen menjelaskan bahwa di luar pemahaman database relasional konvensional, statistik mendefinisikan data secara spesifik sebagai unit observasi individual. Dalam analisis data praktis, sangat krusial untuk langsung mengidentifikasi baris sebagai representasi dari unit observasi tunggal dan kolom sebagai dimensi variabelnya sebelum melakukan manipulasi data lebih lanjut. Konsep baris = observasi, kolom = variabel ini persis sama dengan struktur tabel di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] dan `DataFrame` pada [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
 
 **Contoh kode — memverifikasi struktur baris/kolom sebuah dataset:**
 
@@ -533,7 +536,7 @@ class ExperimentalDesignSimulation:
 > - **Modus untuk Data Kualitatif**: Modus sangat efektif sebagai ukuran pemusatan data kategorikal (non-angka). Dosen memberikan contoh riil mengenai pencarian merek mobil terpopuler di Jakarta dari data `1` juta unit kendaraan. Melalui penghitungan frekuensi, ditemukan `500.000` unit merek Toyota dan `300.000` unit merek Daihatsu. Dengan demikian, modus dari variabel kualitatif merek mobil tersebut adalah Toyota.
 
 > [!tip] Analogi ini juga menjelaskan arah Box Plot
-> Analogi "10 karyawan reguler bergaji 7-9 juta vs 1 direktur bergaji 100 juta" ini persis konsep yang sama dengan arah kemiringan (_skew_) pada [[Sesi 13 - Data Visualization]] Bab 3.2 (Box Plot). Mayoritas data (karyawan) menumpuk rendah, tapi ekor ditarik ke kanan oleh minoritas ekstrem (direktur) — inilah **right-skewed**. Lihat penjelasan lengkapnya di sana.
+> Analogi "10 karyawan reguler bergaji 7-9 juta vs 1 direktur bergaji 100 juta" ini persis konsep yang sama dengan arah kemiringan (_skew_) pada [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.2 (Box Plot). Mayoritas data (karyawan) menumpuk rendah, tapi ekor ditarik ke kanan oleh minoritas ekstrem (direktur) — inilah **right-skewed**. Lihat penjelasan lengkapnya di sana.
 
 **Contoh kode — membuktikan analogi gaji karyawan vs direktur secara langsung:**
 
@@ -711,7 +714,7 @@ print("Outliers ditemukan:", list(outliers))                # [] -> kosong, tida
 
 #### A. Pemodelan Statistika Deskriptif dalam Python
 
-Dalam ekosistem pemrograman Python, seluruh perhitungan ringkasan statistika deskriptif di atas dapat dipanggil secara instan menggunakan library _Pandas_ melalui fungsi `.describe()`. Lihat juga [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] untuk penjelasan lengkap method-method Pandas ini.
+Dalam ekosistem pemrograman Python, seluruh perhitungan ringkasan statistika deskriptif di atas dapat dipanggil secara instan menggunakan library _Pandas_ melalui fungsi `.describe()`. Lihat juga [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] untuk penjelasan lengkap method-method Pandas ini.
 
 ```python
 import pandas as pd
@@ -858,7 +861,7 @@ Metodologi pengujian untuk menentukan apakah suatu dataset dimodelkan dengan bai
 > - **Karakteristik Visual QQ Plot**: Pada data yang berdistribusi normal, titik-titik plot akan berbaris merapat mengikuti garis lurus diagonal secara sempurna. Pada data miring ke kanan (_right-skewed_), titik plot akan melengkung melonjak di bagian kanan atas garis diagonal. Sebaliknya, pada data miring ke kiri (_left-skewed_), titik plot akan mencong dan melengkung di bagian kiri bawah garis diagonal.
 > - **Pembersihan Outlier Berdasarkan Box Plot**: Dosen menjelaskan bahwa dalam siklus pengembangan _machine learning_, Box Plot sering dipakai untuk menyaring outlier (dengan formula batas luar $1.5 \times \text{IQR}$). Namun, penghapusan ini tidak boleh dilakukan sembarangan. Sebagai contoh, dalam kasus deteksi penipuan kartu kredit (_fraud detection_), transaksi fraud yang bersifat pencilan (hanya bernilai sekitar 0.5% hingga 1%) adalah data yang paling krusial untuk dipelajari. Jika data outlier tersebut dihapus, model tidak akan pernah bisa mendeteksi transaksi fraud.
 
-Lihat [[Sesi 13 - Data Visualization]] Bab 3.1-3.2 untuk syntax lengkap membuat Histogram, Box Plot, dan QQ Plot.
+Lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.1-3.2 untuk syntax lengkap membuat Histogram, Box Plot, dan QQ Plot.
 
 **Contoh kode — QQ Plot dengan scipy dan matplotlib:**
 
@@ -965,7 +968,7 @@ Dalam statistika deskriptif, pemilihan jenis grafik atau diagram sangat bergantu
 | **Categorical Variable** | Pie Chart, Bar Plot | Mengamati komposisi, proporsi, atau perbandingan frekuensi antar kategori variabel kualitatif. |
 | **Both Numerical & Categorical** | Bar Plot, Boxplot | Membandingkan nilai agregat kuantitatif atau membandingkan sebaran data numerik di berbagai kelompok kategori. |
 
-> Bab ini adalah ringkasan singkat — penjelasan lengkap dan sintaks kode setiap jenis grafik (Histogram, Box Plot, Scatter Plot, Pie Chart, Bar Chart) ada di [[Sesi 13 - Data Visualization]] Bab 3.
+> Bab ini adalah ringkasan singkat — penjelasan lengkap dan sintaks kode setiap jenis grafik (Histogram, Box Plot, Scatter Plot, Pie Chart, Bar Chart) ada di [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.
 
 ### 6.2 Penjelasan Alat Visualisasi
 
@@ -989,8 +992,8 @@ Dalam statistika deskriptif, pemilihan jenis grafik atau diagram sangat bergantu
 > [!tip] Audio Insight — Kelebihan dan keterbatasan Box Plot
 > Dosen menekankan bahwa Box Plot merupakan teknik visualisasi yang sangat unggul untuk mendeteksi keberadaan pencilan secara instan. Meskipun Box Plot mampu membandingkan persebaran beberapa variabel atau kelompok secara sekaligus, alat ini memiliki keterbatasan dalam mengidentifikasi secara mendetail variasi kelancipan (_pointiness_) atau kelebaran puncak kurva jika dibandingkan dengan histogram.
 
-> [!warning] Cara membaca arah skew dari posisi median di Box Plot — lihat [[Sesi 13 - Data Visualization]]
-> Penjelasan lengkap dan langkah-demi-langkah untuk membaca arah kemiringan (_right-skewed_ vs _left-skewed_) dari posisi garis median di dalam kotak Box Plot — termasuk contoh angka konkret — ada di [[Sesi 13 - Data Visualization]] Bab 3.2 bagian "Fokus Klarifikasi". Ringkasannya: **median dekat Q1 (bawah) = right-skewed**, **median dekat Q3 (atas) = left-skewed**. Ini sering tertukar karena terasa berlawanan dengan intuisi — cek penjelasan detailnya di sana.
+> [!warning] Cara membaca arah skew dari posisi median di Box Plot — lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]]
+> Penjelasan lengkap dan langkah-demi-langkah untuk membaca arah kemiringan (_right-skewed_ vs _left-skewed_) dari posisi garis median di dalam kotak Box Plot — termasuk contoh angka konkret — ada di [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.2 bagian "Fokus Klarifikasi". Ringkasannya: **median dekat Q1 (bawah) = right-skewed**, **median dekat Q3 (atas) = left-skewed**. Ini sering tertukar karena terasa berlawanan dengan intuisi — cek penjelasan detailnya di sana.
 
 ---
 
@@ -1022,7 +1025,7 @@ Dalam statistika deskriptif, pemilihan jenis grafik atau diagram sangat bergantu
 - Dalam analisis data tingkat lanjut, Bar Chart sering digunakan untuk melakukan agregasi nilai kuantitatif berdasarkan kategori tertentu menggunakan fungsi matematika spesifik (seperti nilai rata-rata, jumlah total, nilai minimum, nilai maksimum, atau simpangan baku).
 
 > [!tip] Audio Insight — Bar Chart untuk agregasi kategori
-> Dosen menguraikan bahwa dalam praktik ilmu data, Bar Chart sering digunakan untuk menunjukkan komposisi sekaligus hubungan antara satu variabel kuantitatif dengan satu variabel kategorikal. Bar Chart memungkinkan pembuat keputusan untuk membandingkan performa antarkategori secara langsung dan objektif berdasarkan hasil fungsi agregasi yang telah dihitung sebelumnya. Konsep "agregasi per kategori" ini persis sama dengan `.groupby()` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] dan klausa `GROUP BY` di [[Sesi 09 - Intro to Database and SQL]].
+> Dosen menguraikan bahwa dalam praktik ilmu data, Bar Chart sering digunakan untuk menunjukkan komposisi sekaligus hubungan antara satu variabel kuantitatif dengan satu variabel kategorikal. Bar Chart memungkinkan pembuat keputusan untuk membandingkan performa antarkategori secara langsung dan objektif berdasarkan hasil fungsi agregasi yang telah dihitung sebelumnya. Konsep "agregasi per kategori" ini persis sama dengan `.groupby()` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] dan klausa `GROUP BY` di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]].
 
 ---
 
@@ -1065,7 +1068,7 @@ class GraphicalSummary:
 - Pemahaman kritis terhadap bias metodologi ini sangat penting agar praktisi tidak mudah teperdaya oleh laporan visual atau tajuk utama berita (_headline news_) yang menyesatkan.
 
 > [!tip] Audio Insight — Kritis terhadap asal-usul data
-> Dosen menjelaskan bahwa statistika sering kali menyajikan fakta yang secara matematis benar, namun perspektif dan cara interpretasi penyajiannya dibuat berbeda untuk mengarahkan opini publik. Oleh karena itu, sebagai profesional di bidang data, kita harus kritis dengan menanyakan asal-usul data, bagaimana sampel diambil, serta metode statistik apa yang digunakan sebelum mempercayai sebuah kesimpulan data. Buku yang sama ini juga dirujuk di [[Sesi 13 - Data Visualization]] Bab 1.3 sebagai landasan prinsip _Clarity_ dan _Accuracy_ dalam visualisasi.
+> Dosen menjelaskan bahwa statistika sering kali menyajikan fakta yang secara matematis benar, namun perspektif dan cara interpretasi penyajiannya dibuat berbeda untuk mengarahkan opini publik. Oleh karena itu, sebagai profesional di bidang data, kita harus kritis dengan menanyakan asal-usul data, bagaimana sampel diambil, serta metode statistik apa yang digunakan sebelum mempercayai sebuah kesimpulan data. Buku yang sama ini juga dirujuk di [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 1.3 sebagai landasan prinsip _Clarity_ dan _Accuracy_ dalam visualisasi.
 
 ---
 
@@ -1169,7 +1172,7 @@ Bagian ini berisi catatan pelengkap dari sesi kelas yang memuat beberapa contoh 
     - _Contoh Praktis_: Pengeluaran rutin untuk barang habis pakai harian (seperti karung atau sarung tangan kerja) di mana jumlah permintaannya relatif konstan dan stabil setiap hari tanpa ada fluktuasi atau lonjakan berarti.
 
 > [!tip] Menghubungkan bentuk distribusi dengan arah skew di Box Plot
-> Contoh "waktu perbaikan mesin" (right-skewed) dan "muatan truk" (left-skewed) di atas adalah cara lain untuk melatih intuisi arah skew — lengkapi dengan pembacaan Box Plot-nya di [[Sesi 13 - Data Visualization]] Bab 3.2.
+> Contoh "waktu perbaikan mesin" (right-skewed) dan "muatan truk" (left-skewed) di atas adalah cara lain untuk melatih intuisi arah skew — lengkapi dengan pembacaan Box Plot-nya di [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.2.
 
 **Contoh kode — mensimulasikan dan membandingkan kelima bentuk distribusi di atas:**
 
@@ -1217,9 +1220,9 @@ for nama, data in [("Symmetric (bale kardus)", berat_bale),
 | Batas Outlier | `Q1 - 1.5*IQR` dan `Q3 + 1.5*IQR` (langkah terpisah SETELAH IQR dihitung) |
 | Empirical Rule | 68% (±1s), 95% (±2s), 99.7% (±3s) — hanya untuk data simetris |
 | Interval vs Ratio | tes primer: apakah 0 = ketiadaan absolut? (bukan "bisa negatif?") |
-| Skewness & Box Plot | median dekat Q1 → right-skewed; median dekat Q3 → left-skewed (lihat [[Sesi 13 - Data Visualization]]) |
+| Skewness & Box Plot | median dekat Q1 → right-skewed; median dekat Q3 → left-skewed (lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]]) |
 | Imbalanced Data | jangan pakai accuracy saja — pakai precision & recall |
 
 ---
 
-**Lihat juga:** [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (implementasi `.describe()`, `.mean()`, `.std()`, `.quantile()` di Pandas) · [[Sesi 13 - Data Visualization]] (Histogram, Box Plot, dan visualisasi distribusi) · [[Sesi 09 - Intro to Database and SQL]] (konsep agregasi yang setara dengan `GROUP BY`).
+**Lihat juga:** [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (implementasi `.describe()`, `.mean()`, `.std()`, `.quantile()` di Pandas) · [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] (Histogram, Box Plot, dan visualisasi distribusi) · [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (konsep agregasi yang setara dengan `GROUP BY`).

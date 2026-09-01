@@ -1,11 +1,14 @@
 ---
-tags: [module1, sesi-10, sql, relational-model, primary-key, foreign-key, join, inner-join, left-join, right-join, full-join, self-join, cartesian-product, python-mysql-connector, sakila]
+tags: [jcaieh/module1, sesi-10, sql, relational-model, primary-key, foreign-key, join, inner-join, left-join, right-join, full-join, self-join, cartesian-product, python-mysql-connector, sakila, jcaieh/module1/sesi10]
+bootcamp: JCAIEH
+module: 1
+session: 10
 aliases: ["Sesi 10", "SQL Working With Multiple Tables"]
 ---
 
 # Session 10 — SQL Working With Multiple Tables
 
-This session builds directly on [[Sesi 09 - Intro to Database and SQL]] — everything here assumes you already understand `SELECT`, `WHERE`, `GROUP BY`, and basic DBMS terminology from Session 9. The new territory is connecting *more than one table together*.
+This session builds directly on [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — everything here assumes you already understand `SELECT`, `WHERE`, `GROUP BY`, and basic DBMS terminology from Session 9. The new territory is connecting *more than one table together*.
 
 ## Bab 1 Relational Model Constraints (Batasan Model Relasional)
 
@@ -64,7 +67,7 @@ WHERE movie.title = 'Odyssey';
 >     - Tabel `kendaraan` memiliki _Primary Key_ berupa `plat_nomor`.
 >     - Karena setiap kendaraan dimiliki oleh seorang penduduk, kolom `NIK` dimasukkan ke dalam tabel `kendaraan` sebagai kolom pemilik kendaraan. Di dalam tabel `kendaraan`, kolom `NIK` ini bertindak sebagai _Foreign Key_ yang merujuk ke _Primary Key_ `NIK` di tabel `penduduk`. Hubungan ini mendefinisikan relasi kata kerja kepemilikan (_memiliki_ atau _dimiliki_).
 
-Contoh SQL mendefinisikan Primary Key dan Foreign Key secara eksplisit (mengembangkan konsep `CREATE TABLE` dari [[Sesi 09 - Intro to Database and SQL]]):
+Contoh SQL mendefinisikan Primary Key dan Foreign Key secara eksplisit (mengembangkan konsep `CREATE TABLE` dari [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]]):
 
 ```sql
 CREATE TABLE penduduk (
@@ -629,7 +632,7 @@ pip install mysql-connector-python pandas python-dotenv
 > - **Pentingnya Isolasi Environment**: Dosen menerangkan mengapa pembuatan environment baru sangat direkomendasikan. Jika seorang programmer bekerja pada lima proyek berbeda, satu proyek mungkin membutuhkan modul Pandas versi lama sementara proyek lainnya membutuhkan Pandas versi terbaru. Jika diinstal secara global, perubahan versi untuk proyek terbaru akan merusak kode pada proyek lama. Dengan Conda environment, dependensi setiap proyek disimpan terpisah dan aman.
 > - **Konfigurasi VSCode Interpreter**: Setelah membuat environment di terminal, pengguna harus menyinkronkan VSCode agar menggunakan interpreter dari environment yang tepat. Caranya dengan mengklik menu pilihan interpreter di pojok kanan bawah editor VSCode (Select Python Interpreter) dan memilih `Purwadika`. Jika pilihan tersebut belum muncul di menu, dosen menyarankan untuk menutup (_close_) VSCode terlebih dahulu dan membukanya kembali agar daftar interpreter ter-refresh secara otomatis.
 
-Manajemen environment dan package Python ini melengkapi dasar-dasar Python yang sudah dipelajari di [[Sesi 05 - Python Function and File Handling]] dan [[Sesi 08 - Python and Modular Programming]] — sekarang kita menggabungkan Python dengan database sungguhan.
+Manajemen environment dan package Python ini melengkapi dasar-dasar Python yang sudah dipelajari di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] dan [[Sesi 08 - Python and Modular Programming (JCAIEH M1)|Sesi 08 - Python and Modular Programming]] — sekarang kita menggabungkan Python dengan database sungguhan.
 
 ---
 
@@ -659,7 +662,7 @@ mydb = mysql.connector.connect(
 |`passwd` atau `password`|String|Kata sandi rahasia untuk masuk ke server database MySQL.|
 |`database`|String|Nama skema database spesifik yang ingin diakses (contoh: `'world'` atau `'sakila'`).|
 
-Parameter-parameter ini persis sama dengan parameter koneksi GUI/CLI yang sudah dibahas di [[Sesi 09 - Intro to Database and SQL]] Bab 12 — bedanya di sini kita menuliskannya di dalam kode Python, bukan mengisi form GUI.
+Parameter-parameter ini persis sama dengan parameter koneksi GUI/CLI yang sudah dibahas di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] Bab 12 — bedanya di sini kita menuliskannya di dalam kode Python, bukan mengisi form GUI.
 
 #### B. Eksekusi Query Menggunakan Kursor (Method 1)
 
@@ -687,7 +690,7 @@ df = pd.DataFrame(result, columns=mycursor.column_names)
 df.head(5)
 ```
 
-Hasil `df` di atas adalah objek Pandas DataFrame biasa — semua teknik manipulasi data yang dipelajari di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (filtering, `.groupby()`, dsb.) bisa langsung diterapkan pada `df` ini setelah data ditarik dari MySQL.
+Hasil `df` di atas adalah objek Pandas DataFrame biasa — semua teknik manipulasi data yang dipelajari di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (filtering, `.groupby()`, dsb.) bisa langsung diterapkan pada `df` ini setelah data ditarik dari MySQL.
 
 ---
 
@@ -713,7 +716,7 @@ sql_df('''
 ''')
 ```
 
-Pola "wrapper function" ini adalah aplikasi langsung dari konsep pendefinisian fungsi (`def`) dan modular programming yang dipelajari di [[Sesi 08 - Python and Modular Programming]] — alih-alih menulis ulang kode cursor/execute/fetchall setiap kali, logika berulang itu dibungkus jadi satu fungsi yang bisa dipakai berkali-kali.
+Pola "wrapper function" ini adalah aplikasi langsung dari konsep pendefinisian fungsi (`def`) dan modular programming yang dipelajari di [[Sesi 08 - Python and Modular Programming (JCAIEH M1)|Sesi 08 - Python and Modular Programming]] — alih-alih menulis ulang kode cursor/execute/fetchall setiap kali, logika berulang itu dibungkus jadi satu fungsi yang bisa dipakai berkali-kali.
 
 #### B. Penerapan Keamanan Kredensial Menggunakan .env (Dotenv)
 
@@ -755,7 +758,7 @@ mydb = mysql.connector.connect(
 )
 ```
 
-Membaca file `.env` dan mengelola file konfigurasi seperti ini adalah bentuk lanjutan dari file handling yang dipelajari di [[Sesi 05 - Python Function and File Handling]] — bedanya di sini file yang dibaca berisi kredensial rahasia, bukan data biasa, sehingga penanganannya (lewat `.gitignore`) menjadi krusial untuk keamanan.
+Membaca file `.env` dan mengelola file konfigurasi seperti ini adalah bentuk lanjutan dari file handling yang dipelajari di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] — bedanya di sini file yang dibaca berisi kredensial rahasia, bukan data biasa, sehingga penanganannya (lewat `.gitignore`) menjadi krusial untuk keamanan.
 
 ---
 
@@ -770,7 +773,7 @@ Membaca file `.env` dan mengelola file konfigurasi seperti ini adalah bentuk lan
 - Aktivitas penarikan data difokuskan pada manipulasi tabel tunggal, penggabungan multi-tabel (_multi-table join_), operasi agregasi, pemfilteran pola string menggunakan operator `LIKE`, hingga penggunaan kueri bersarang (_subquery_).
 
 > [!tip] Audio Insight — Git pull dan aktivasi Virtual Environment sebelum latihan
-> - Dosen mengingatkan mahasiswa untuk melakukan pembaharuan kode (_git pull_) terlebih dahulu pada repositori lokal masing-masing guna memastikan bahan latihan dan skema database "Sakila" serta "World" versi terbaru sudah tersinkronisasi sebelum sesi latihan dimulai. (Lihat [[Sesi 02 - Intro to Git and GitHub]] untuk dasar-dasar `git pull`.)
+> - Dosen mengingatkan mahasiswa untuk melakukan pembaharuan kode (_git pull_) terlebih dahulu pada repositori lokal masing-masing guna memastikan bahan latihan dan skema database "Sakila" serta "World" versi terbaru sudah tersinkronisasi sebelum sesi latihan dimulai. (Lihat [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] untuk dasar-dasar `git pull`.)
 > - Jika mahasiswa menggunakan Jupyterlab, dosen menyarankan untuk mengaktifkan _Virtual Environment_ yang telah dibuat sebelumnya agar library konektor dapat dipanggil tanpa hambatan dependensi.
 
 ---
@@ -832,7 +835,7 @@ ORDER BY length DESC
 LIMIT 25;
 ```
 
-- **Analisis Teknis**: Kueri ini menggunakan _Scalar Subquery_ di dalam klausul `WHERE` untuk menghitung nilai rata-rata dinamis secara global terlebih dahulu sebelum digunakan sebagai pembanding baris demi baris pada tabel utama. Konsep subquery ini dibahas lengkap di [[Sesi 09 - Intro to Database and SQL]] Bab 11.
+- **Analisis Teknis**: Kueri ini menggunakan _Scalar Subquery_ di dalam klausul `WHERE` untuk menghitung nilai rata-rata dinamis secara global terlebih dahulu sebelum digunakan sebagai pembanding baris demi baris pada tabel utama. Konsep subquery ini dibahas lengkap di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] Bab 11.
 
 #### E. Nomor 5: Agregasi Multi-Fungsi dengan Group By (Tabel film)
 
@@ -943,7 +946,7 @@ LIMIT 10;
 > [!tip] Audio Insight — Kenapa harus subquery, bukan WHERE length > AVG(length) langsung
 > - **Keterbatasan Fungsi Agregat**: Mahasiswa menanyakan mengapa ekspresi pemfilteran tidak bisa ditulis secara langsung seperti `WHERE length > AVG(length)`. Dosen menerangkan aturan dasar SQL bahwa fungsi agregat seperti `AVG()` tidak dapat ditempatkan langsung di dalam klausul `WHERE` pada tingkat kueri yang sama. Hal ini karena proses filter `WHERE` dieksekusi oleh mesin database sebelum proses kalkulasi agregat baris dilakukan.
 > - **Solusi Kueri Bersarang**: Solusi mutlak untuk masalah di atas adalah membungkus fungsi agregat di dalam subquery mandiri `(SELECT AVG(length) FROM film)`. Subquery tersebut akan dihitung terlebih dahulu untuk menghasilkan satu nilai skalar tunggal (misalnya nilai rata-rata 115 menit), yang kemudian disuntikkan ke kueri utama sebagai nilai konstan pembanding durasi masing-masing baris film.
-> - **Ketentuan Group By**: Jika fungsi agregat ingin ditampilkan bersama dengan kolom non-agregat di tingkat SELECT utama, maka seluruh kolom non-agregat tersebut (seperti `title`, `description`, `length`, `rating`) wajib didaftarkan ke dalam klausul `GROUP BY` agar tidak menimbulkan kegagalan eksekusi (_SQL error_). Oleh karena itu, penggunaan subquery jauh lebih bersih dan efisien untuk kasus pemfilteran baris individual seperti ini. (Bandingkan dengan aturan `GROUP BY` di [[Sesi 09 - Intro to Database and SQL]] Bab 8.)
+> - **Ketentuan Group By**: Jika fungsi agregat ingin ditampilkan bersama dengan kolom non-agregat di tingkat SELECT utama, maka seluruh kolom non-agregat tersebut (seperti `title`, `description`, `length`, `rating`) wajib didaftarkan ke dalam klausul `GROUP BY` agar tidak menimbulkan kegagalan eksekusi (_SQL error_). Oleh karena itu, penggunaan subquery jauh lebih bersih dan efisien untuk kasus pemfilteran baris individual seperti ini. (Bandingkan dengan aturan `GROUP BY` di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] Bab 8.)
 
 ---
 
@@ -1071,4 +1074,4 @@ ORDER BY title ASC
 LIMIT 10;
 ```
 
-Latihan Sakila ini menutup Module 1's SQL track. Langkah berikutnya beralih ke fondasi statistika di [[Sesi 11 - Statistics Fundamental]], lalu kembali ke Python untuk manipulasi data tabular di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — di mana `pd.DataFrame` hasil `sql_df()` di Bab 4 session ini akan sering muncul lagi sebagai titik awal analisis.
+Latihan Sakila ini menutup Module 1's SQL track. Langkah berikutnya beralih ke fondasi statistika di [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]], lalu kembali ke Python untuk manipulasi data tabular di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — di mana `pd.DataFrame` hasil `sql_df()` di Bab 4 session ini akan sering muncul lagi sebagai titik awal analisis.

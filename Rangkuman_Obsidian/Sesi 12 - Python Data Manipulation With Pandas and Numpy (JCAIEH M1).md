@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-12, numpy, pandas, dataframe, series, data-wrangling, broadcasting, groupby, merge, missing-values, file-io]
+tags: [jcaieh/module1, sesi-12, numpy, pandas, dataframe, series, data-wrangling, broadcasting, groupby, merge, missing-values, file-io, jcaieh/module1/sesi12]
+bootcamp: JCAIEH
+module: 1
+session: 12
 aliases: ["Sesi 12", "Pandas and Numpy", "Data Manipulation"]
 ---
 
@@ -18,14 +21,14 @@ aliases: ["Sesi 12", "Pandas and Numpy", "Data Manipulation"]
 - _Data Analysis_ adalah proses penemuan (discovery) dan penyampaian (communication) pola-pola yang bermakna (meaningful patterns) di dalam data.
 - _Analytics_ didefinisikan sebagai scientific process untuk mentransformasikan data menjadi _insight_ guna mendukung pengambilan keputusan yang lebih baik.
 - Bidang _analytics_ mengandalkan penerapan secara simultan dari beberapa disiplin ilmu, yaitu:
-    - _Statistics_ (Statistika) — lihat [[Sesi 11 - Statistics Fundamental]].
+    - _Statistics_ (Statistika) — lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]].
     - _Computer programming_ (Pemrograman Komputer).
     - _Operations research_ (Riset Operasi).
 
 #### B. Tujuan dan Peran Visualisasi Data
 
 - Tujuan utama dari _Data Analysis_ adalah memperoleh _actionable insights_ yang dapat menghasilkan keputusan yang lebih cerdas (smarter decisions) serta hasil bisnis yang lebih baik (better business outcomes).
-- Dalam menyampaikan temuan atau wawasan (_insights_), proses _Data Analysis_ sangat mengutamakan penggunaan _data visualization_ agar informasi tersebut lebih mudah dipahami dan dikomunikasikan secara efektif — lihat [[Sesi 13 - Data Visualization]].
+- Dalam menyampaikan temuan atau wawasan (_insights_), proses _Data Analysis_ sangat mengutamakan penggunaan _data visualization_ agar informasi tersebut lebih mudah dipahami dan dikomunikasikan secara efektif — lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]].
 
 > [!tip] Audio Insight — Masalahnya bukan kurang data, tapi kelebihan data
 > Dosen menjelaskan bahwa di era modern ini, tantangan utama organisasi bukanlah ketiadaan data, melainkan melimpahnya data yang dimiliki tanpa adanya kemampuan untuk memanfaatkannya secara optimal (_too much data and unable to utilize it_). Hal inilah yang mendorong tingginya permintaan terhadap peran-peran seperti _data analyst_ dan _data scientist_ dalam beberapa tahun terakhir. Dosen menekankan bahwa jika hasil analisis data tidak dapat dipahami oleh pengambil keputusan, maka data tersebut tidak akan berguna. Oleh karena itu, _data visualization_ menjadi metode krusial untuk menjembatani wawasan teknis dengan keputusan strategis.
@@ -36,7 +39,7 @@ aliases: ["Sesi 12", "Pandas and Numpy", "Data Manipulation"]
 
 #### A. Karakteristik Python sebagai Alat Analisis
 
-- Python merupakan bahasa pemrograman yang bersifat _open source_ (bebas digunakan tanpa biaya lisensi), _interpreted_, _high level language_, dan mendukung pendekatan _object-oriented programming_ yang sangat baik (lihat [[Sesi 07 - Object Oriented Programming]]).
+- Python merupakan bahasa pemrograman yang bersifat _open source_ (bebas digunakan tanpa biaya lisensi), _interpreted_, _high level language_, dan mendukung pendekatan _object-oriented programming_ yang sangat baik (lihat [[Sesi 07 - Object Oriented Programming (JCAIEH M1)|Sesi 07 - Object Oriented Programming]]).
 - Kemudahan penggunaan (_ease of use_) dan sintaksis yang sederhana (_simple syntax_) menjadikan Python mudah diadaptasi oleh individu yang tidak memiliki latar belakang pemrograman (_coding background_).
 - Python menyediakan fungsionalitas dan pustaka lengkap untuk menangani perhitungan matematika (_mathematics_), statistik (_statistics_), dan fungsi ilmiah (_scientific functions_) yang dibutuhkan dalam aplikasi _data science_.
 
@@ -69,13 +72,13 @@ aliases: ["Sesi 12", "Pandas and Numpy", "Data Manipulation"]
 
 > [!tip] Audio Insight — NumPy vs `math`, dan hubungan NumPy-Pandas
 > - **Perbandingan NumPy dengan Library Math Standar bawaan Python**: Dosen menjelaskan bahwa meskipun Python memiliki library bawaan bernama `math`, library tersebut tidak dirancang untuk menangani struktur data _array_ atau matriks berdimensi tinggi. NumPy hadir khusus untuk memproses operasi matematika pada array berdimensi besar (_higher dimension arrays_) dengan performa yang sangat cepat.
-> - **Struktur Array dalam NumPy**: Dosen memberikan analogi bahwa array satu dimensi (1D array) mirip dengan struktur List horizontal di Python, sedangkan array dua dimensi (2D array) analog dengan struktur _list of list_. NumPy bahkan mampu mendukung komputasi hingga array 10 dimensi. Ini adalah "versi upgrade" dari struktur List/Dict yang sudah dipelajari di [[Sesi 04 - Data Types Collection Notes]].
+> - **Struktur Array dalam NumPy**: Dosen memberikan analogi bahwa array satu dimensi (1D array) mirip dengan struktur List horizontal di Python, sedangkan array dua dimensi (2D array) analog dengan struktur _list of list_. NumPy bahkan mampu mendukung komputasi hingga array 10 dimensi. Ini adalah "versi upgrade" dari struktur List/Dict yang sudah dipelajari di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]].
 > - **Relevansi NumPy dalam AI dan Machine Learning**: Di dalam pengembangan AI atau _machine learning_, seluruh nilai data disimpan di dalam struktur array. Nilai-nilai tersebut tidak disimpan menggunakan tipe data Python List standar karena proses perhitungannya yang lambat. Sebagai solusinya, data tersebut dibungkus dalam tipe data NumPy Array guna mempercepat proses pelatihan model (_training process_).
 > - **Hubungan Integrasi NumPy dan Pandas**: Dosen menjelaskan bahwa saat melakukan instalasi Pandas (misalnya melalui instruksi instalasi pustaka), sistem secara otomatis juga menginstal NumPy. Hal ini dikarenakan _under the hood_ (di bawah kap mesinnya), Pandas dibangun di atas NumPy dan menggunakan library NumPy untuk merepresentasikan serta menyimpan objek _Series_ dan _DataFrame_. Integrasi tingkat rendah ini yang membuat pemrosesan data di Pandas menjadi sangat cepat.
 > - **Perbedaan Series dan DataFrame**: Secara sederhana, Dosen menjelaskan bahwa _DataFrame_ berbentuk tabel (dua dimensi), sedangkan _Series_ hanya terdiri dari satu kolom saja (satu dimensi).
 
 > [!tip] Upgrade path dari List/Dict Python murni
-> Kalau di [[Sesi 04 - Data Types Collection Notes]] kamu belajar `list` dan `dict` sebagai wadah data serbaguna, anggap NumPy Array dan Pandas Series/DataFrame sebagai "versi profesional"-nya khusus untuk data numerik/tabular: jauh lebih cepat, mendukung operasi matematis langsung per elemen (`+`, `-`, `*`, `/` tanpa loop manual), dan punya method analisis siap pakai (`.mean()`, `.sort_values()`, dll).
+> Kalau di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] kamu belajar `list` dan `dict` sebagai wadah data serbaguna, anggap NumPy Array dan Pandas Series/DataFrame sebagai "versi profesional"-nya khusus untuk data numerik/tabular: jauh lebih cepat, mendukung operasi matematis langsung per elemen (`+`, `-`, `*`, `/` tanpa loop manual), dan punya method analisis siap pakai (`.mean()`, `.sort_values()`, dll).
 
 #### C. Tabel Istilah Teknis dan Karakteristik
 
@@ -194,7 +197,7 @@ print(f"NumPy Array : {waktu_array:.5f} detik")   # jauh lebih cepat
 #### C. Metode Pembuatan Acak (np.random Module)
 
 - `np.random.rand()`: Membuat array berisi angka desimal acak (_float_) dengan distribusi seragam (_uniform distribution_) di dalam interval [0, 1).
-- `np.random.randn()`: Membuat array berisi angka acak berdasarkan distribusi normal standar (_normally distributed_ dengan mean = 0 dan standar deviasi = 1). Lihat [[Sesi 11 - Statistics Fundamental]] Bab 5 untuk konsep distribusi normalnya.
+- `np.random.randn()`: Membuat array berisi angka acak berdasarkan distribusi normal standar (_normally distributed_ dengan mean = 0 dan standar deviasi = 1). Lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 5 untuk konsep distribusi normalnya.
 - `np.random.randint()`: Membuat array berisi bilangan bulat acak (_integer_) dengan menentukan batas minimum, batas maksimum (eksklusif), dan jumlah data yang diinginkan.
 
 > [!warning] Audio Insight — `np.arange()` vs `np.linspace()`, matriks identitas, dan kenapa pakai `randint`
@@ -859,7 +862,7 @@ print(df_multi.xs('Cabang1', level='Cabang'))
 - Atribut `.dtypes`: Mengetahui tipe data masing-masing kolom.
 - Method `.head()` dan `.tail()`: Menampilkan baris teratas dan terbawah tabel (secara default menampilkan 5 baris).
 - Method `.info()`: Menghasilkan informasi lengkap struktur DataFrame meliputi tipe data, jumlah nilai non-null, dan penggunaan memori.
-- Method `.describe()`: Menghitung statistik deskriptif otomatis (mean, std, min, max, kuartil) untuk seluruh kolom bertipe numerik — lihat [[Sesi 11 - Statistics Fundamental]] Bab 4 untuk arti tiap statistiknya.
+- Method `.describe()`: Menghitung statistik deskriptif otomatis (mean, std, min, max, kuartil) untuk seluruh kolom bertipe numerik — lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 4 untuk arti tiap statistiknya.
 - Method statistik spesifik: `.mean()`, `.median()`, `.std()`, `.min()`, dan `.max()`.
 - Method keunikan: `.unique()` untuk melihat nilai unik, `.nunique()` untuk menghitung jumlah nilai unik, dan `.value_counts()` untuk menghitung frekuensi kemunculan nilai pada suatu kolom.
 
@@ -925,7 +928,7 @@ print(df['col2'].nunique())   # 3 -> jumlah nilai unik
 > Dosen mengilustrasikan operasi `.groupby('Company')` yang dipadukan dengan fungsi `.mean()`. Pandas secara cerdas hanya akan menghitung nilai rata-rata untuk kolom yang bertipe numerik (seperti kolom Sales), dan mengabaikan kolom bertipe string/kategori.
 
 > [!tip] `.groupby()` = "GROUP BY" versi Pandas
-> Konsep `.groupby()` diikuti fungsi agregasi ini sama persis logikanya dengan klausa `GROUP BY` di SQL yang dipelajari di [[Sesi 09 - Intro to Database and SQL]]. Kalau di SQL kamu menulis `SELECT Company, AVG(Sales) FROM tabel GROUP BY Company`, di Pandas kamu menulis `df.groupby('Company')['Sales'].mean()` — hasil akhirnya konseptual sama.
+> Konsep `.groupby()` diikuti fungsi agregasi ini sama persis logikanya dengan klausa `GROUP BY` di SQL yang dipelajari di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]]. Kalau di SQL kamu menulis `SELECT Company, AVG(Sales) FROM tabel GROUP BY Company`, di Pandas kamu menulis `df.groupby('Company')['Sales'].mean()` — hasil akhirnya konseptual sama.
 
 ```python
 # Menghitung jumlah data kosong per kolom
@@ -972,7 +975,7 @@ print(df_filled)
 - **pd.concat()**: Menyatukan atau menumpuk beberapa DataFrame. Penggabungan dapat dilakukan secara vertikal ke bawah (default: `axis=0`) atau secara horizontal berdampingan (`axis=1`).
 
 > [!tip] `pd.merge()` = SQL `JOIN`
-> `pd.merge(..., how='inner'/'left'/'right'/'outer')` adalah padanan langsung dari `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, dan `FULL OUTER JOIN` yang dipelajari di [[Sesi 10 - SQL Working With Multiple Tables]]. Kalau kamu sudah paham cara kerja JOIN di SQL, `pd.merge()` akan terasa sangat familier.
+> `pd.merge(..., how='inner'/'left'/'right'/'outer')` adalah padanan langsung dari `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, dan `FULL OUTER JOIN` yang dipelajari di [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]]. Kalau kamu sudah paham cara kerja JOIN di SQL, `pd.merge()` akan terasa sangat familier.
 
 #### B. Operasi Aritmatika Antar Kolom, .apply(), dan Pivot Table
 
@@ -1151,4 +1154,4 @@ df.groupby(['Pclass', 'Sex'])['Survived'].mean().sort_values(ascending=False)
 
 ---
 
-**Lihat juga:** [[Sesi 04 - Data Types Collection Notes]] (List/Dict sebagai fondasi sebelum NumPy/Pandas) · [[Sesi 09 - Intro to Database and SQL]] dan [[Sesi 10 - SQL Working With Multiple Tables]] (padanan SQL untuk `.groupby()` dan `.merge()`) · [[Sesi 11 - Statistics Fundamental]] (arti statistik di balik `.describe()`, `.mean()`, `.std()`) · [[Sesi 13 - Data Visualization]] (memvisualisasikan hasil DataFrame).
+**Lihat juga:** [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] (List/Dict sebagai fondasi sebelum NumPy/Pandas) · [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] dan [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]] (padanan SQL untuk `.groupby()` dan `.merge()`) · [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] (arti statistik di balik `.describe()`, `.mean()`, `.std()`) · [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] (memvisualisasikan hasil DataFrame).

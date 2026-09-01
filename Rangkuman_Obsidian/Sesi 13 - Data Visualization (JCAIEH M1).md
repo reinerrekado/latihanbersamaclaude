@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-13, data-visualization, matplotlib, seaborn, pandas-plotting, boxplot, histogram, scatterplot, heatmap, chart-selection]
+tags: [jcaieh/module1, sesi-13, data-visualization, matplotlib, seaborn, pandas-plotting, boxplot, histogram, scatterplot, heatmap, chart-selection, jcaieh/module1/sesi13]
+bootcamp: JCAIEH
+module: 1
+session: 13
 aliases: ["Sesi 13", "Data Visualization", "Visualisasi Data"]
 ---
 
@@ -90,7 +93,7 @@ plt.show()
 | **Visual Hierarchy** | Hierarki visual yang mengatur elemen grafik secara terstruktur sehingga penyampaian informasi mengalir dengan runut (_storytelling_). |
 
 > [!tip] Audio Insight — "How to Lie with Data/Statistics" dan alur storytelling
-> - **Clarity (Kejelasan)**: Dosen merujuk pada literatur berjudul _"How to Lie with Data"_ (atau _"How to Lie with Statistics"_ — buku yang sama dibahas di [[Sesi 11 - Statistics Fundamental]] Bab 7.1). Buku ini menguraikan bagaimana visualisasi data dapat dimanipulasi secara sengaja untuk menghasilkan grafik yang menyesatkan (_misleading_) bagi pembacanya.
+> - **Clarity (Kejelasan)**: Dosen merujuk pada literatur berjudul _"How to Lie with Data"_ (atau _"How to Lie with Statistics"_ — buku yang sama dibahas di [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 7.1). Buku ini menguraikan bagaimana visualisasi data dapat dimanipulasi secara sengaja untuk menghasilkan grafik yang menyesatkan (_misleading_) bagi pembacanya.
 > - **Accuracy (Akurasi)**: Visualisasi yang tidak akurat (misalnya karena manipulasi skala sumbu) akan mendistorsi perbandingan data yang sebenarnya. Nilai visual yang tampak pada grafik harus benar-benar selaras dengan nilai data (_value data_) asli.
 > - **Simplicity (Kesederhanaan)**: Analis harus mendahulukan visualisasi yang paling sederhana. Hindari penambahan dekorasi kompleks atau elemen visual berlebih yang tidak relevan karena akan membingungkan audiens.
 > - **Visual Hierarchy (Hierarki Visual)**: Pengaturan visual yang baik membantu analis bercerita (_storytelling_) secara terstruktur. Struktur visual sebaiknya dibuat mengalir, misalnya: menyajikan tren makro di bagian atas, faktor-faktor pengaruh di bagian tengah, hingga rincian mikro di bagian bawah. Cara ini mencegah alur pembacaan yang melompat-lompat (seperti dari bawah langsung ke atas).
@@ -193,7 +196,7 @@ Tipe visualisasi data dikelompokkan ke dalam empat kategori utama sesuai dengan 
 > - Aspek visual _Histogram_ dan _Box Plot_ dapat digabungkan ke dalam satu visualisasi kombo (_combo visualization_) untuk memberikan analisis statistik yang lebih lengkap.
 > - Pilihan lainnya adalah menggunakan _Violin Plot_ yang secara teknis menggabungkan visualisasi _Box Plot_ (untuk ringkasan nilai kuartil dan median) dengan _Kernel Density Plot_ (untuk visualisasi kepadatan frekuensi distribusi data).
 
-Keempat kategori ini (Comparison, Composition, Relationship, Distribution) berhubungan erat dengan konsep ukuran pemusatan dan penyebaran data di [[Sesi 11 - Statistics Fundamental]] — kategori **Distribution** khususnya adalah representasi visual langsung dari _measures of spread_ dan bentuk distribusi (skewness, normal, dsb) yang dibahas di sana.
+Keempat kategori ini (Comparison, Composition, Relationship, Distribution) berhubungan erat dengan konsep ukuran pemusatan dan penyebaran data di [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] — kategori **Distribution** khususnya adalah representasi visual langsung dari _measures of spread_ dan bentuk distribusi (skewness, normal, dsb) yang dibahas di sana.
 
 ---
 
@@ -212,7 +215,7 @@ Keempat kategori ini (Comparison, Composition, Relationship, Distribution) berhu
 
 > [!tip] Audio Insight — Matplotlib vs Seaborn vs Pandas plotting
 > - **Matplotlib**: Meskipun sangat bertenaga dan fleksibel untuk membuat kanvas visualisasi, Matplotlib membutuhkan penulisan baris kode yang relatif lebih panjang dan detail untuk mengonfigurasi komponen visualisasi dibanding Seaborn.
-> - **Seaborn**: Seaborn dikembangkan langsung di atas Matplotlib (analogi seperti Pandas yang dikembangkan di atas Numpy — lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]]). Antarmuka Seaborn jauh lebih atraktif dan informatif secara visual karena memiliki opsi tema bawaan. Penggunaannya sangat disukai oleh para analis karena sintaks kodenya jauh lebih singkat dan tidak membutuhkan banyak variabel tambahan yang rumit.
+> - **Seaborn**: Seaborn dikembangkan langsung di atas Matplotlib (analogi seperti Pandas yang dikembangkan di atas Numpy — lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]]). Antarmuka Seaborn jauh lebih atraktif dan informatif secara visual karena memiliki opsi tema bawaan. Penggunaannya sangat disukai oleh para analis karena sintaks kodenya jauh lebih singkat dan tidak membutuhkan banyak variabel tambahan yang rumit.
 > - **Pandas**: Pustaka ini utamanya digunakan untuk analisis dan manipulasi data (_data analysis and manipulation_), namun dilengkapi dengan metode plotting cepat (seperti `.hist()` atau `.boxplot()`) untuk keperluan eksplorasi data instan tanpa harus memanggil library visualisasi eksternal terlebih dahulu.
 
 ---
@@ -289,7 +292,7 @@ plt.show()
 
 > [!tip] Audio Insight — `kde=True` dan cara memilih jumlah bins
 > Dosen menekankan bahwa parameter **kde** (Kernel Density Estimation) bernilai `True` pada library Seaborn sangat berguna untuk menggambarkan garis perkiraan mulus sebaran data (_density curve_) di atas batang histogram.
-> Mengatur ukuran **bins** yang pas sangat penting. Jika bins terlalu sedikit, pola sebaran tidak terlihat; jika bins terlalu banyak, grafik akan tampak berantakan karena terlalu detail. Bentuk-bentuk sebaran yang bisa dibaca dari histogram (symmetric, right-skewed, left-skewed, bimodal, uniform) dibahas tuntas dengan contoh industri di [[Sesi 11 - Statistics Fundamental]] Lampiran.
+> Mengatur ukuran **bins** yang pas sangat penting. Jika bins terlalu sedikit, pola sebaran tidak terlihat; jika bins terlalu banyak, grafik akan tampak berantakan karena terlalu detail. Bentuk-bentuk sebaran yang bisa dibaca dari histogram (symmetric, right-skewed, left-skewed, bimodal, uniform) dibahas tuntas dengan contoh industri di [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Lampiran.
 
 ---
 
@@ -304,7 +307,7 @@ plt.show()
     3. **Median (Q2 / Kuartil Tengah)**: Garis horizontal di dalam kotak yang menandai nilai tengah atau persentil ke-50.
     4. **Third Quartile (Q3 / Kuartil Atas)**: Batas atas kotak yang menandakan persentil ke-75 dari data.
     5. **Maximum**: Batas nilai terbesar bukan pencilan (ditandai oleh ujung garis atas/_whisker_).
-- Jarak antara Q1 dan Q3 disebut **Interquartile Range (IQR)**. Batas garis _whisker_ bawah dihitung dengan rumus `Q1 - 1.5 * IQR` dan batas atas dihitung dengan `Q3 + 1.5 * IQR`. Lihat [[Sesi 11 - Statistics Fundamental]] Bab 4.4 untuk penjelasan lengkap kenapa `1.5 * IQR` adalah aturan TERPISAH dari IQR itu sendiri.
+- Jarak antara Q1 dan Q3 disebut **Interquartile Range (IQR)**. Batas garis _whisker_ bawah dihitung dengan rumus `Q1 - 1.5 * IQR` dan batas atas dihitung dengan `Q3 + 1.5 * IQR`. Lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 4.4 untuk penjelasan lengkap kenapa `1.5 * IQR` adalah aturan TERPISAH dari IQR itu sendiri.
 - Nilai data yang berada di luar batas garis _whisker_ didefinisikan secara matematis sebagai **outliers** (pencilan) dan digambarkan dalam bentuk titik atau berlian terpisah di luar grafik kotak.
 
 #### B. Membaca Skewness (Kemiringan Distribusi Data)
@@ -319,7 +322,7 @@ Analisis kemiringan distribusi (_skewness_) sebaran data dapat dibaca langsung d
 
 #### Fokus Klarifikasi: kenapa "median dekat Q1" = right-skewed (bukan sebaliknya)
 
-Ini poin yang paling sering terasa berlawanan dengan intuisi. Berikut jalur penalarannya langkah demi langkah, memakai analogi yang sama dengan [[Sesi 11 - Statistics Fundamental]] Bab 4.2 (gaji karyawan vs direktur):
+Ini poin yang paling sering terasa berlawanan dengan intuisi. Berikut jalur penalarannya langkah demi langkah, memakai analogi yang sama dengan [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 4.2 (gaji karyawan vs direktur):
 
 **Langkah 1 — Ingat dulu siapa yang "menumpuk" dan siapa yang jadi "ekor".**
 Bayangkan 9 karyawan reguler bergaji 7-9 juta, dan 1 direktur bergaji 100 juta.
@@ -512,7 +515,7 @@ plt.show()
 ```
 
 > [!tip] Audio Insight — Estimator default Seaborn adalah mean
-> Secara bawaan (_default_), library Seaborn menggunakan estimator nilai rata-rata (_mean_). Penggunaan parameter **estimator** yang diatur ke nilai `np.median` atau fungsi statistik lain sangat membantu jika data mengandung bias ekstrem. Ini persis konsep fungsi agregasi pada `.groupby()` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] dan `GROUP BY` di [[Sesi 09 - Intro to Database and SQL]] — Bar Plot pada dasarnya adalah "visualisasi dari hasil agregasi per kategori".
+> Secara bawaan (_default_), library Seaborn menggunakan estimator nilai rata-rata (_mean_). Penggunaan parameter **estimator** yang diatur ke nilai `np.median` atau fungsi statistik lain sangat membantu jika data mengandung bias ekstrem. Ini persis konsep fungsi agregasi pada `.groupby()` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] dan `GROUP BY` di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — Bar Plot pada dasarnya adalah "visualisasi dari hasil agregasi per kategori".
 
 ---
 
@@ -766,7 +769,7 @@ plt.show()
 
 #### A. Deskripsi Tugas Analisis Data dan Grafik
 
-Latihan praktis menggunakan dataset Titanic dirancang untuk menguji kemampuan pengolahan, manipulasi, serta visualisasi data secara langsung menggunakan Python. Latihan ini memanfaatkan library Pandas untuk manipulasi data (lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]]), serta Matplotlib dan Seaborn untuk pembuatan grafik. Terdapat lima tugas visualisasi utama yang harus diselesaikan oleh peserta:
+Latihan praktis menggunakan dataset Titanic dirancang untuk menguji kemampuan pengolahan, manipulasi, serta visualisasi data secara langsung menggunakan Python. Latihan ini memanfaatkan library Pandas untuk manipulasi data (lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]]), serta Matplotlib dan Seaborn untuk pembuatan grafik. Terdapat lima tugas visualisasi utama yang harus diselesaikan oleh peserta:
 
 - **Tugas 1 (Bar Plot - Survivor Comparison)**: Membandingkan jumlah penumpang yang selamat (survivor) dengan penumpang yang tidak selamat menggunakan Bar Plot. Analisis ini ditujukan untuk melihat kelompok mana yang memiliki frekuensi penumpang lebih banyak.
 - **Tugas 2 (Histogram - Age Distribution)**: Memvisualisasikan sebaran atau distribusi usia (age) dari seluruh penumpang Titanic menggunakan Histogram untuk mengamati karakteristik demografis penumpang.
@@ -913,4 +916,4 @@ Bagian ini berisi catatan kelas versi ringkas/mentah yang melengkapi Bab 1-5 di 
 
 ---
 
-**Lihat juga:** [[Sesi 11 - Statistics Fundamental]] (dasar statistik di balik Box Plot, IQR, skewness, dan empirical rule) · [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (persiapan/manipulasi DataFrame sebelum divisualisasikan) · [[Sesi 09 - Intro to Database and SQL]] (konsep agregasi `GROUP BY` yang mendasari Bar Chart hasil agregasi).
+**Lihat juga:** [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] (dasar statistik di balik Box Plot, IQR, skewness, dan empirical rule) · [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (persiapan/manipulasi DataFrame sebelum divisualisasikan) · [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (konsep agregasi `GROUP BY` yang mendasari Bar Chart hasil agregasi).

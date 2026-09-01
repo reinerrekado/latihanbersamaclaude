@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-01, python, ai-fundamentals, algorithm, pseudocode, git, flowchart]
+tags: [jcaieh/module1, sesi-01, python, ai-fundamentals, algorithm, pseudocode, git, flowchart, jcaieh/module1/sesi01]
+bootcamp: JCAIEH
+module: 1
+session: 1
 aliases: ["Sesi 1", "Introduction to DS Python Statistics SQL Git and GitHub"]
 ---
 
@@ -255,7 +258,7 @@ hanoi(3, "A", "C", "B")
 ```
 
 > [!info] Lihat juga
-> Konsep fungsi (`def`, parameter, `return`) dibahas lebih dalam di [[Sesi 05 - Python Function and File Handling]]. Rekursi juga dibandingkan langsung dengan _looping_ di [[Sesi 03 - Conditional and Loop Statement]] (Bab 5, perbandingan alokasi memori _stack_).
+> Konsep fungsi (`def`, parameter, `return`) dibahas lebih dalam di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]]. Rekursi juga dibandingkan langsung dengan _looping_ di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] (Bab 5, perbandingan alokasi memori _stack_).
 
 ### 3.5 Insight Filosofi Algoritma
 
@@ -308,7 +311,7 @@ Python adalah bahasa pemrograman yang sangat fleksibel dan populer untuk berbaga
 > [!tip] Wawasan Penting — Venv Tidak Diperlukan Jika Sudah Ada Conda
 > Jika pengguna telah menginstal Anaconda atau Conda, maka instalasi venv secara terpisah tidak lagi diperlukan. Hal ini dikarenakan Conda sudah memaketkan instalasi Python dan pengelola lingkungannya sendiri secara terintegrasi.
 
-**Source Code Management (Git)** — alat wajib untuk manajemen riwayat kode: **Versioning** (melacak setiap perubahan kode dari waktu ke waktu) dan **Kolaborasi** (memungkinkan tim bekerja pada bagian kode berbeda secara paralel tanpa merusak pekerjaan satu sama lain). Lihat pembahasan lengkap di [[Sesi 02 - Intro to Git and GitHub]].
+**Source Code Management (Git)** — alat wajib untuk manajemen riwayat kode: **Versioning** (melacak setiap perubahan kode dari waktu ke waktu) dan **Kolaborasi** (memungkinkan tim bekerja pada bagian kode berbeda secara paralel tanpa merusak pekerjaan satu sama lain). Lihat pembahasan lengkap di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]].
 
 > [!tip] Tips Verifikasi — Cek Instalasi Git
 > Untuk memastikan Git sudah terpasang, ketik perintah `git` di dalam terminal VSCode. Jika muncul daftar bantuan perintah, berarti Git telah dikenali oleh sistem.
@@ -417,7 +420,7 @@ print(type(message))  # Output: <class 'str'>
 ```
 
 > [!info] Lihat juga
-> Keempat tipe data koleksi ini dibahas jauh lebih mendalam (metode, mutability, indexing/slicing) di [[Sesi 04 - Data Types Collection Notes]] — termasuk mengapa List bersifat _mutable_ sedangkan Tuple _immutable_, dan perbandingan `id()` memori antar variabel.
+> Keempat tipe data koleksi ini dibahas jauh lebih mendalam (metode, mutability, indexing/slicing) di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] — termasuk mengapa List bersifat _mutable_ sedangkan Tuple _immutable_, dan perbandingan `id()` memori antar variabel.
 
 ### 5.5 Metode Manipulasi String (String Built-in Methods)
 
@@ -579,7 +582,7 @@ print(not (x > 10))       # Output: True
 ```
 
 > [!info] Lihat juga
-> Operator perbandingan dan logika ini dibahas jauh lebih mendalam — termasuk tabel _truth table_ lengkap dan konsep _short-circuit evaluation_ — di [[Sesi 03 - Conditional and Loop Statement]] Bab 2.
+> Operator perbandingan dan logika ini dibahas jauh lebih mendalam — termasuk tabel _truth table_ lengkap dan konsep _short-circuit evaluation_ — di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] Bab 2.
 
 ---
 
@@ -635,7 +638,7 @@ print(not (x > 10))       # Output: True
 
 ### 7.1 Kasus Membuat Keterangan Data Collection
 
-> Lihat catatan tipe-tipe data koleksi di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub#5.4 Tipe Data Koleksi (Collection Data Types)|Bab 5.4]] di atas, dan pembahasan lengkapnya di [[Sesi 04 - Data Types Collection Notes]].
+> Lihat catatan tipe-tipe data koleksi di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)#5.4 Tipe Data Koleksi (Collection Data Types)|Bab 5.4]] di atas, dan pembahasan lengkapnya di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]].
 
 **7.1.1 Memberi keterangan kata** — jenis data string (str). Variabel: `binatang`. Data: `"anjing hitam besar"`, `"kucing berekor pendek"`.
 
@@ -733,7 +736,7 @@ print(message4)
 ```
 
 > [!info] Lihat juga
-> Struktur `if-else` yang dipakai di atas dibahas secara sistematis (termasuk `if-elif-else`, _nested if_, dan aturan indentasi) di [[Sesi 03 - Conditional and Loop Statement]] Bab 3–4.
+> Struktur `if-else` yang dipakai di atas dibahas secara sistematis (termasuk `if-elif-else`, _nested if_, dan aturan indentasi) di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] Bab 3–4.
 
 ---
 
@@ -850,4 +853,4 @@ print("Baris ini yang dieksekusi")  # komentar juga bisa di akhir baris
 
 ## Ringkasan Sesi
 
-Sesi 1 membangun fondasi mengenai: (1) apa itu AI dan mengapa Applied AI Engineering relevan, (2) cara berpikir algoritmik lewat flowchart dan studi kasus Tower of Hanoi (rekursi), (3) instalasi lingkungan kerja Python + Git, (4) sintaks dasar Python (variabel, tipe data, string, f-string, operator), dan (5) pseudocode sebagai jembatan berpikir sebelum menulis kode. Materi ini menjadi fondasi langsung bagi [[Sesi 02 - Intro to Git and GitHub]] (Git mendalam), [[Sesi 03 - Conditional and Loop Statement]] (if-else & loop), dan [[Sesi 04 - Data Types Collection Notes]] (list/tuple/set/dict mendalam).
+Sesi 1 membangun fondasi mengenai: (1) apa itu AI dan mengapa Applied AI Engineering relevan, (2) cara berpikir algoritmik lewat flowchart dan studi kasus Tower of Hanoi (rekursi), (3) instalasi lingkungan kerja Python + Git, (4) sintaks dasar Python (variabel, tipe data, string, f-string, operator), dan (5) pseudocode sebagai jembatan berpikir sebelum menulis kode. Materi ini menjadi fondasi langsung bagi [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] (Git mendalam), [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] (if-else & loop), dan [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] (list/tuple/set/dict mendalam).

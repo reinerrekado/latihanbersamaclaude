@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-04, python, list, tuple, set, dictionary, mutable, immutable, hashable, indexing, slicing]
+tags: [jcaieh/module1, sesi-04, python, list, tuple, set, dictionary, mutable, immutable, hashable, indexing, slicing, jcaieh/module1/sesi04]
+bootcamp: JCAIEH
+module: 1
+session: 4
 aliases: ["Sesi 4", "Data Types Collection Notes"]
 ---
 
@@ -95,7 +98,7 @@ else:
 ```
 
 > [!info] Lihat juga
-> Soal bilangan prima ini pertama kali dibahas sebagai Soal 4 di [[Sesi 03 - Conditional and Loop Statement]] Bab 8.2 — di sini logikanya di-review ulang dengan penekanan pada kasus edge case angka 2.
+> Soal bilangan prima ini pertama kali dibahas sebagai Soal 4 di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] Bab 8.2 — di sini logikanya di-review ulang dengan penekanan pada kasus edge case angka 2.
 
 ---
 
@@ -134,7 +137,7 @@ angka_tuple = (1, 2, 3)
 ```
 
 > [!info] Lihat juga
-> Konsep _mutable_/_immutable_ ini sudah disinggung sekilas saat pengenalan List/Tuple/Set/Dict di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 5.4. Di sesi ini kita membahasnya jauh lebih dalam, termasuk perbedaan `id()` memori antar variabel (lihat Bab 3.2.3 di bawah).
+> Konsep _mutable_/_immutable_ ini sudah disinggung sekilas saat pengenalan List/Tuple/Set/Dict di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 5.4. Di sesi ini kita membahasnya jauh lebih dalam, termasuk perbedaan `id()` memori antar variabel (lihat Bab 3.2.3 di bawah).
 
 > [!tip] Audio Insight — Alur Kerja Git dalam Pembelajaran Praktis
 > Di dalam pelaksanaan kelas AI Engineering Purwadhika, dosen mengintegrasikan sistem pengontrol versi (_version control system_) menggunakan platform GitHub untuk mengelola materi latihan praktis secara efisien. Alur kerja Git yang wajib diikuti oleh siswa:
@@ -145,7 +148,7 @@ angka_tuple = (1, 2, 3)
 > git pull
 > ```
 >
-> Penerapan metode ini bertujuan melatih kemampuan praktis siswa dalam berinteraksi dengan Git agar siap menghadapi standar industri pekerjaan sebagai AI Engineer. (Lihat detail perintah Git lengkap di [[Sesi 02 - Intro to Git and GitHub]].)
+> Penerapan metode ini bertujuan melatih kemampuan praktis siswa dalam berinteraksi dengan Git agar siap menghadapi standar industri pekerjaan sebagai AI Engineer. (Lihat detail perintah Git lengkap di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]].)
 
 ---
 
@@ -349,7 +352,7 @@ print(fruit_with_a)
 > Metode ini terbukti mempermudah siswa kelas AI Engineering dalam menyelesaikan tugas penyaringan karakter teks dan operasi matematika secara cepat tanpa mengalami kegagalan logika pemrograman.
 
 > [!info] Lihat juga
-> List comprehension adalah nenek moyang langsung dari operasi vektor di Pandas/NumPy — lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] untuk cara serupa memfilter dan mentransformasi kolom data tanpa loop eksplisit.
+> List comprehension adalah nenek moyang langsung dari operasi vektor di Pandas/NumPy — lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] untuk cara serupa memfilter dan mentransformasi kolom data tanpa loop eksplisit.
 
 ---
 
@@ -563,7 +566,7 @@ print(slicing_kosong)  # Output: []
 > Dalam sesi diskusi praktis, dijelaskan alasan mengapa Python membiarkan operasi slicing yang di luar rentang (_out-of-range_) tetap berjalan tanpa memicu crash. Slicing dirancang untuk mengambil "porsi segmen data yang tersedia". Apabila segmen yang diminta berada di luar batas elemen aktual, Python mengasumsikan bahwa tidak ada elemen yang dapat diiris pada rentang tersebut, sehingga mengembalikan kontainer kosong (`[]` atau `()`) dianggap sebagai output logis yang aman untuk kelancaran jalannya aplikasi (_fail-safe mechanism_).
 
 > [!info] Lihat juga
-> Aturan slicing `[start:stop:step]` ini persis sama dengan slicing string `word[::-1]` yang dibahas di [[Sesi 03 - Conditional and Loop Statement]] Bab 1.5 (studi kasus palindrome).
+> Aturan slicing `[start:stop:step]` ini persis sama dengan slicing string `word[::-1]` yang dibahas di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] Bab 1.5 (studi kasus palindrome).
 
 ---
 
@@ -712,7 +715,7 @@ print("Siswa kelas Python saja:", pure_python)  # Output: {'andi', 'budi'}
 ```
 
 > [!info] Lihat juga
-> Set (`.union`, `.intersection`) berkaitan langsung dengan konsep `JOIN` di SQL — lihat [[Sesi 09 - Intro to Database and SQL]] dan [[Sesi 10 - SQL Working With Multiple Tables]], di mana `INNER JOIN` secara konseptual mirip dengan _intersection_, dan `UNION` di SQL persis meniru nama operasi set ini.
+> Set (`.union`, `.intersection`) berkaitan langsung dengan konsep `JOIN` di SQL — lihat [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] dan [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]], di mana `INNER JOIN` secara konseptual mirip dengan _intersection_, dan `UNION` di SQL persis meniru nama operasi set ini.
 
 ---
 
@@ -911,7 +914,7 @@ dictionary["key"]
 Notasi kurung siku dengan _string key_ di dalamnya ini adalah cara paling dasar dan paling sering dipakai untuk mengambil nilai dari dictionary — lihat perbandingannya dengan `.get()` di Bab 7.3 di atas.
 
 > [!info] Lihat juga
-> Struktur _key-value_ pada Dictionary Python adalah cikal bakal konsep **row/record** di SQL dan **JSON** pada umumnya — lihat [[Sesi 09 - Intro to Database and SQL]]. Dictionary juga menjadi format input paling umum untuk membuat `Series`/`DataFrame` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (misalnya `pd.DataFrame([student_data])`).
+> Struktur _key-value_ pada Dictionary Python adalah cikal bakal konsep **row/record** di SQL dan **JSON** pada umumnya — lihat [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]]. Dictionary juga menjadi format input paling umum untuk membuat `Series`/`DataFrame` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (misalnya `pd.DataFrame([student_data])`).
 
 ---
 
@@ -949,7 +952,7 @@ HackerRank adalah platform evaluasi kode daring (_online code evaluation platfor
 - **Manipulasi Struktur & Koleksi Data:** _List Comprehensions_, _Find the Runner-Up Score!_, _Nested Lists_, _Finding the percentage_, _Lists_, _Tuples_, _sWAP cASE_.
 
 > [!info] Lihat juga
-> Daftar latihan HackerRank di atas adalah bahan utama sesi berikutnya — lihat [[Sesi 06 - Hackerrank Exercise]] untuk pembahasan solusi latihannya.
+> Daftar latihan HackerRank di atas adalah bahan utama sesi berikutnya — lihat [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] untuk pembahasan solusi latihannya.
 
 ### 8.3 Signifikansi Problem Solving dalam Karier AI Engineer
 
@@ -976,4 +979,4 @@ HackerRank adalah platform evaluasi kode daring (_online code evaluation platfor
 
 ## Ringkasan Sesi
 
-Sesi 4 menuntaskan pembahasan tipe data koleksi Python: List (_mutable_, `.append`/`.insert`/`.extend`/`.pop`/`.remove`/`.copy`, list comprehension), Tuple (_immutable_, `.index`/`.count`, aturan koma _single item tuple_), Indexing & Slicing (`[start:stop:step]`, indeks negatif, perilaku _out-of-range_), Set (elemen unik, operasi himpunan union/intersection/difference/symmetric difference), dan Dictionary (_key-value_, `.get`/`.update`/`.setdefault`/`.items`). Sesi ini juga membuka pintu ke latihan mandiri di [[Sesi 06 - Hackerrank Exercise]] dan menjadi fondasi konseptual langsung untuk struktur data relasional di [[Sesi 09 - Intro to Database and SQL]] serta manipulasi data tabular di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
+Sesi 4 menuntaskan pembahasan tipe data koleksi Python: List (_mutable_, `.append`/`.insert`/`.extend`/`.pop`/`.remove`/`.copy`, list comprehension), Tuple (_immutable_, `.index`/`.count`, aturan koma _single item tuple_), Indexing & Slicing (`[start:stop:step]`, indeks negatif, perilaku _out-of-range_), Set (elemen unik, operasi himpunan union/intersection/difference/symmetric difference), dan Dictionary (_key-value_, `.get`/`.update`/`.setdefault`/`.items`). Sesi ini juga membuka pintu ke latihan mandiri di [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] dan menjadi fondasi konseptual langsung untuk struktur data relasional di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] serta manipulasi data tabular di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]].

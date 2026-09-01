@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-05, python, function, scope, file-handling, recursion]
+tags: [jcaieh/module1, sesi-05, python, function, scope, file-handling, recursion, jcaieh/module1/sesi05]
+bootcamp: JCAIEH
+module: 1
+session: 5
 aliases: ["Sesi 5"]
 ---
 
@@ -231,7 +234,7 @@ print(hasil_lambda)                     # Output: [-2, -4, -6, -8]
 ```
 
 > [!tip] Lihat juga
-> `map()` dengan `lambda` juga dipakai secara intensif untuk parsing input di [[Sesi 06 - Hackerrank Exercise]] (misalnya `map(int, input().split())`), dan `lambda` sebagai kunci `sorted()` untuk multi-kriteria sorting juga dibahas lebih lanjut di sesi tersebut.
+> `map()` dengan `lambda` juga dipakai secara intensif untuk parsing input di [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] (misalnya `map(int, input().split())`), dan `lambda` sebagai kunci `sorted()` untuk multi-kriteria sorting juga dibahas lebih lanjut di sesi tersebut.
 
 ---
 
@@ -725,7 +728,7 @@ print(is_prime(9))         # Output BENAR: False
 - **Menutup (Close)**: Memutuskan koneksi berkas eksternal menggunakan metode `.close()` untuk membebaskan sumber daya memori dan mengunci kembali berkas agar tidak terjadi korupsi data (*data corruption*).
 
 > [!tip] Lihat juga
-> Pola "buka koneksi → proses → tutup koneksi" ini akan muncul lagi dalam bentuk yang sangat mirip saat menyambungkan Python ke database di [[Sesi 09 - Intro to Database and SQL]] (membuka *connection*, menjalankan query, lalu menutup koneksi).
+> Pola "buka koneksi → proses → tutup koneksi" ini akan muncul lagi dalam bentuk yang sangat mirip saat menyambungkan Python ke database di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (membuka *connection*, menjalankan query, lalu menutup koneksi).
 
 ---
 
@@ -850,7 +853,7 @@ Mahasiswa diminta membuat fungsi `get_total(list_of_price, discount)` yang bertu
 > [!warning] Audio Insight — Pola Integrasi Aliran Data (Data Flow)
 > Proses pemecahan masalah dilakukan dengan membagi tugas ke dalam fungsi khusus. Fungsi utama (seperti `read_prices_and_get_total()`) bertugas melakukan pembacaan file `invoice.txt` menggunakan `with open` dalam mode `"r"`, mengekstrak nilai angka total belanja dari string teks, menyimpannya ke dalam list, lalu mengirimkan list tersebut ke dalam fungsi kalkulator `get_total(list_of_price, discount)` untuk mendapatkan harga bersih setelah diskon.
 
-**Contoh implementasi lengkap (ditambahkan, konsisten dengan pola parsing "Total" berjarak 3 baris yang dipakai di [[Sesi 06 - Hackerrank Exercise]]):**
+**Contoh implementasi lengkap (ditambahkan, konsisten dengan pola parsing "Total" berjarak 3 baris yang dipakai di [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]]):**
 
 ```python
 def get_total(list_of_price, discount):
@@ -871,4 +874,4 @@ print(read_prices_and_get_total("invoice.txt", discount=10))
 ```
 
 > [!tip] Lihat juga
-> Pola parsing baris "Total" dengan langkah 3 baris (`range(2, len(lines), 3)`) di atas persis sama dengan pola yang dipakai untuk soal *invoice* di [[Sesi 06 - Hackerrank Exercise]] Bab 1 — keduanya adalah dua versi latihan dari kasus yang sama.
+> Pola parsing baris "Total" dengan langkah 3 baris (`range(2, len(lines), 3)`) di atas persis sama dengan pola yang dipakai untuk soal *invoice* di [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] Bab 1 — keduanya adalah dua versi latihan dari kasus yang sama.

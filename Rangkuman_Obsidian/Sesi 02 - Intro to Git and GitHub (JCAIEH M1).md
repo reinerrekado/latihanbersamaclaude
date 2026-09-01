@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-02, git, github, version-control, workflow]
+tags: [jcaieh/module1, sesi-02, git, github, version-control, workflow, jcaieh/module1/sesi02]
+bootcamp: JCAIEH
+module: 1
+session: 2
 aliases: ["Sesi 2", "Intro to Git and GitHub", "Tutorial Git & Github", "Latihan Github Bersama Nadir"]
 ---
 
@@ -194,7 +197,7 @@ git commit -m "feat: pesan commit yang deskriptif"
 ### 3.3 Catatan Tambahan Terkait Lingkungan Kerja
 
 > [!tip] Audio Insight — Pentingnya Aktivasi Virtual Environment
-> Sebelum menjalankan script Python atau perintah Git tertentu, dosen menekankan pentingnya aktivasi _virtual environment_. Di terminal VS Code, sering kali pengguna perlu memastikan bahwa environment **base** pada MiniConda atau Anaconda sudah aktif. Hal ini ditandai dengan munculnya nama environment dalam kurung di awal baris perintah terminal. Aktivasi lingkungan yang tepat memastikan semua _dependencies_ tersedia saat script dijalankan. (Lihat juga pengenalan Venv/Conda di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 4.3.)
+> Sebelum menjalankan script Python atau perintah Git tertentu, dosen menekankan pentingnya aktivasi _virtual environment_. Di terminal VS Code, sering kali pengguna perlu memastikan bahwa environment **base** pada MiniConda atau Anaconda sudah aktif. Hal ini ditandai dengan munculnya nama environment dalam kurung di awal baris perintah terminal. Aktivasi lingkungan yang tepat memastikan semua _dependencies_ tersedia saat script dijalankan. (Lihat juga pengenalan Venv/Conda di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 4.3.)
 
 ---
 
@@ -510,7 +513,7 @@ print(check_palindrome("madam"))  # Output: palindrome
 ```
 
 > [!info] Lihat juga
-> Kelima soal Python di atas memakai pola if-else, operator modulo, dan slicing string yang dibahas mendalam di [[Sesi 03 - Conditional and Loop Statement]] (khususnya studi kasus konversi suhu, cek ganjil-genap, hapus kemunculan pertama, dan palindrome yang identik di Bab 1).
+> Kelima soal Python di atas memakai pola if-else, operator modulo, dan slicing string yang dibahas mendalam di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] (khususnya studi kasus konversi suhu, cek ganjil-genap, hapus kemunculan pertama, dan palindrome yang identik di Bab 1).
 
 ---
 
@@ -532,10 +535,10 @@ pwd
 ```
 
 > [!info] Lihat juga
-> `pwd` (_print working directory_) melengkapi trio navigasi terminal `cd` dan `ls` yang sudah dibahas di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 8.3.
+> `pwd` (_print working directory_) melengkapi trio navigasi terminal `cd` dan `ls` yang sudah dibahas di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 8.3.
 
 ---
 
 ## Ringkasan Sesi
 
-Sesi 2 memberikan fondasi praktis Git & GitHub: definisi dan perbedaan Git vs GitHub, empat istilah kunci (repository, commit, branch, merge), siklus status file (untracked → modified → staged → committed), alur perintah dasar (`init`, `config`, `status`, `add`, `commit`, `diff`, `log`, `checkout`, `merge`, `remote`, `push`), hingga simulasi lengkap GitHub Flow dari pembuatan repo sampai push & merge branch. Materi Python (Tugas Besar 2) melengkapi konsep if-else dan string yang lebih dalam dibahas di [[Sesi 03 - Conditional and Loop Statement]]. Alur kerja Git ini juga menjadi rutinitas standar yang dipakai berulang sepanjang seluruh materi berikutnya, termasuk saat mengambil materi baru dengan `git pull` (lihat [[Sesi 04 - Data Types Collection Notes]] Bab 2, bagian alur kerja Git dalam pembelajaran praktis).
+Sesi 2 memberikan fondasi praktis Git & GitHub: definisi dan perbedaan Git vs GitHub, empat istilah kunci (repository, commit, branch, merge), siklus status file (untracked → modified → staged → committed), alur perintah dasar (`init`, `config`, `status`, `add`, `commit`, `diff`, `log`, `checkout`, `merge`, `remote`, `push`), hingga simulasi lengkap GitHub Flow dari pembuatan repo sampai push & merge branch. Materi Python (Tugas Besar 2) melengkapi konsep if-else dan string yang lebih dalam dibahas di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]]. Alur kerja Git ini juga menjadi rutinitas standar yang dipakai berulang sepanjang seluruh materi berikutnya, termasuk saat mengambil materi baru dengan `git pull` (lihat [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] Bab 2, bagian alur kerja Git dalam pembelajaran praktis).

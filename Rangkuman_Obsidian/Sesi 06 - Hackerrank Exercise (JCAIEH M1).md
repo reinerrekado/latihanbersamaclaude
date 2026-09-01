@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-06, python, hackerrank, list, dictionary, sorting, lambda]
+tags: [jcaieh/module1, sesi-06, python, hackerrank, list, dictionary, sorting, lambda, jcaieh/module1/sesi06]
+bootcamp: JCAIEH
+module: 1
+session: 6
 aliases: ["Sesi 6"]
 ---
 
@@ -8,7 +11,7 @@ aliases: ["Sesi 6"]
 Study guide ini merangkum pembahasan lima latihan pemrograman Python bergaya HackerRank yang dibahas di kelas: pemrosesan file invoice, Runner-Up Score, Nested List (skor terendah kedua), List Commands, dan Company Logo. Latihan-latihan ini melatih manipulasi *list*, *set*, dan *dictionary*, serta teknik *sorting* lanjutan dengan `lambda`.
 
 > [!tip] Prasyarat
-> Latihan-latihan di sesi ini menggabungkan konsep *function*, *file handling* ([[Sesi 05 - Python Function and File Handling]]), dan tipe data koleksi (*list*, *set*, *dictionary* — lihat [[Sesi 04 - Data Types Collection Notes]]).
+> Latihan-latihan di sesi ini menggabungkan konsep *function*, *file handling* ([[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]]), dan tipe data koleksi (*list*, *set*, *dictionary* — lihat [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]]).
 
 ---
 
@@ -53,7 +56,7 @@ print(f"Total setelah diskon {discount}%: {final_total}")
 ```
 
 > [!tip] Lihat juga
-> Ini adalah versi lanjutan dari Latihan 5 (`get_total`) di [[Sesi 05 - Python Function and File Handling]] — polanya identik: buka file dengan `with`, `.readlines()`, lompat 3 baris, `.split()`, ambil indeks `[-1]`.
+> Ini adalah versi lanjutan dari Latihan 5 (`get_total`) di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] — polanya identik: buka file dengan `with`, `.readlines()`, lompat 3 baris, `.split()`, ambil indeks `[-1]`.
 
 ---
 
@@ -459,4 +462,4 @@ if __name__ == '__main__':
 > **Logika Slicing dan Sorting:** Penggunaan indeks negatif (seperti `[-2]`) adalah cara cepat di Python untuk mengakses elemen dari urutan paling belakang tanpa perlu menghitung panjang List secara manual.
 
 > [!tip] Lihat juga
-> Teknik `lambda x: (-x[1], x[0])` di atas dibangun di atas dasar `lambda` yang dijelaskan di [[Sesi 05 - Python Function and File Handling]] Bab 1.6 — kalau masih ragu dengan sintaks `lambda parameter: expression`, kembali ke sana dulu sebelum mendalami *multi-criteria sorting* ini.
+> Teknik `lambda x: (-x[1], x[0])` di atas dibangun di atas dasar `lambda` yang dijelaskan di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] Bab 1.6 — kalau masih ragu dengan sintaks `lambda parameter: expression`, kembali ke sana dulu sebelum mendalami *multi-criteria sorting* ini.

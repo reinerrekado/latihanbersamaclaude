@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-07, python, oop, class, object, self, inheritance]
+tags: [jcaieh/module1, sesi-07, python, oop, class, object, self, inheritance, jcaieh/module1/sesi07]
+bootcamp: JCAIEH
+module: 1
+session: 7
 aliases: ["Sesi 7"]
 ---
 
@@ -93,7 +96,7 @@ def send_email():
 ```
 
 > [!tip] Lihat juga
-> Perhatikan `global email` di atas — inilah `global` keyword yang dijelaskan lengkap di [[Sesi 05 - Python Function and File Handling]] Bab 2.3, contoh nyata mengapa OOP dibutuhkan: pendekatan prosedural terpaksa memakai `global` berulang kali untuk mengubah state.
+> Perhatikan `global email` di atas — inilah `global` keyword yang dijelaskan lengkap di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] Bab 2.3, contoh nyata mengapa OOP dibutuhkan: pendekatan prosedural terpaksa memakai `global` berulang kali untuk mengubah state.
 
 ##### 2. Object-Oriented Programming (OOP) Approach
 
@@ -131,7 +134,7 @@ print(user1.get_user_info())
 > *Built-in data types* tersebut memiliki *methods* eksklusif yang menempel padanya (seperti `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, dan `.clear()`) yang tidak dapat digunakan oleh *data type* lain yang berbeda *class* *blueprint*-nya.
 
 > [!tip] Lihat juga
-> Ini menjelaskan mengapa `list` dan `dict` yang dipakai sejak [[Sesi 04 - Data Types Collection Notes]] terasa punya "kemampuan" (method) sendiri-sendiri — keduanya sebenarnya adalah *class* bawaan Python. Prinsip yang sama juga menjelaskan mengapa objek `DataFrame` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] punya method seperti `.head()`, `.describe()`, `.groupby()` — DataFrame adalah *object* hasil instansiasi dari `class DataFrame` milik library Pandas.
+> Ini menjelaskan mengapa `list` dan `dict` yang dipakai sejak [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] terasa punya "kemampuan" (method) sendiri-sendiri — keduanya sebenarnya adalah *class* bawaan Python. Prinsip yang sama juga menjelaskan mengapa objek `DataFrame` di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] punya method seperti `.head()`, `.describe()`, `.groupby()` — DataFrame adalah *object* hasil instansiasi dari `class DataFrame` milik library Pandas.
 
 ---
 
@@ -519,7 +522,7 @@ print(acc.owner_name)   # Output: Rian
 - *Method* didefinisikan secara eksklusif di dalam sebuah *class*. *Method* ini menempel pada *object* tertentu hasil instansiasi *class* tersebut dan tidak dapat dipanggil secara independen tanpa adanya *object* penerima.
 
 > [!tip] Lihat juga
-> "Regular function" di sini sama persis dengan *function* yang dibahas panjang lebar di [[Sesi 05 - Python Function and File Handling]] Bab 1. Perbedaan utamanya hanya lokasi: method hidup di dalam class dan otomatis menerima `self`, sedangkan regular function hidup bebas di modul/file.
+> "Regular function" di sini sama persis dengan *function* yang dibahas panjang lebar di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] Bab 1. Perbedaan utamanya hanya lokasi: method hidup di dalam class dan otomatis menerima `self`, sedangkan regular function hidup bebas di modul/file.
 
 #### C. Python Implementation dari Methods
 
@@ -780,7 +783,7 @@ model_clf.confusion_matrix()
 > Dosen memberikan penjelasan mengapa pembagian *attributes* dan *methods* spesifik ini sangat krusial: atribut metrik evaluasi seperti `"r2"` (R-Squared) atau metode diagnostik seperti `multicolinearity_test()` hanya relevan dan bekerja pada domain analisis regresi numerik, sehingga tidak boleh ada pada kelas klasifikasi. Sebaliknya, evaluasi menggunakan metrik akurasi (*accuracy*) dan representasi visual *confusion matrix* via metode `confusion_matrix()` hanya relevan untuk domain klasifikasi data kategorikal, sehingga tidak boleh ada pada kelas regresi. Dengan menggunakan paradigma *Inheritance*, pengembang berhasil mencegah terjadinya kesalahan struktural dan menjamin bahwa fungsionalitas yang tidak relevan tidak akan pernah bisa diakses atau dipanggil oleh objek yang salah, sekaligus tetap menjaga efisiensi penulisan kode dasar latihan (`train` dan `test`) yang seragam di memori.
 
 > [!tip] Lihat juga
-> Pola `class RegressionModel(MachineLearningModel)` di atas adalah gambaran awal dari cara kerja model *machine learning* di Pandas/Scikit-learn — akan sangat berguna saat sampai ke [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
+> Pola `class RegressionModel(MachineLearningModel)` di atas adalah gambaran awal dari cara kerja model *machine learning* di Pandas/Scikit-learn — akan sangat berguna saat sampai ke [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
 
 ---
 
@@ -886,4 +889,4 @@ if __name__ == "__main__":
 > Dalam diskusi kelas dengan mahasiswa (Stepen), dosen menguji coba mengganti nama berkas utama dari `main.py` menjadi `main_code.py` lalu menjalankannya langsung. Hasilnya menunjukkan bahwa variabel `__name__` pada berkas utama yang dieksekusi tetap bernilai `"__main__"`. Nilai `"__main__"` bersifat konseptual untuk menandai proses utama dan sama sekali tidak bergantung pada nama fisik file script di dalam sistem penyimpanan komputer Anda.
 
 > [!tip] Lihat juga
-> Mekanisme `if __name__ == "__main__"` ini dibahas jauh lebih dalam (termasuk *name guard* untuk melindungi modul saat diimpor) di [[Sesi 08 - Python and Modular Programming]] Bab 4 — sesi ini hanya memperkenalkan konsepnya lewat contoh `class BankAccount`.
+> Mekanisme `if __name__ == "__main__"` ini dibahas jauh lebih dalam (termasuk *name guard* untuk melindungi modul saat diimpor) di [[Sesi 08 - Python and Modular Programming (JCAIEH M1)|Sesi 08 - Python and Modular Programming]] Bab 4 — sesi ini hanya memperkenalkan konsepnya lewat contoh `class BankAccount`.

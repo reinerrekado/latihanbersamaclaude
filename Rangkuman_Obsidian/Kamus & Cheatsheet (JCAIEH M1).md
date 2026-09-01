@@ -1,12 +1,14 @@
 ---
-tags: [exam-prep, cheatsheet, glossary, module-1]
+tags: [exam-prep, cheatsheet, glossary, jcaieh/module1]
+bootcamp: JCAIEH
+module: 1
 aliases: ["Kamus", "Cheat Sheet", "Glosarium"]
 ---
 
 # 📚 Kamus & Cheat Sheet — Module 1 (13 Sesi)
 
 > [!info] Tentang file ini
-> Gabungan dua hal: (1) **Cheat Sheet** — ringkasan konsep + jebakan/trap per sesi (versi Obsidian dari `CHEATSHEET.md`), dan (2) **Kamus A-Z** — ~440 istilah dari seluruh 13 sesi, digabung dan dirapikan dari 4 file glosarium sementara. Dibuat 2026-08-30/2026-09-02. Lihat juga [[MOC - Module 1|halaman indeks utama]] untuk catatan lengkap per sesi.
+> Gabungan dua hal: (1) **Cheat Sheet** — ringkasan konsep + jebakan/trap per sesi (versi Obsidian dari `CHEATSHEET.md`), dan (2) **Kamus A-Z** — ~440 istilah dari seluruh 13 sesi, digabung dan dirapikan dari 4 file glosarium sementara. Dibuat 2026-08-30/2026-09-02. Lihat juga [[MOC - Module 1 (JCAIEH M1)|halaman indeks utama]] untuk catatan lengkap per sesi.
 
 ## 🗂️ Daftar Isi
 
@@ -68,7 +70,7 @@ Terjadi karena SQL dan Pandas sering diajarkan berdampingan (konsepnya mirip: `G
 
 ### Sesi 1 — Intro to DS Python Statistics SQL Git & GitHub
 
-> [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub|→ Catatan lengkap]]
+> [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|→ Catatan lengkap]]
 
 **AI vs Software Tradisional**
 - AI = cabang Computer Science: learning from data, recognizing patterns, understanding language, making predictions, solving problems.
@@ -145,7 +147,7 @@ days = remaining % 30
 
 ### Sesi 2 — Intro to Git & GitHub
 
-> [[Sesi 02 - Intro to Git and GitHub|→ Catatan lengkap]]
+> [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|→ Catatan lengkap]]
 
 - Git = **Distributed VCS**, dibuat Linus Torvalds. GitHub = platform **hosting** (bukan VCS itu sendiri) + jejaring sosial developer.
 
@@ -190,7 +192,7 @@ days = remaining % 30
 
 ### Sesi 3 — Conditional & Loop Statement
 
-> [[Sesi 03 - Conditional and Loop Statement|→ Catatan lengkap]]
+> [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|→ Catatan lengkap]]
 
 **Function, Parameter, Return (Review)**
 
@@ -257,7 +259,7 @@ days = remaining % 30
 
 ### Sesi 4 — Data Types Collection
 
-> [[Sesi 04 - Data Types Collection Notes|→ Catatan lengkap]]
+> [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|→ Catatan lengkap]]
 
 | Type | Class | Category | Mutable? |
 |---|---|---|---|
@@ -320,7 +322,7 @@ days = remaining % 30
 
 ### Sesi 5 — Python Function & File Handling
 
-> [[Sesi 05 - Python Function and File Handling|→ Catatan lengkap]]
+> [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|→ Catatan lengkap]]
 
 - Function dibuat kalau logika dipakai berulang. Dua cara: `def` atau `lambda`.
 
@@ -384,7 +386,7 @@ with open("data.txt", "w") as file:
 
 ### Sesi 6 — Hackerrank Exercise
 
-> [[Sesi 06 - Hackerrank Exercise|→ Catatan lengkap]]
+> [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|→ Catatan lengkap]]
 
 ```python
 # Runner-Up Score
@@ -416,7 +418,7 @@ result = sorted(letter_counter.items(), key=lambda x: (-x[1], x[0]))
 
 ### Sesi 7 — Object Oriented Programming
 
-> [[Sesi 07 - Object Oriented Programming|→ Catatan lengkap]]
+> [[Sesi 07 - Object Oriented Programming (JCAIEH M1)|→ Catatan lengkap]]
 
 | | Procedural | OOP |
 |---|---|---|
@@ -477,7 +479,7 @@ class RegressionModel(MachineLearningModel):
 
 ### Sesi 8 — Python & Modular Programming
 
-> [[Sesi 08 - Python and Modular Programming|→ Catatan lengkap]]
+> [[Sesi 08 - Python and Modular Programming (JCAIEH M1)|→ Catatan lengkap]]
 
 - Monolitik = 1 file. Modular = dipecah jadi modul kecil reusable. 5 masalah monolitik: sulit dibaca, maintain, debug, reuse, kolaborasi.
 
@@ -518,7 +520,7 @@ class RegressionModel(MachineLearningModel):
 
 ### Sesi 9 — Intro to Database & SQL
 
-> [[Sesi 09 - Intro to Database and SQL|→ Catatan lengkap]]
+> [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|→ Catatan lengkap]]
 
 - Database = organized collection of related data. DBMS = software perantara user↔database. Fungsi: correlate, query, report.
 - Parameter koneksi wajib: DBMS type, Host (`localhost`), Port (`3306` MySQL), Username (`root`), Password.
@@ -564,7 +566,7 @@ class RegressionModel(MachineLearningModel):
 
 ### Sesi 10 — SQL Working With Multiple Tables
 
-> [[Sesi 10 - SQL Working With Multiple Tables|→ Catatan lengkap]]
+> [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|→ Catatan lengkap]]
 
 | | Primary Key (PK) | Foreign Key (FK) |
 |---|---|---|
@@ -622,7 +624,7 @@ mydb = mysql.connector.connect(host='localhost', user='root', passwd='pass', dat
 
 ### Sesi 11 — Statistics Fundamental
 
-> [[Sesi 11 - Statistics Fundamental|→ Catatan lengkap]]
+> [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|→ Catatan lengkap]]
 
 - Statistics = "belajar dari data": collecting, analyzing, interpreting, drawing conclusion. 3 tahap: Design → Description → Inference.
 
@@ -681,7 +683,7 @@ Quantitative: Discrete (hasil MENGHITUNG) | Continuous (hasil MENGUKUR)
 
 ### Sesi 12 — Python Data Manipulation With Pandas and NumPy
 
-> [[Sesi 12 - Python Data Manipulation With Pandas and Numpy|→ Catatan lengkap]]
+> [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|→ Catatan lengkap]]
 
 - NumPy = operasi matematika performa tinggi pada array (vectorization). Pandas = manipulasi data terstruktur, dibangun di atas NumPy. Series (1D), DataFrame (2D).
 
@@ -730,7 +732,7 @@ Quantitative: Discrete (hasil MENGHITUNG) | Continuous (hasil MENGUKUR)
 
 ### Sesi 13 — Data Visualization
 
-> [[Sesi 13 - Data Visualization|→ Catatan lengkap]]
+> [[Sesi 13 - Data Visualization (JCAIEH M1)|→ Catatan lengkap]]
 
 - Otak proses gambar lebih cepat dari tabel. Anscombe's Quartet: mean/SD/korelasi sama, bentuk visual beda total.
 

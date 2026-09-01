@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-09, sql, database, dbms, ddl, dml, filtering, sorting, aggregate-function, scalar-function, group-by, having, subquery, date-time-functions]
+tags: [jcaieh/module1, sesi-09, sql, database, dbms, ddl, dml, filtering, sorting, aggregate-function, scalar-function, group-by, having, subquery, date-time-functions, jcaieh/module1/sesi09]
+bootcamp: JCAIEH
+module: 1
+session: 9
 aliases: ["Sesi 9", "Sesi 09", "Intro to Database and SQL"]
 ---
 
@@ -83,7 +86,7 @@ aliases: ["Sesi 9", "Sesi 09", "Intro to Database and SQL"]
 > - DBMS mempermudah analisis data bisnis secara cepat tanpa perlu membaca data tabular satu per satu secara manual.
 > - **Contoh Kasus Pelanggan:** Jika perusahaan ingin mengetahui pelanggan mana yang paling loyal (sering membeli) atau pelanggan mana yang paling jarang melakukan pembelian, DBMS dapat langsung menjawab pertanyaan tersebut dengan cepat, asalkan data transaksi tersedia di database dan query ditulis dengan benar.
 > - **Analogi Efisiensi (Excel vs SQL):** Di Microsoft Excel, pencarian pelanggan loyal dari data tabular yang besar dapat dilakukan menggunakan fitur Pivot. Di dalam DBMS, terdapat bahasa pemrograman khusus (SQL) yang memungkinkan pengguna melakukan pengelompokan dan analisis serupa secara jauh lebih cepat dan efisien dengan menuliskan sintaks kueri yang tepat.
-> - DBMS sangat membantu pengguna dalam memahami data yang rumit, namun apabila tingkat kompleksitas data terlalu tinggi, DBMS memerlukan dukungan teknik lain seperti visualisasi data (lihat [[Sesi 13 - Data Visualization]]).
+> - DBMS sangat membantu pengguna dalam memahami data yang rumit, namun apabila tingkat kompleksitas data terlalu tinggi, DBMS memerlukan dukungan teknik lain seperti visualisasi data (lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]]).
 
 ### 1.4 Database dalam Manajemen Bisnis dan Pengambilan Keputusan
 
@@ -109,7 +112,7 @@ aliases: ["Sesi 9", "Sesi 09", "Intro to Database and SQL"]
 > - Para manajer, karyawan, dan seluruh stakeholder yang terkait membutuhkan akses data real-time untuk menghasilkan better decision.
 > - DBMS merupakan satu-satunya alat penunjang utama yang memungkinkan para pengambil keputusan tersebut mengakses dan menyaring informasi yang relevan dari database.
 
-Konsep DBMS ini menjadi fondasi untuk [[Sesi 10 - SQL Working With Multiple Tables]], di mana kita akan belajar bagaimana beberapa tabel di dalam satu DBMS bisa saling terhubung lewat Primary Key dan Foreign Key.
+Konsep DBMS ini menjadi fondasi untuk [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]], di mana kita akan belajar bagaimana beberapa tabel di dalam satu DBMS bisa saling terhubung lewat Primary Key dan Foreign Key.
 
 ---
 
@@ -204,7 +207,7 @@ DESCRIBE Persons;
 > [!tip] Audio Insight — Verifikasi struktur, nullability, dan constraint key
 > - **Verifikasi Struktur via GUI dan CLI:** Pada aplikasi GUI seperti DBeaver, detail kolom dapat dilihat dengan mengklik ganda nama tabel lalu membuka tab _Data_ atau _Properties_. Di sisi lain, pada CLI, perintah `DESCRIBE` (contoh: `DESCRIBE person;`) akan menampilkan informasi kolom berupa nama kolom (_Field_), tipe data (_Type_), apakah kolom diperbolehkan kosong (_Null_), dan penunjuk kunci (_Key_).
 > - **Pengaturan Nullability:** Kolom-kolom pada tabel `Persons` yang baru dibuat secara default akan bernilai `YES` pada kolom _Null_. Ini berarti kolom tersebut bersifat opsional dan diperbolehkan untuk tidak memiliki nilai (bernilai null) saat pengisian data.
-> - **Ketiadaan Constraint Key:** Pada contoh dasar ini, belum ada kolom yang didefinisikan sebagai _Primary Key_ atau kunci unik lainnya, sehingga kolom _Key_ pada deskripsi struktur tabel masih kosong. Konsep Primary Key/Foreign Key ini dibahas tuntas di [[Sesi 10 - SQL Working With Multiple Tables]].
+> - **Ketiadaan Constraint Key:** Pada contoh dasar ini, belum ada kolom yang didefinisikan sebagai _Primary Key_ atau kunci unik lainnya, sehingga kolom _Key_ pada deskripsi struktur tabel masih kosong. Konsep Primary Key/Foreign Key ini dibahas tuntas di [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]].
 
 ---
 
@@ -907,7 +910,7 @@ SELECT MAX(Population) AS Max_Population FROM City WHERE CountryCode = 'IDN';
 > - Fungsi agregat mengabaikan nilai NULL dalam kalkulasinya (kecuali COUNT(*) yang menghitung seluruh baris termasuk baris kosong).
 > - Sesuai data lisan pada rekaman kuliah, rata-rata populasi kota di wilayah Indonesia (dengan filter CountryCode = 'IDN') adalah sekitar 441.008, dengan populasi kota terkecil bernilai 89.900 dan kota terbesar mencapai 9.604.900.
 
-Fungsi agregat SQL ini punya rekan dekat di dunia Python: lihat `.sum()`, `.mean()`, `.min()`, `.max()` pada Pandas Series/DataFrame di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
+Fungsi agregat SQL ini punya rekan dekat di dunia Python: lihat `.sum()`, `.mean()`, `.min()`, `.max()` pada Pandas Series/DataFrame di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
 
 ---
 
@@ -1024,7 +1027,7 @@ SELECT AVG(Population) AS Rata_rata, District AS Provinsi FROM City WHERE Countr
 
 **Penting: `GROUP BY`-lah yang benar-benar mengelompokkan baris menjadi grup.** Klausa `HAVING` di bab berikutnya **tidak** melakukan pengelompokan apa pun — ia hanya menyaring grup-grup yang *sudah* dibentuk oleh `GROUP BY`. Lihat penjelasan urutan eksekusi lengkap di [[#Bab 9 Penyaringan Grup Data (HAVING)]] di bawah.
 
-Konsep pengelompokan ini identik dengan method `.groupby()` pada Pandas DataFrame — lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]] untuk perbandingan langsungnya (`GROUP BY District` di SQL ≈ `df.groupby('District')` di Pandas).
+Konsep pengelompokan ini identik dengan method `.groupby()` pada Pandas DataFrame — lihat [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] untuk perbandingan langsungnya (`GROUP BY District` di SQL ≈ `df.groupby('District')` di Pandas).
 
 ---
 
@@ -1394,7 +1397,7 @@ SELECT * FROM
 > - Penamaan alias pada _Derived Table_ sangat penting bagi manajemen memori database MySQL agar kueri utama dapat merujuk kembali ke tabel hasil filter sementara tersebut dengan nama yang jelas.
 > - Meskipun penulisan alias ini diwajibkan oleh sintaksis MySQL, alias tersebut tidak harus selalu dipanggil secara aktif di bagian kueri utama jika memang tidak diperlukan. Pengguna dapat menuliskan alias yang singkat dan cepat (misalnya `AS SA` atau `AS ST` seperti dicontohkan dosen) agar kueri dapat dieksekusi tanpa error.
 
-Aturan "alias wajib" ini juga muncul kembali dalam bentuk yang lebih ketat pada Self JOIN di [[Sesi 10 - SQL Working With Multiple Tables]] — di sana, melewatkan alias benar-benar menyebabkan error sintaksis, bukan sekadar rekomendasi.
+Aturan "alias wajib" ini juga muncul kembali dalam bentuk yang lebih ketat pada Self JOIN di [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]] — di sana, melewatkan alias benar-benar menyebabkan error sintaksis, bukan sekadar rekomendasi.
 
 ---
 
@@ -1454,7 +1457,7 @@ Aturan "alias wajib" ini juga muncul kembali dalam bentuk yang lebih ketat pada 
 > [!tip] Audio Insight — GUI sebagai lapisan antarmuka, dan sifat SQL yang indentation-insensitive
 > - **Kelebihan GUI dibanding CLI:** Penggunaan CLI/terminal untuk melihat database dan tabel yang jumlahnya banyak dinilai sangat menyulitkan bagi pemula karena output ditampilkan dalam format teks murni yang padat dan kaku. Perkakas GUI menawarkan visualisasi yang jauh lebih terstruktur dan mudah dinavigasi.
 > - **Konsep Arsitektur Interface:** Perkakas GUI (DBeaver/MySQL Workbench) pada dasarnya hanyalah lapisan antarmuka (_interface/client_) yang bertindak sebagai jembatan untuk menulis (_write_) dan membaca (_retrieve_) data dari database server fisik. Jika Anda mengedit data menggunakan MySQL Workbench, data di server fisik akan langsung berubah. Sehingga ketika keesokan harinya Anda membuka DBeaver untuk membaca database yang sama, data hasil pembaruan tersebut akan langsung terbaca secara konsisten.
-> - **Tujuan Penggunaan Perkakas:** Perkakas database GUI dirancang untuk kebutuhan pengerjaan teknis pengembang (_developer_) atau analis data (_data analyst_) untuk mempermudah eksekusi query. Di dunia kerja nyata, tabel tabular mentah dari database GUI ini tidak disajikan langsung ke level eksekutif/direktur karena sulit dipahami secara instan. Data tersebut harus diekstraksi terlebih dahulu lalu divisualisasikan menggunakan alat visualisasi data eksternal (lihat [[Sesi 13 - Data Visualization]]).
+> - **Tujuan Penggunaan Perkakas:** Perkakas database GUI dirancang untuk kebutuhan pengerjaan teknis pengembang (_developer_) atau analis data (_data analyst_) untuk mempermudah eksekusi query. Di dunia kerja nyata, tabel tabular mentah dari database GUI ini tidak disajikan langsung ke level eksekutif/direktur karena sulit dipahami secara instan. Data tersebut harus diekstraksi terlebih dahulu lalu divisualisasikan menggunakan alat visualisasi data eksternal (lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]]).
 > - **Karakteristik Aturan Penulisan Sintaks SQL:** Penulisan query SQL bersifat fleksibel terhadap spasi, baris baru, dan indentasi (_indentation insensitive_). Hal ini berbeda dengan bahasa pemrograman Python yang mewajibkan indentasi (_indentation sensitive_). Pengaturan spasi dan baris baru pada SQL semata-mata dilakukan untuk mempermudah pemeliharaan kode dan keterbacaan (_readability_) oleh manusia.
 
 ---
@@ -1499,7 +1502,7 @@ SHOW TABLES;
 > - **Penanganan Lupa Password Database Server:** Lupa kata sandi MySQL server lokal tidak dapat diatasi dengan fitur pemulihan sederhana seperti "forgot password". Prosedur reset manualnya sangat kompleks dan memakan waktu. Metode pemecahan masalah tercepat untuk lingkungan belajar lokal adalah melakukan _uninstall_ aplikasi MySQL Server secara total, lalu menginstal ulang server database tersebut untuk mengonfigurasi kata sandi administratif yang baru. Proses instalasi ulang ini tidak perlu dilakukan pada aplikasi antarmuka seperti DBeaver.
 > - **Unduh Driver Database Otomatis:** Saat pertama kali mengonfigurasi koneksi database jenis baru pada DBeaver, aplikasi akan mendeteksi kebutuhan berkas driver pendukung dan memicu unduhan otomatis dari repositori online. Pengguna cukup mengonfirmasi persetujuan unduhan (_download_) agar koneksi dapat diaktifkan.
 
-Bab konektivitas ini menjadi jembatan langsung ke [[Sesi 10 - SQL Working With Multiple Tables]] bagian Python MySQL Connector, di mana parameter koneksi yang sama (host, user, password, database) dipakai lagi — kali ini dari dalam skrip Python, bukan dari GUI.
+Bab konektivitas ini menjadi jembatan langsung ke [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]] bagian Python MySQL Connector, di mana parameter koneksi yang sama (host, user, password, database) dipakai lagi — kali ini dari dalam skrip Python, bukan dari GUI.
 
 ---
 
@@ -1521,7 +1524,7 @@ Bab konektivitas ini menjadi jembatan langsung ke [[Sesi 10 - SQL Working With M
 |`country`|`Code` (Primary Key)|Data demografi, ekonomi, dan geografis negara.|
 |`countrylanguage`|`CountryCode` (Primary Key), `Language`|Distribusi bahasa resmi dan non-resmi negara.|
 
-Perhatikan bahwa ketiga tabel ini sudah saling terhubung lewat Primary Key/Foreign Key — konsep relasi antar-tabel ini dibahas secara formal di [[Sesi 10 - SQL Working With Multiple Tables]].
+Perhatikan bahwa ketiga tabel ini sudah saling terhubung lewat Primary Key/Foreign Key — konsep relasi antar-tabel ini dibahas secara formal di [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]].
 
 #### B. Prosedur Penyusunan Lingkungan Kerja (Injest Database)
 

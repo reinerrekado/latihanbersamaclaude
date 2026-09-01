@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-08, python, modular-programming, module, package, import, name-guard]
+tags: [jcaieh/module1, sesi-08, python, modular-programming, module, package, import, name-guard, jcaieh/module1/sesi08]
+bootcamp: JCAIEH
+module: 1
+session: 8
 aliases: ["Sesi 8"]
 ---
 
@@ -48,7 +51,7 @@ Ketika program bertumbuh menjadi lebih besar (misalnya mencapai 500 baris kode a
 > **Mekanisme Kolaborasi Tim**: Jika proyek dikelola secara modular, pembagian tugas menjadi lebih jelas. Sebagai contoh, developer A dapat fokus mengerjakan tahap *preprocessing*, developer B pada *model training*, dan developer C pada pemuatan data (*load results*). Setiap developer bekerja pada file modul terpisah dan membuat cabang (*branch*) Git masing-masing. Saat dilakukan penggabungan (*merge*), sistem Git akan mengenalinya sebagai file baru atau perubahan terpisah, sehingga dapat melakukan penggabungan otomatis (*auto-merge*) tanpa memicu konflik terus-menerus. Sebaliknya, jika bekerja pada satu file yang sama, baris-baris kode akan saling tumpang tindih dan memicu *conflict* yang harus diresolusi manual (*resolve conflict*) secara berulang.
 
 > [!tip] Lihat juga
-> *Merge conflict* dan konsep *branch* di atas sudah diperkenalkan di [[Sesi 02 - Intro to Git and GitHub]] — pemrograman modular adalah salah satu alasan konkret mengapa struktur branch/merge Git menjadi jauh lebih efektif digunakan.
+> *Merge conflict* dan konsep *branch* di atas sudah diperkenalkan di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] — pemrograman modular adalah salah satu alasan konkret mengapa struktur branch/merge Git menjadi jauh lebih efektif digunakan.
 
 ---
 
@@ -78,7 +81,7 @@ Ketika program bertumbuh menjadi lebih besar (misalnya mencapai 500 baris kode a
 > Dosen menjelaskan bahwa pengorganisasian kode ke dalam modul sangat membantu proses pemecahan masalah (*debugging*). Jika terjadi kesalahan kalkulasi, developer dapat langsung menuju ke file `calculator.py` tanpa perlu memeriksa ratusan baris kode lainnya di berkas utama.
 
 > [!tip] Lihat juga
-> "Modul dapat berisi *classes*" — ini artinya *class* seperti `BankAccount` atau `MachineLearningModel` yang dibuat di [[Sesi 07 - Object Oriented Programming]] dalam praktiknya justru sebaiknya diletakkan di dalam file modul terpisah (`bank_account.py`, `model.py`), lalu diimpor ke `main.py`.
+> "Modul dapat berisi *classes*" — ini artinya *class* seperti `BankAccount` atau `MachineLearningModel` yang dibuat di [[Sesi 07 - Object Oriented Programming (JCAIEH M1)|Sesi 07 - Object Oriented Programming]] dalam praktiknya justru sebaiknya diletakkan di dalam file modul terpisah (`bank_account.py`, `model.py`), lalu diimpor ke `main.py`.
 
 ---
 
@@ -222,7 +225,7 @@ print(result_sub)
 > Materi ini menyebut alias untuk dua tujuan yang berbeda. Keduanya sama-sama pakai `as`, tapi motivasinya beda — jangan disamakan:
 >
 > **1. Alias untuk KONVENSI (mempersingkat penulisan, bukan karena ada konflik)**
-> Dipakai karena nama modul aslinya panjang/sering diketik berulang, dan sudah menjadi kebiasaan umum di komunitas Python — bukan karena akan terjadi bentrok nama. Contoh paling terkenal (akan sering ditemui mulai [[Sesi 12 - Python Data Manipulation With Pandas and Numpy]]):
+> Dipakai karena nama modul aslinya panjang/sering diketik berulang, dan sudah menjadi kebiasaan umum di komunitas Python — bukan karena akan terjadi bentrok nama. Contoh paling terkenal (akan sering ditemui mulai [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]]):
 > ```python
 > import pandas as pd
 > import numpy as np
@@ -292,7 +295,7 @@ model.train_model()        # -> AttributeError: 'str' object has no attribute 't
 - **Karakteristik Perilaku**: Jika berkas tersebut hanya diimpor ke berkas lain sebagai modul pustaka, pemeriksaan kondisional ini akan bernilai salah (*False*) dan blok kode di dalamnya akan diabaikan sehingga tidak ikut dieksekusi.
 
 > [!tip] Lihat juga
-> Mekanisme `__name__` ini sudah diperkenalkan sekilas di [[Sesi 07 - Object Oriented Programming]] Bab 6.2 lewat contoh `class BankAccount`. Di sini konsepnya dibahas lebih menyeluruh sebagai *name guard* untuk modul.
+> Mekanisme `__name__` ini sudah diperkenalkan sekilas di [[Sesi 07 - Object Oriented Programming (JCAIEH M1)|Sesi 07 - Object Oriented Programming]] Bab 6.2 lewat contoh `class BankAccount`. Di sini konsepnya dibahas lebih menyeluruh sebagai *name guard* untuk modul.
 
 ---
 
@@ -489,7 +492,7 @@ from preprocessing import standardize_text, categorical_encoder
 ```
 
 > [!tip] Lihat juga
-> Pola impor `import nama_library` yang akan sering ditemui saat menyambungkan Python ke database di [[Sesi 09 - Intro to Database and SQL]] (misalnya `import mysql.connector` atau `import sqlite3`) sebenarnya adalah *package* pihak ketiga yang strukturnya persis mengikuti konsep Deep Import / Shallow Import di atas.
+> Pola impor `import nama_library` yang akan sering ditemui saat menyambungkan Python ke database di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (misalnya `import mysql.connector` atau `import sqlite3`) sebenarnya adalah *package* pihak ketiga yang strukturnya persis mengikuti konsep Deep Import / Shallow Import di atas.
 
 ---
 
@@ -818,7 +821,7 @@ Fungsi ini menentukan huruf mutu (grade) berdasarkan nilai rata-rata menggunakan
 3. **Kembalikan Hasil (Output)**: Kirimkan huruf grade yang terpilih kembali ke program utama.
 
 > [!tip] Mengapa urutan `if/elif` dari tertinggi ke terendah itu penting
-> Karena begitu satu kondisi `True`, Python langsung berhenti mengevaluasi kondisi lain di bawahnya (persis seperti prinsip prioritas `if/elif` yang dibahas di [[Sesi 05 - Python Function and File Handling]] Bab 3.4.A). Jika urutannya dibalik (mulai dari `average >= 60` di atas), maka nilai 95 pun akan langsung "tertangkap" sebagai grade D di kondisi pertama — salah total. Urutan tertinggi ke terendah memastikan setiap angka jatuh ke kategori yang benar-benar paling sesuai.
+> Karena begitu satu kondisi `True`, Python langsung berhenti mengevaluasi kondisi lain di bawahnya (persis seperti prinsip prioritas `if/elif` yang dibahas di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] Bab 3.4.A). Jika urutannya dibalik (mulai dari `average >= 60` di atas), maka nilai 95 pun akan langsung "tertangkap" sebagai grade D di kondisi pertama — salah total. Urutan tertinggi ke terendah memastikan setiap angka jatuh ke kategori yang benar-benar paling sesuai.
 
 ---
 
@@ -836,7 +839,7 @@ git pull
 Perintah ini akan secara otomatis mendeteksi perubahan terbaru di repositori GitHub pengajar dan mengunduh berkas atau folder baru secara cepat tanpa merusak pekerjaan lokal yang telah dimodifikasi.
 
 > [!tip] Lihat juga
-> `git pull` melengkapi perintah-perintah dasar Git (`git add`, `git commit`, `git push`, `git clone`) yang sudah dibahas di [[Sesi 02 - Intro to Git and GitHub]].
+> `git pull` melengkapi perintah-perintah dasar Git (`git add`, `git commit`, `git push`, `git clone`) yang sudah dibahas di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]].
 
 #### 2. Persiapan Pertemuan Berikutnya: Pengenalan Perkakas SQL
 
@@ -850,4 +853,4 @@ Pada sesi berikutnya, materi perkuliahan akan beralih ke pembahasan SQL (*Struct
 | **DBeaver** | Mendukung multi-basis data (*Database agnostic*) | Sangat direkomendasikan karena mendukung berbagai jenis basis data (MySQL, PostgreSQL, Google BigQuery, dll.). Perkakas ini sangat populer di industri karena fleksibilitasnya dalam mengelola berbagai ekosistem basis data yang berbeda secara bersamaan dalam satu aplikasi. |
 
 > [!tip] Lihat juga
-> Kedua perkakas ini menjadi pintu masuk pembahasan [[Sesi 09 - Intro to Database and SQL]] — sesi berikutnya setelah sesi ini.
+> Kedua perkakas ini menjadi pintu masuk pembahasan [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — sesi berikutnya setelah sesi ini.

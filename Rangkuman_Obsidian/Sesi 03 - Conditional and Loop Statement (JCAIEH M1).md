@@ -1,5 +1,8 @@
 ---
-tags: [module1, sesi-03, python, conditional, loop, boolean, if-else, for-loop, while-loop]
+tags: [jcaieh/module1, sesi-03, python, conditional, loop, boolean, if-else, for-loop, while-loop, jcaieh/module1/sesi03]
+bootcamp: JCAIEH
+module: 1
+session: 3
 aliases: ["Sesi 3", "Conditional and Loop Statement"]
 ---
 
@@ -196,7 +199,7 @@ else:
 > Penulisan `[::-1]` merupakan bentuk singkat yang secara otomatis memotong string dari indeks paling belakang ke paling depan. Jika ditulis secara eksplisit, parameter `start` diisi dengan panjang string dikurangi satu (`len(word)-1`), parameter `stop` dikosongkan (agar indeks 0 ikut terbawa), dan `step` diisi `-1`.
 
 > [!info] Lihat juga
-> Aturan slicing `[start:stop:step]` ini identik untuk `list` dan `tuple`, dibahas lebih dalam dengan tabel indeks positif/negatif di [[Sesi 04 - Data Types Collection Notes]] Bab 5.
+> Aturan slicing `[start:stop:step]` ini identik untuk `list` dan `tuple`, dibahas lebih dalam dengan tabel indeks positif/negatif di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] Bab 5.
 
 ---
 
@@ -296,7 +299,7 @@ print(hasil)  # Output: False
 > Penggunaan kurung tanda baca pada operator `not` (misalnya `not (x > 5)`) sangat disarankan untuk menegaskan batasan ekspresi mana yang ingin dibalikkan nilainya secara visual agar kode mudah dibaca oleh sesama programmer.
 
 > [!info] Lihat juga
-> Ringkasan dasar operator perbandingan dan logika ini pertama kali disinggung secara singkat di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 5.10.
+> Ringkasan dasar operator perbandingan dan logika ini pertama kali disinggung secara singkat di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 5.10.
 
 ---
 
@@ -529,7 +532,7 @@ while not soup_cooked:
 > - Sebaliknya, _Looping_ bekerja secara linier di dalam satu cakupan eksekusi yang sama. Program mengevaluasi kondisi secara langsung untuk mengulang instruksi yang didefinisikan (misalnya menjalankan fungsi luar secara berulang seperti `stir_the_soup()`), sehingga jauh lebih hemat dalam penggunaan sumber daya memori komputer.
 
 > [!info] Lihat juga
-> Konsep _Recursion_ dan _Base Case_ ini dijelaskan mendalam lewat studi kasus Tower of Hanoi di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 3, termasuk implementasi Python-nya.
+> Konsep _Recursion_ dan _Base Case_ ini dijelaskan mendalam lewat studi kasus Tower of Hanoi di [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] Bab 3, termasuk implementasi Python-nya.
 
 ---
 
@@ -605,7 +608,7 @@ Objek _Iterable_ adalah tipe data atau objek apa pun dalam Python yang elemen-el
 | **Range** | `range(5)` | Mengiterasi urutan numerik dinamis yang dihasilkan dari fungsi pembatas. |
 
 > [!info] Lihat juga
-> Kategori tipe data _Sequences_, _Mappings_, dan _Sets_ ini (termasuk `range` sebagai _sequence_ yang _immutable_) dirangkum secara sistematis dalam satu tabel besar `mutable`/`immutable` di [[Sesi 04 - Data Types Collection Notes]] Bab 2.
+> Kategori tipe data _Sequences_, _Mappings_, dan _Sets_ ini (termasuk `range` sebagai _sequence_ yang _immutable_) dirangkum secara sistematis dalam satu tabel besar `mutable`/`immutable` di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] Bab 2.
 
 ### 6.3 Sintaksis Dasar `for` loop
 
@@ -706,7 +709,7 @@ for key, value in person.items():
 > Saat menggunakan metode `.items()`, kita wajib menyediakan dua variabel penampung pada baris deklarasi `for` (misalnya `for key, value in person.items()`). Python akan selalu mengirimkan data kunci ke variabel pertama dan data nilai ke variabel kedua secara berurutan. Jangan membalik urutan variabel jika ingin menjaga kejelasan logika kode.
 
 > [!info] Lihat juga
-> Tipe data Dictionary dan metode `.keys()`/`.values()`/`.items()` ini dibahas lebih dalam (termasuk `.get()`, `.update()`, `.setdefault()`) di [[Sesi 04 - Data Types Collection Notes]] Bab 7.
+> Tipe data Dictionary dan metode `.keys()`/`.values()`/`.items()` ini dibahas lebih dalam (termasuk `.get()`, `.update()`, `.setdefault()`) di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] Bab 7.
 
 ### 6.6 Implementasi Pernyataan `pass` sebagai Placeholder
 
@@ -1018,10 +1021,10 @@ else:
 > Saat melakukan iterasi pada perulangan `for` menggunakan fungsi `range()`, batas atas harus ditambahkan dengan angka 1 (`upper + 1`). Hal ini disebabkan karena parameter `stop` pada fungsi `range()` bersifat eksklusif (tidak diikutsertakan dalam iterasi).
 
 > [!info] Lihat juga
-> Algoritma pencarian bilangan prima ini dibahas ulang dan ditelusuri lebih detail (termasuk kasus khusus angka 2) di [[Sesi 04 - Data Types Collection Notes]] Bab 1.
+> Algoritma pencarian bilangan prima ini dibahas ulang dan ditelusuri lebih detail (termasuk kasus khusus angka 2) di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] Bab 1.
 
 ---
 
 ## Ringkasan Sesi
 
-Sesi 3 membangun kemampuan mengambil keputusan (Boolean, operator perbandingan & logika, `if`/`if-else`/`if-elif-else`/_nested if_) dan melakukan perulangan (`for`, `while`, `range()`, `enumerate()`, `break`, `continue`, `else` pada loop). Studi kasus konversi suhu/jarak, ganjil-genap, penghapusan karakter, dan palindrome yang dibuka di Bab 1 juga muncul di [[Sesi 02 - Intro to Git and GitHub]] sebagai Tugas Besar 2. Materi bilangan prima di Bab 8 menjadi jembatan langsung ke pembahasan tipe data koleksi di [[Sesi 04 - Data Types Collection Notes]], yang membuka bab dengan me-review ulang soal bilangan prima yang sama.
+Sesi 3 membangun kemampuan mengambil keputusan (Boolean, operator perbandingan & logika, `if`/`if-else`/`if-elif-else`/_nested if_) dan melakukan perulangan (`for`, `while`, `range()`, `enumerate()`, `break`, `continue`, `else` pada loop). Studi kasus konversi suhu/jarak, ganjil-genap, penghapusan karakter, dan palindrome yang dibuka di Bab 1 juga muncul di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] sebagai Tugas Besar 2. Materi bilangan prima di Bab 8 menjadi jembatan langsung ke pembahasan tipe data koleksi di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]], yang membuka bab dengan me-review ulang soal bilangan prima yang sama.
