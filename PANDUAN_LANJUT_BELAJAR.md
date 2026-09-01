@@ -71,9 +71,9 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 - [x] Soal Easy #1 (LeetCode, Accepted) — *Convert the Temperature, Accepted 2026-08-30, bukti sudah dikirim ke form*
 - [x] Soal Easy #2 (LeetCode, Accepted) — *Two Sum, Accepted 2026-09-02, runtime 0 ms, semua 3 test case lolos*
-- [ ] Soal Easy #3 (LeetCode, Accepted)
+- [x] Soal Easy #3 (LeetCode, Accepted) — *Contains Duplicate, Accepted 2026-09-02, pakai pola "seen set"*
 - [ ] Soal Medium #1 (LeetCode, Accepted)
-- [ ] Submit link akun LeetCode + screenshot Accepted via Google Form *(sebagian sudah — bukti Soal Easy #1 & #2 sudah terkirim; centang penuh setelah semua 4 soal beres)*
+- [ ] Submit link akun LeetCode + screenshot Accepted via Google Form *(sebagian sudah — bukti Soal Easy #1 & #2 sudah terkirim; Soal Easy #3 (Contains Duplicate) Accepted tapi screenshot BELUM dikirim ke form; centang penuh setelah semua 4 soal beres)*
 
 ---
 
@@ -109,12 +109,13 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
   5. ⬜ Cek Palindrome — BELUM dikerjakan, di-skip sementara buat coba LeetCode duluan (Palindrome itu sendiri mirip soal LeetCode klasik, rencana digabung nanti).
   - **Sesi ini juga ada 2x momen jujur soal Copilot**: sempat aktifin Copilot buat liat hint pas macet di soal 3, lalu dimatiin lagi sendiri; dan sekali lagi pas soal LeetCode "cuma liat, nggak accept". Instruktur (via cheat sheet Sesi 3) tegas bilang jangan pakai AI autocomplete pas masih belajar dasar — user nunjukin insting yang tepat buat balik matiin sendiri.
 
-- **CC1 (LeetCode) — mulai dikerjakan 2026-08-30 malam, progress 2/4 soal Accepted (per 2026-09-02):**
+- **CC1 (LeetCode) — mulai dikerjakan 2026-08-30 malam, progress 3/4 soal Accepted (per 2026-09-02):**
   - ✅ **"Convert the Temperature" (Easy) — ACCEPTED di LeetCode.** Ditulis & ditest dulu di Jupyter (alur: draft lokal → pindah ke LeetCode → submit — ini SAH, nggak ada aturan wajib ngoding langsung di LeetCode, cuma submission akhir yang wajib terjadi di LeetCode). Sempat ada 2 bug transisi ke format `class Solution`: (1) case-mismatch `celsius` vs `Celsius` lagi (pola berulang!), (2) lupa cara test method di dalam class butuh instansiasi objek dulu (`sol = Solution()` baru `sol.method(...)`) — LeetCode ngelakuin ini otomatis pas submit, tapi di Jupyter harus manual.
   - ✅ **Bukti submission Soal 1 (Convert the Temperature) SUDAH dikirim ke form** (2026-08-30 malam). Format bukti sesuai `Template Screenshot Code Challenge.docx`: 2 screenshot terpisah per soal (CODE/SOLUSI + HASIL status "Accepted" dari tombol Submit, bukan dari "Run").
   - ✅ **"Two Sum" (Easy) — ACCEPTED di LeetCode, 2026-09-02.** Runtime 0 ms, 3/3 test case lolos. Detail proses & bug-bug yang ditemukan sendiri ada di catatan "Percobaan kedua & SELESAI" di atas. **Bukti screenshot SUDAH dikirim ke form** (2026-09-02).
   - ⚠️ **Ketidakcocokan angka ditemukan** antara 2 dokumen resmi: Briefing bilang "3 Easy + 1 Medium = 100 poin", tapi Template Screenshot nulis teks "8 Easy + 2 Medium = 30 poin" untuk Modul 01 — TAPI template itu sendiri cuma nyediain 4 slot soal (Soal 1-3 Easy, Soal 4 Medium), yang justru cocok ke Briefing. User memutuskan itu typo/sisa teks dari template batch lain, pilih percaya ke Briefing + jumlah slot aktual (3 Easy+1 Medium), TIDAK dikonfirmasi ke pengajar (keputusan user sendiri, dicatat biar jelas bukan rekomendasi Claude).
-  - **Sisa CC1:** 2 Easy lagi + 1 Medium. Kandidat: Remove Duplicates from Sorted Array, Contains Duplicate, atau Palindrome (gabung sama Soal 5 Tugas Besar 2 di atas). Medium belum dipilih.
+  - ✅ **"Contains Duplicate" (Easy) — ACCEPTED di LeetCode, 2026-09-02.** Percobaan ke-4 setelah 3 draft yang tangled (self-reference variabel sebelum didefinisikan, `else: return False` di dalam loop — persis jebakan `is_prime` di Sesi 5 — dan elemen Two Sum seperti `enumerate()`/dict yang ketarik masuk padahal nggak relevan). Konsep akhirnya klik lewat perbandingan skeleton eksplisit ke Two Sum ("seen set" vs "seen dict") dan kode dikasih langsung sebagai kerangka lengkap (bukan cuma dibimbing trace) karena 3x percobaan mandiri berturut-turut belum konvergen. Pola solusi: `set()` kosong sebagai "sudah pernah dilihat", `return True` begitu ketemu, `return False` di LUAR loop (rata kiri `for`). **Screenshot proof BELUM dikirim ke form.**
+  - **Sisa CC1:** 1 Medium. Belum dipilih.
 
 - **Sesi 7 (OOP) & Sesi 9 (SQL) — mulai 2026-08-31, metode BERUBAH jadi "jelasin dulu baru quiz":**
   - **Perubahan metode penting:** setelah cold-quiz OOP & SQL awal hampir semua "lost", user nanya "apakah dilempar kuis sudah pasti saya tidak bisa jawab?" — dikonfirmasi BENAR untuk istilah teknis baru total (`self`, `__init__`, `GROUP BY`, dst) yang nggak bisa dinalar dari logika umum (beda dari statistik/viz yang masih bisa ditebak pakai analogi). Metode diganti: **jelasin ringkas dulu, baru quiz check** — khusus buat sesi vocabulary-heavy (SQL, OOP), BUKAN sesi reasoning-heavy (stats, viz) yang cold-quiz masih oke. Detail di memory `learning_style`.
