@@ -16,7 +16,7 @@ aliases: ["Sesi 9", "Sesi 09", "Intro to Database and SQL"]
 
 #### A. Fondasi Konseptual Database
 
-- Database didefinisikan sebagai koleksi data yang terorganisasi, yang secara umum disimpan dan diakses secara elektronik dari sistem komputer.
+- [[Kamus & Cheatsheet (JCAIEH M1)#D|Database]] didefinisikan sebagai koleksi data yang terorganisasi, yang secara umum disimpan dan diakses secara elektronik dari sistem komputer.
 - Istilah electronic database merujuk pada kumpulan data atau informasi apa pun yang dirancang secara khusus untuk kebutuhan rapid search dan retrieval menggunakan bantuan komputer.
 - Pada tingkat kompleksitas yang lebih tinggi, database dikembangkan dengan menerapkan teknik formal design dan modeling.
 
@@ -41,7 +41,7 @@ aliases: ["Sesi 9", "Sesi 09", "Intro to Database and SQL"]
 #### A. Komponen Utama Arsitektur Informasi
 
 - Secara formal, istilah "database" merujuk pada satu set related data beserta metode pengorganisasian data tersebut.
-- Akses terhadap data yang terorganisasi ini disediakan melalui perantara yang disebut Database Management System (DBMS).
+- Akses terhadap data yang terorganisasi ini disediakan melalui perantara yang disebut [[Kamus & Cheatsheet (JCAIEH M1)#D|Database Management System (DBMS)]].
 - DBMS terdiri dari integrated set of computer software yang mengizinkan user untuk berinteraksi dengan satu atau lebih database.
 - DBMS menyediakan akses terhadap seluruh data yang tersimpan di dalam database, meskipun pembatasan akses dapat diberlakukan untuk melindungi data tertentu.
 
@@ -128,10 +128,10 @@ Konsep DBMS ini menjadi fondasi untuk [[Sesi 10 - SQL Working With Multiple Tabl
 
 |Perintah SQL|Deskripsi Fungsional|Kode Contoh|
 |:--|:--|:--|
-|CREATE DATABASE|Membuat database baru di server database.|`CREATE DATABASE Seller;`|
-|SHOW DATABASES|Menampilkan daftar seluruh database yang tersedia di server.|`SHOW DATABASES;`|
-|USE|Mengaktifkan database tertentu agar query selanjutnya dieksekusi di database tersebut.|`USE Seller;`|
-|DROP DATABASE|Menghapus database beserta seluruh tabel dan data di dalamnya secara permanen.|`DROP DATABASE Seller;`|
+|[[Kamus & Cheatsheet (JCAIEH M1)#C|CREATE DATABASE]]|Membuat database baru di server database.|`CREATE DATABASE Seller;`|
+|[[Kamus & Cheatsheet (JCAIEH M1)#S|SHOW DATABASES]]|Menampilkan daftar seluruh database yang tersedia di server.|`SHOW DATABASES;`|
+|[[Kamus & Cheatsheet (JCAIEH M1)#U|USE]]|Mengaktifkan database tertentu agar query selanjutnya dieksekusi di database tersebut.|`USE Seller;`|
+|[[Kamus & Cheatsheet (JCAIEH M1)#D|DROP DATABASE]]|Menghapus database beserta seluruh tabel dan data di dalamnya secara permanen.|`DROP DATABASE Seller;`|
 
 #### B. Sintaksis dan Eksekusi Perintah SQL
 
@@ -161,7 +161,7 @@ DROP DATABASE demo_scratch;   -- 4. (opsional) hapus permanen jika sudah tidak d
 
 - Tabel adalah objek database utama yang menyimpan data dalam bentuk baris (rows) dan kolom (columns).
 - Perintah `CREATE TABLE` digunakan untuk mendefinisikan tabel baru dengan menentukan nama tabel, nama kolom, serta tipe data untuk masing-masing kolom.
-- Tipe data (Data Type) menentukan jenis nilai yang dapat disimpan oleh suatu kolom, seperti angka bulat (integer) atau karakter teks (character string).
+- Tipe data ([[Kamus & Cheatsheet (JCAIEH M1)#D|Data Type]]) menentukan jenis nilai yang dapat disimpan oleh suatu kolom, seperti angka bulat (integer) atau karakter teks (character string).
 
 |Karakteristik Struktur|Deskripsi Teknis|
 |:--|:--|
@@ -307,9 +307,9 @@ VALUES
 #### A. Kegunaan Perintah SELECT
 
 - Perintah `SELECT` digunakan untuk mengekstrak dan menampilkan data dari tabel database.
-- Hasil pencarian data tersebut disimpan dalam tabel hasil sementara yang disebut sebagai result-set.
+- Hasil pencarian data tersebut disimpan dalam tabel hasil sementara yang disebut sebagai [[Kamus & Cheatsheet (JCAIEH M1)#R|result-set]].
 
-|Jenis Perintah SELECT|Bentuk Sintaksis|Efek Terhadap Kolom Hasil|
+|Jenis Perintah [[Kamus & Cheatsheet (JCAIEH M1)#S|SELECT]]|Bentuk Sintaksis|Efek Terhadap Kolom Hasil|
 |:--|:--|:--|
 |SELECT Bintang (`*`)|`SELECT * FROM table_name;`|Menampilkan seluruh kolom yang terdaftar di tabel secara lengkap.|
 |SELECT Kolom Spesifik|`SELECT col1, col2 FROM table_name;`|Hanya menampilkan kolom-kolom yang didefinisikan secara eksplisit.|
@@ -352,7 +352,7 @@ FROM City;
 - Di dalam tabel database, sebuah kolom sering kali berisi nilai-nilai yang sama (duplikat).
 - Klausa `DISTINCT` digunakan di dalam pernyataan `SELECT` untuk menyaring hasil query sehingga hanya menampilkan nilai-nilai yang unik dan berbeda saja.
 
-|Sintaksis DISTINCT|Target Pengolahan|Output Hasil Query|
+|Sintaksis [[Kamus & Cheatsheet (JCAIEH M1)#D|DISTINCT]]|Target Pengolahan|Output Hasil Query|
 |:--|:--|:--|
 |`SELECT DISTINCT column_name`|Mengidentifikasi nilai-nilai unik dalam kolom terpilih.|Menghilangkan seluruh nilai duplikat yang redundan dari result-set.|
 
@@ -427,7 +427,7 @@ LIMIT 5;
 
 - Klausa `WHERE` adalah perintah dasar yang digunakan untuk menyaring baris data (_records_) dari tabel.
 - Fungsi utama klausa ini adalah mengekstrak hanya baris data yang memenuhi kriteria atau kondisi spesifik yang ditentukan.
-- Klausa `WHERE` diletakkan setelah klausa `FROM` dalam struktur query SQL.
+- Klausa `WHERE` diletakkan setelah klausa `FROM` dalam struktur query SQL. (Bandingkan dengan [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|boolean filtering / `.loc[]` di Pandas]] — konsep sama, sintaks beda: `df[df['col'] > value]` ≈ `WHERE col > value`.)
 
 #### A. Sintaksis Dasar dan Penyaringan Nilai Numerik
 
@@ -485,7 +485,7 @@ SELECT * FROM City WHERE CountryCode = 'IDN' OR CountryCode = 'MYS';
 
 #### A. Penggunaan Wildcard dalam SQL
 
-- SQL menyediakan dua karakter khusus (_wildcards_) yang digunakan bersama operator `LIKE`:
+- SQL menyediakan dua karakter khusus (_[[Kamus & Cheatsheet (JCAIEH M1)#W|wildcards]]_) yang digunakan bersama operator `LIKE`:
     - `%` (Tanda Persen): Merepresentasikan nol, satu, atau beberapa karakter (_zero, one, or multiple characters_).
     - `_` (Tanda Garis Bawah / Underscore): Merepresentasikan satu karakter tunggal saja secara eksis (_exactly a single character_).
 - Kedua wildcard ini dapat digunakan secara terpisah maupun digabungkan dalam satu pola pencarian teks.
@@ -573,7 +573,7 @@ SELECT Name, Region, LifeExpectancy FROM Country WHERE LifeExpectancy NOT BETWEE
 
 #### A. Aturan Standar Case Sensitivity dalam Database
 
-- Kata kunci dasar atau perintah utama SQL (_SQL keywords_) seperti `SELECT`, `WHERE`, `LIKE`, `AND`, dan `OR` bersifat **case-insensitive** (tidak sensitif huruf). Perintah dapat ditulis dalam huruf besar maupun huruf kecil tanpa memengaruhi fungsionalitas.
+- Kata kunci dasar atau perintah utama SQL (_SQL keywords_) seperti `SELECT`, `WHERE`, `LIKE`, `AND`, dan `OR` bersifat **[[Kamus & Cheatsheet (JCAIEH M1)#C|case-insensitive]]** (tidak sensitif huruf). Perintah dapat ditulis dalam huruf besar maupun huruf kecil tanpa memengaruhi fungsionalitas.
 - Nama kolom (_column names_) secara umum bersifat **case-insensitive**.
 - Nama database dan nama tabel (_database and table names_) sangat bergantung pada sistem operasi yang menjalankan database server:
     - Pada sistem operasi **Linux**, nama database dan tabel bersifat **case-sensitive** (sensitif huruf).
@@ -721,8 +721,8 @@ DELETE FROM person;
 
 #### A. Pengenalan Klausa `ORDER BY`
 
-- Klausa `ORDER BY` digunakan untuk mengurutkan kumpulan hasil (_result-set_) dari kueri data berdasarkan satu atau lebih kolom.
-- Secara default, klausa `ORDER BY` akan mengurutkan data dari nilai terkecil ke terbesar (_ascending_).
+- Klausa `ORDER BY` digunakan untuk mengurutkan kumpulan hasil (_result-set_) dari kueri data berdasarkan satu atau lebih kolom. (Bandingkan dengan [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|.sort_values() di Pandas]] — konsep sama, sintaks beda.)
+- Secara default, klausa `ORDER BY` akan mengurutkan data dari nilai terkecil ke terbesar (_[[Kamus & Cheatsheet (JCAIEH M1)#A|ascending]]_).
 - Untuk mengubah urutan dari terbesar ke terkecil (_descending_), kata kunci `DESC` ditambahkan secara eksplisit setelah nama kolom yang bersangkutan.
 
 |Kata Kunci|Arah Pengurutan|Karakteristik Default|
@@ -819,8 +819,8 @@ LIMIT 5;
 - Database secara umum dilengkapi dengan built-in function (fungsi bawaan) yang dapat dimasukkan secara langsung ke dalam pernyataan SQL.
 - Penggunaan fungsi ini secara signifikan mengurangi jumlah data yang perlu diekstraksi dari server, sehingga mempercepat proses pengolahan data.
 - Fungsi bawaan SQL dikelompokkan menjadi dua kategori utama berdasarkan cakupan kerjanya:
-    - **Aggregate Functions (Fungsi Agregat):** Beroperasi pada sekumpulan nilai (_collection of values_) atau satu kolom secara keseluruhan untuk menghasilkan nilai tunggal (_single value_).
-    - **Scalar Functions (Fungsi Skalar):** Beroperasi pada setiap nilai individual (_every individual value_) di baris data secara mandiri.
+    - **[[Kamus & Cheatsheet (JCAIEH M1)#A|Aggregate Functions]] (Fungsi Agregat):** Beroperasi pada sekumpulan nilai (_collection of values_) atau satu kolom secara keseluruhan untuk menghasilkan nilai tunggal (_single value_).
+    - **[[Kamus & Cheatsheet (JCAIEH M1)#S|Scalar Functions]] (Fungsi Skalar):** Beroperasi pada setiap nilai individual (_every individual value_) di baris data secara mandiri.
 
 |Jenis Fungsi|Karakteristik Utama|Contoh Fungsi|
 |:--|:--|:--|
@@ -1279,7 +1279,7 @@ WHERE staff_id = 1 AND amount > 11;
 
 #### A. Konsep Dasar Subquery
 
-- Subquery atau kueri bersarang didefinisikan sebagai sebuah kueri SQL yang berada di dalam kueri SQL lainnya.
+- [[Kamus & Cheatsheet (JCAIEH M1)#S|Subquery]] atau kueri bersarang didefinisikan sebagai sebuah kueri SQL yang berada di dalam kueri SQL lainnya.
 - Kueri yang berada di bagian dalam (inner query) dieksekusi terlebih dahulu, kemudian hasilnya digunakan oleh kueri yang berada di bagian luar (outer query) untuk menyelesaikan operasi utamanya.
 - Subquery dapat disisipkan atau bersarang di dalam berbagai jenis pernyataan SQL utama, termasuk SELECT, INSERT, UPDATE, atau DELETE, serta dapat disisipkan di dalam subquery lainnya.
 
@@ -1366,7 +1366,7 @@ FROM new_employees;
 
 #### A. Pembuatan Tabel Virtual Sementara
 
-- Subquery yang diletakkan di dalam klausa `FROM` berfungsi menggantikan posisi nama tabel fisik. Konsep ini dikenal sebagai _Derived Tables_ atau _Table Expressions_.
+- Subquery yang diletakkan di dalam klausa `FROM` berfungsi menggantikan posisi nama tabel fisik. Konsep ini dikenal sebagai _[[Kamus & Cheatsheet (JCAIEH M1)#D|Derived Tables]]_ atau _Table Expressions_.
 - Subquery ini menghasilkan sekumpulan baris dan kolom yang bertindak sebagai tabel virtual sementara untuk diproses lebih lanjut oleh kueri utama.
 
 |Terminologi|Karakteristik Utama|
@@ -1685,6 +1685,14 @@ Bagian ini adalah catatan mentah langsung dari sesi kuliah (belum diolah ulang),
 7. Sekarang bikin lagi database baru, namanya `CREATE DATABASE seller;`
 
 **Ringkasan cepat tiga klausa inti** (dari catatan kelas, sudah dibahas lengkap di bab-bab sebelumnya):
-- **HAVING**: Mengolah data agregat atau hasil olahan (menyaring grup — lihat [[#Bab 9 Penyaringan Grup Data (HAVING)]]).
-- **WHERE**: Menyaring data (baris individual — lihat [[#Bab 4 Penyaringan Data Tingkat Lanjut (Filtering Data)]]).
-- **LIKE**: Mencocokkan pola teks (lihat Bab 4.2 — Pencocokan Pola Teks di atas).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#H|HAVING]]**: Mengolah data agregat atau hasil olahan (menyaring grup — lihat [[#Bab 9 Penyaringan Grup Data (HAVING)]]).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#W|WHERE]]**: Menyaring data (baris individual — lihat [[#Bab 4 Penyaringan Data Tingkat Lanjut (Filtering Data)]]).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#L|LIKE]]**: Mencocokkan pola teks (lihat Bab 4.2 — Pencocokan Pola Teks di atas).
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]] — melanjutkan langsung dari sesi ini: relasi multi-tabel (Primary Key/Foreign Key, JOIN) dibangun di atas fondasi SELECT/WHERE/GROUP BY yang dipelajari di sini.
+- [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — konsep SQL di sini (WHERE, GROUP BY, ORDER BY, fungsi agregat) punya padanan langsung di Pandas (`.loc[]`/boolean filtering, `.groupby()`, `.sort_values()`, `.mean()`/`.sum()`).
+- [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] — fungsi agregat SQL (AVG, MIN, MAX) menghitung ukuran statistik dasar yang dibahas lebih formal di sesi ini.

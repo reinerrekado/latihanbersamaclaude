@@ -18,9 +18,9 @@ Catatan sesi ketiga ini mencakup review 5 studi kasus latihan mandiri (konversi 
 
 **Fondasi Konseptual:**
 
-- **Fungsi (Function):** dideklarasikan menggunakan kata kunci `def`. Fungsi merupakan blok kode terorganisir yang menerima masukan, memprosesnya, dan dapat mengembalikan nilai.
-- **Parameter:** variabel lokal yang didefinisikan dalam tanda kurung pada deklarasi fungsi (misalnya `fahrenheit`) untuk menampung argumen yang dikirim saat fungsi dipanggil.
-- **Mekanisme Return:** kata kunci `return` digunakan untuk mengirimkan kembali nilai hasil perhitungan di dalam fungsi kepada baris kode yang memanggil fungsi tersebut.
+- **Fungsi ([[Kamus & Cheatsheet (JCAIEH M1)#F|Function]]):** dideklarasikan menggunakan kata kunci `def`. Fungsi merupakan blok kode terorganisir yang menerima masukan, memprosesnya, dan dapat mengembalikan nilai.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#P|Parameter]]:** variabel lokal yang didefinisikan dalam tanda kurung pada deklarasi fungsi (misalnya `fahrenheit`) untuk menampung argumen yang dikirim saat fungsi dipanggil.
+- **Mekanisme [[Kamus & Cheatsheet (JCAIEH M1)#R|Return]]:** kata kunci `return` digunakan untuk mengirimkan kembali nilai hasil perhitungan di dalam fungsi kepada baris kode yang memanggil fungsi tersebut.
 
 **Implementasi menggunakan fungsi:**
 
@@ -51,9 +51,9 @@ print(celsius_degree)  # Output: 35.0
 **Fondasi Konseptual:**
 
 - **Fungsi `input()`:** mengambil masukan teks dari pengguna. Hasil kembalian `input()` secara default selalu bertipe data string (teks).
-- **Float Type Casting:** pengubahan tipe data string hasil `input()` secara eksplisit menjadi tipe data desimal (float) agar dapat diproses dalam perhitungan matematika.
-- **Manual Concatenation:** menggabungkan string dan variabel menggunakan operator `+`. Mewajibkan konversi tipe data non-string ke string secara manual menggunakan `str()` untuk menghindari error.
-- **F-String (Literal String Interpolation):** sintaksis modern dengan awalan huruf `f` sebelum tanda petik string, memungkinkan penyisipan variabel langsung di dalam string menggunakan `{}` tanpa perlu konversi tipe manual.
+- **Float Type Casting:** pengubahan tipe data string hasil `input()` secara eksplisit menjadi tipe data desimal ([[Kamus & Cheatsheet (JCAIEH M1)#F|float]]) agar dapat diproses dalam perhitungan matematika.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#S|Manual Concatenation]]:** menggabungkan string dan variabel menggunakan operator `+`. Mewajibkan konversi tipe data non-string ke string secara manual menggunakan `str()` untuk menghindari error.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#F|F-String]] (Literal String Interpolation):** sintaksis modern dengan awalan huruf `f` sebelum tanda petik string, memungkinkan penyisipan variabel langsung di dalam string menggunakan `{}` tanpa perlu konversi tipe manual.
 
 | Karakteristik | Manual Concatenation (`+`) | F-String (`f"..."`) |
 | --- | --- | --- |
@@ -88,7 +88,7 @@ print("Ukuran " + str(cm) + " cm = " + str(km) + " km")
 
 **Fondasi Konseptual:**
 
-- **Operator Modulo (`%`):** operator aritmetika yang menghasilkan sisa pembagian dari operasi pembagian dua bilangan bulat.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#M|Operator Modulo]] (`%`):** operator aritmetika yang menghasilkan sisa pembagian dari operasi pembagian dua bilangan bulat.
 - **Logika Ganjil/Genap:** bilangan bulat `n` disebut ganjil jika `n % 2 != 0`. Sebaliknya, disebut genap jika `n % 2 == 0`.
 
 **Perbandingan `return` vs `print()`:**
@@ -164,7 +164,7 @@ print(result)  # Output: Saya  makan dan akan minum
 
 - **Definisi Palindrom:** kata atau kalimat yang susunan karakternya tetap sama persis baik dibaca dari depan (normal) maupun dari belakang (terbalik).
 - **String Slicing (`[::-1]`):** metode pemotongan terurut menggunakan format indeks `[start:stop:step]`. Nilai `step` negatif `-1` menginstruksikan Python untuk melakukan pemindaian elemen secara mundur (terbalik).
-- **Iterable Data Type:** karakteristik string di mana setiap karakter penyusunnya merupakan elemen berurutan yang dapat diakses satu per satu menggunakan nomor indeks.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#I|Iterable Data Type]]:** karakteristik string di mana setiap karakter penyusunnya merupakan elemen berurutan yang dapat diakses satu per satu menggunakan nomor indeks.
 
 **Parameter Slicing Python `[start:stop:step]`:**
 
@@ -207,7 +207,7 @@ else:
 
 ### 2.1 Karakteristik dan Definisi Tipe Data Boolean
 
-- **Definisi:** Boolean adalah tipe data primitif yang hanya memiliki dua nilai kebenaran, yaitu `True` dan `False`. Tipe data ini digunakan untuk merepresentasikan hasil dari suatu ekspresi logis.
+- **Definisi:** [[Kamus & Cheatsheet (JCAIEH M1)#B|Boolean]] adalah tipe data primitif yang hanya memiliki dua nilai kebenaran, yaitu `True` dan `False`. Tipe data ini digunakan untuk merepresentasikan hasil dari suatu ekspresi logis.
 - **Peran dalam Pemrograman:** nilai Boolean berfungsi sebagai fondasi utama dalam pengambilan keputusan (_decision-making_). Komputer mengevaluasi ekspresi Boolean untuk menentukan jalur eksekusi kode atau blok pernyataan mana yang harus dijalankan berdasarkan kondisi yang terpenuhi.
 - **Case Sensitivity:** Python menerapkan aturan penulisan huruf kapital yang ketat untuk konstanta Boolean. Penulisan wajib diawali huruf kapital (`True` dan `False`). Penulisan dengan huruf kecil seluruhnya (`true` atau `false`) akan menyebabkan kegagalan sistem berupa `NameError`.
 
@@ -279,7 +279,7 @@ print(f"Hasil NOT: {kondisi_not}")  # Output: Hasil NOT: True
 
 > [!warning] Audio Insight — Short-Circuit Evaluation pada `and`/`or`
 > Python mengevaluasi ekspresi logika dari arah kiri ke kanan.
-> - Pada operator `and`, jika kondisi pertama sudah dievaluasi bernilai `False`, Python tidak akan mengevaluasi kondisi kedua karena hasil akhirnya sudah pasti `False` (konsep _short-circuit evaluation_).
+> - Pada operator `and`, jika kondisi pertama sudah dievaluasi bernilai `False`, Python tidak akan mengevaluasi kondisi kedua karena hasil akhirnya sudah pasti `False` (konsep _[[Kamus & Cheatsheet (JCAIEH M1)#S|short-circuit evaluation]]_).
 > - Pada operator `or`, jika kondisi pertama sudah bernilai `True`, evaluasi akan langsung dihentikan dan menghasilkan nilai `True` tanpa perlu memeriksa kondisi berikutnya.
 
 ```python
@@ -391,7 +391,7 @@ print("Have a nice day!")
 > [!warning] Audio Insight — Identifikasi dan Dampak `IndentationError`
 > Python mendeteksi struktur pengelompokan kode berdasarkan konsistensi indentasi. Jika Anda menuliskan baris instruksi di bawah _statement_ `if` tanpa memberikan spasi atau tab, Python akan menghentikan proses eksekusi dan mengeluarkan pesan kegagalan: `IndentationError: expected an indentation block`. Tingkat kerapian indentasi harus seragam di dalam satu blok yang sama — mencampur tab dengan spasi manual akan memicu galat sistem.
 
-> [!warning] Audio Insight — Dead Code Akibat Urutan Kondisi yang Salah
+> [!warning] Audio Insight — [[Kamus & Cheatsheet (JCAIEH M1)#D|Dead Code]] Akibat Urutan Kondisi yang Salah
 > Karena interpreter Python bekerja secara sekuensial dari atas ke bawah, penentuan urutan kondisi dari yang paling spesifik ke yang paling umum sangatlah krusial. Perhatikan contoh kesalahan penulisan (_logic error_) berikut:
 >
 > ```python
@@ -425,7 +425,7 @@ else:
 
 ### 4.1 Konsep dan Kasus Penggunaan Keputusan Dependen
 
-_Nested if_ adalah struktur percabangan di mana sebuah pernyataan `if` diletakkan di dalam blok pernyataan `if` lainnya. Konsep ini digunakan untuk menangani situasi **keputusan dependen**, yaitu situasi di mana suatu kondisi kedua (_Inner Condition_) hanya perlu dievaluasi jika kondisi pertama (_Outer Condition_) telah terbukti bernilai `True`.
+_[[Kamus & Cheatsheet (JCAIEH M1)#N|Nested if]]_ adalah struktur percabangan di mana sebuah pernyataan `if` diletakkan di dalam blok pernyataan `if` lainnya. Konsep ini digunakan untuk menangani situasi **keputusan dependen**, yaitu situasi di mana suatu kondisi kedua (_[[Kamus & Cheatsheet (JCAIEH M1)#I|Inner Condition]]_) hanya perlu dievaluasi jika kondisi pertama (_[[Kamus & Cheatsheet (JCAIEH M1)#O|Outer Condition]]_) telah terbukti bernilai `True`.
 
 Apabila _Outer Condition_ dievaluasi bernilai `False`, komputer akan langsung melewati seluruh blok _Nested if_ di dalamnya tanpa melakukan pemeriksaan pada _Inner Condition_.
 
@@ -433,8 +433,8 @@ Apabila _Outer Condition_ dievaluasi bernilai `False`, komputer akan langsung me
 | --- | --- |
 | **Outer Condition** | Kondisi tingkat pertama yang dievaluasi paling awal untuk menentukan apakah blok di dalamnya dapat diakses. |
 | **Inner Condition** | Kondisi bersarang di dalam _Outer Condition_ yang hanya dievaluasi jika kondisi tingkat pertama bernilai `True`. |
-| **Double Indentation** | Aturan penulisan spasi vertikal ganda untuk menegaskan cakupan (_scope_) dari _Inner Condition_. |
-| **NameError** | Eror yang terjadi jika program memanggil fungsi atau variabel dalam kondisi yang belum didefinisikan sebelumnya. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#D|Double Indentation]]** | Aturan penulisan spasi vertikal ganda untuk menegaskan cakupan (_scope_) dari _Inner Condition_. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#N|NameError]]** | Eror yang terjadi jika program memanggil fungsi atau variabel dalam kondisi yang belum didefinisikan sebelumnya. |
 
 ### 4.2 Aturan Double Indentation dan Contoh Implementasi
 
@@ -495,7 +495,7 @@ print("Have a nice day!")
 ### 5.1 Konsep Dasar Perulangan dan Stopping Condition
 
 - **Looping / Iteration:** proses eksekusi sekumpulan instruksi secara berulang-ulang hingga suatu kondisi berhenti yang ditentukan terpenuhi. Digunakan sebagai mekanisme otomatisasi untuk menangani tugas repetitif secara efisien tanpa menulis ulang instruksi yang sama berkali-kali.
-- **Stopping Condition:** syarat batas evaluasi yang wajib dipenuhi agar aliran eksekusi program dapat keluar dari siklus perulangan. Jika tidak didefinisikan dengan benar atau tidak pernah tercapai, sistem akan terjebak dalam **Infinite Loop** (perulangan tanpa akhir) yang terus-menerus mengonsumsi memori dan daya komputasi perangkat secara berlebihan hingga program dihentikan secara paksa.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#S|Stopping Condition]]:** syarat batas evaluasi yang wajib dipenuhi agar aliran eksekusi program dapat keluar dari siklus perulangan. Jika tidak didefinisikan dengan benar atau tidak pernah tercapai, sistem akan terjebak dalam **[[Kamus & Cheatsheet (JCAIEH M1)#I|Infinite Loop]]** (perulangan tanpa akhir) yang terus-menerus mengonsumsi memori dan daya komputasi perangkat secara berlebihan hingga program dihentikan secara paksa.
 
 ### 5.2 Perbandingan Efisiensi Penulisan Kode
 
@@ -528,7 +528,7 @@ while not soup_cooked:
 
 > [!tip] Audio Insight — Pembeda Fundamental Looping vs Recursion
 > Dalam interaksi kelas, dibahas pertanyaan kritis mengenai korelasi perulangan dengan konsep pemrograman rekursif. Dosen menegaskan bahwa meskipun keduanya menghasilkan eksekusi berulang, prinsip kerjanya di dalam memori sangat berbeda:
-> - _Recursion_ adalah sebuah fungsi yang memanggil dirinya sendiri dari dalam badan fungsinya sendiri, sehingga membutuhkan alokasi tumpukan memori (_stack_) baru untuk setiap pemanggilan fungsi berantai tersebut hingga batas berhenti (_base case_) dicapai.
+> - _[[Kamus & Cheatsheet (JCAIEH M1)#R|Recursion]]_ adalah sebuah fungsi yang memanggil dirinya sendiri dari dalam badan fungsinya sendiri, sehingga membutuhkan alokasi tumpukan memori (_stack_) baru untuk setiap pemanggilan fungsi berantai tersebut hingga batas berhenti (_base case_) dicapai.
 > - Sebaliknya, _Looping_ bekerja secara linier di dalam satu cakupan eksekusi yang sama. Program mengevaluasi kondisi secara langsung untuk mengulang instruksi yang didefinisikan (misalnya menjalankan fungsi luar secara berulang seperti `stir_the_soup()`), sehingga jauh lebih hemat dalam penggunaan sumber daya memori komputer.
 
 > [!info] Lihat juga
@@ -1028,3 +1028,11 @@ else:
 ## Ringkasan Sesi
 
 Sesi 3 membangun kemampuan mengambil keputusan (Boolean, operator perbandingan & logika, `if`/`if-else`/`if-elif-else`/_nested if_) dan melakukan perulangan (`for`, `while`, `range()`, `enumerate()`, `break`, `continue`, `else` pada loop). Studi kasus konversi suhu/jarak, ganjil-genap, penghapusan karakter, dan palindrome yang dibuka di Bab 1 juga muncul di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] sebagai Tugas Besar 2. Materi bilangan prima di Bab 8 menjadi jembatan langsung ke pembahasan tipe data koleksi di [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]], yang membuka bab dengan me-review ulang soal bilangan prima yang sama.
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] — perbandingan Looping vs Recursion di Bab 5 di sini merujuk balik ke studi kasus Tower of Hanoi (rekursi) yang dibuka di Sesi 1 Bab 3.
+- [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] — kelima studi kasus di Bab 1 (konversi suhu, ganjil-genap, hapus kemunculan pertama, palindrome) pertama kali muncul sebagai Tugas Besar 2 di Sesi 2.
+- [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] — algoritma bilangan prima di Bab 8 dan aturan slicing `[start:stop:step]` di Bab 1.5 dibahas ulang lebih dalam sebagai pembuka Sesi 4.

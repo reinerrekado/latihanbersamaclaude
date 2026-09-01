@@ -16,7 +16,7 @@ Catatan sesi kedua ini mencakup pengenalan Git dan GitHub, empat istilah kunci (
 
 ### 1.1 Definisi Git
 
-Git adalah sebuah _distributed version control system_ (VCS) yang memungkinkan pengembang untuk melacak perubahan pada kode mereka dari waktu ke waktu. Sistem ini dirancang untuk menangani segala jenis proyek, dari kecil hingga sangat besar, dengan kecepatan dan efisiensi tinggi.
+Git adalah sebuah _[[Kamus & Cheatsheet (JCAIEH M1)#D|distributed version control system]]_ (VCS) yang memungkinkan pengembang untuk melacak perubahan pada kode mereka dari waktu ke waktu. Sistem ini dirancang untuk menangani segala jenis proyek, dari kecil hingga sangat besar, dengan kecepatan dan efisiensi tinggi.
 
 Salah satu fungsi utama Git adalah memfasilitasi kolaborasi. Dengan Git, beberapa orang dapat bekerja pada proyek yang sama secara bersamaan tanpa risiko saling menimpa (_overwriting_) perubahan yang dilakukan oleh pengembang lain.
 
@@ -42,8 +42,8 @@ GitHub bukan sekadar tempat penyimpanan, melainkan berfungsi sebagai jejaring so
 
 **Fitur Kerja Tim di GitHub:**
 
-- **Pull Request:** mekanisme untuk mengajukan perubahan kode ke proyek utama.
-- **Issue Tracking:** fitur untuk mencatat dan melacak bug, tugas, atau permintaan fitur baru.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#P|Pull Request]]:** mekanisme untuk mengajukan perubahan kode ke proyek utama.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#I|Issue Tracking]]:** fitur untuk mencatat dan melacak bug, tugas, atau permintaan fitur baru.
 - **Project Management:** perangkat lunak terintegrasi untuk mengelola alur kerja dan progres proyek.
 
 ### 1.5 Perbedaan Peran Git vs GitHub
@@ -78,19 +78,19 @@ Untuk memahami cara kerja Git, struktur sistem ini dapat divisualisasikan menggu
 
 ### 2.2 Empat Istilah Kunci Utama Git
 
-**Repository (Repo)** — tempat penyimpanan utama di mana sebuah proyek disimpan. Secara teknis, ini berfungsi seperti folder besar di komputer yang memiliki kemampuan khusus untuk melacak semua file dan setiap perubahan yang terjadi pada file-file tersebut sepanjang waktu.
+**[[Kamus & Cheatsheet (JCAIEH M1)#R|Repository (Repo)]]** — tempat penyimpanan utama di mana sebuah proyek disimpan. Secara teknis, ini berfungsi seperti folder besar di komputer yang memiliki kemampuan khusus untuk melacak semua file dan setiap perubahan yang terjadi pada file-file tersebut sepanjang waktu.
 
-**Commit** — sebuah _snapshot_ atau potret dari proyek pada titik waktu tertentu. Ketika pengembang melakukan perubahan dan menyimpannya sebagai _commit_, Git mencatat keadaan persis dari seluruh proyek saat itu.
+**[[Kamus & Cheatsheet (JCAIEH M1)#C|Commit]]** — sebuah _snapshot_ atau potret dari proyek pada titik waktu tertentu. Ketika pengembang melakukan perubahan dan menyimpannya sebagai _commit_, Git mencatat keadaan persis dari seluruh proyek saat itu.
 
-- Setiap _commit_ diidentifikasi secara unik menggunakan **SHA-1 hash** (untaian 40 karakter heksadesimal).
+- Setiap _commit_ diidentifikasi secara unik menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#S|SHA-1 hash]]** (untaian 40 karakter heksadesimal).
 - Hash ini memungkinkan pengembang untuk merujuk kembali ke versi lama dan melihat sejarah perubahan dengan presisi tinggi.
 
-**Branch** — salinan jalur pengembangan proyek yang memungkinkan pengembang bekerja tanpa memengaruhi jalur utama (_main project_). Fitur ini penting untuk eksperimen atau pengembangan fitur baru secara terisolasi.
+**[[Kamus & Cheatsheet (JCAIEH M1)#B|Branch]]** — salinan jalur pengembangan proyek yang memungkinkan pengembang bekerja tanpa memengaruhi jalur utama (_main project_). Fitur ini penting untuk eksperimen atau pengembangan fitur baru secara terisolasi.
 
-**Merge** — proses pengambilan perubahan dari sebuah _branch_ dan menggabungkannya kembali ke proyek utama.
+**[[Kamus & Cheatsheet (JCAIEH M1)#M|Merge]]** — proses pengambilan perubahan dari sebuah _branch_ dan menggabungkannya kembali ke proyek utama.
 
 - Git akan mencoba menggabungkan perubahan secara otomatis.
-- Jika terdapat perubahan pada baris kode yang sama di dua jalur berbeda, akan terjadi **_conflict_**. Dalam situasi ini, pengembang harus melakukan **conflict resolution** secara manual untuk menentukan kode mana yang akan digunakan.
+- Jika terdapat perubahan pada baris kode yang sama di dua jalur berbeda, akan terjadi **_[[Kamus & Cheatsheet (JCAIEH M1)#M|conflict]]_**. Dalam situasi ini, pengembang harus melakukan **conflict resolution** secara manual untuk menentukan kode mana yang akan digunakan.
 
 > [!tip] Audio Insight — Repository vs. Cloud Storage
 > _Repository_ dapat dibayangkan seperti layanan drive bersama (seperti Google Drive atau OneDrive), namun dengan kecerdasan tambahan untuk melacak riwayat perubahan secara mendalam, bukan sekadar menyimpan file versi terbaru.
@@ -142,9 +142,9 @@ git out!
 
 ### 3.1 Siklus Status Berkas (Status Lifecycle)
 
-Dalam Git, setiap berkas di dalam _working directory_ (direktori kerja) memiliki siklus status yang menentukan bagaimana Git memperlakukan berkas tersebut. Secara garis besar, berkas dikategorikan menjadi dua kelompok utama:
+Dalam Git, setiap berkas di dalam _[[Kamus & Cheatsheet (JCAIEH M1)#W|working directory]]_ (direktori kerja) memiliki siklus status yang menentukan bagaimana Git memperlakukan berkas tersebut. Secara garis besar, berkas dikategorikan menjadi dua kelompok utama:
 
-- **Tracked files:** berkas yang sudah dikenal oleh Git. Berkas ini adalah bagian dari _snapshot_ terakhir atau telah masuk ke dalam _staging area_. Statusnya dapat berupa _unmodified_, _modified_, atau _staged_.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#T|Tracked files]]:** berkas yang sudah dikenal oleh Git. Berkas ini adalah bagian dari _snapshot_ terakhir atau telah masuk ke dalam _[[Kamus & Cheatsheet (JCAIEH M1)#S|staging area]]_. Statusnya dapat berupa _unmodified_, _modified_, atau _staged_.
 - **Untracked files:** berkas apa pun di dalam direktori kerja yang tidak ada dalam _snapshot_ terakhir dan belum dimasukkan ke dalam _staging area_. Git melihat berkas ini tetapi tidak memantau perubahannya secara otomatis.
 
 | Status | Arti | Karakteristik / Indikator |
@@ -238,7 +238,7 @@ File Anda selalu berpindah di antara tiga status ini saat Anda bekerja:
 
 - **`git log`:** mencetak daftar riwayat sejarah _commit_ yang sudah Anda lakukan.
 - **Hash Code:** deretan angka dan huruf acak (misal: `e69de29`) di dalam log — ID unik untuk setiap _commit_.
-- **HEAD:** kursor/penanda yang menunjukkan di mana posisi Anda saat ini di dalam sejarah Git (contoh: `HEAD -> main` berarti Anda sedang melihat file dari _commit_ terakhir di cabang `main`).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#H|HEAD]]:** kursor/penanda yang menunjukkan di mana posisi Anda saat ini di dalam sejarah Git (contoh: `HEAD -> main` berarti Anda sedang melihat file dari _commit_ terakhir di cabang `main`).
 
 ### 4.5 Cabang & Pindah (Branching & Checkout)
 
@@ -542,3 +542,11 @@ pwd
 ## Ringkasan Sesi
 
 Sesi 2 memberikan fondasi praktis Git & GitHub: definisi dan perbedaan Git vs GitHub, empat istilah kunci (repository, commit, branch, merge), siklus status file (untracked → modified → staged → committed), alur perintah dasar (`init`, `config`, `status`, `add`, `commit`, `diff`, `log`, `checkout`, `merge`, `remote`, `push`), hingga simulasi lengkap GitHub Flow dari pembuatan repo sampai push & merge branch. Materi Python (Tugas Besar 2) melengkapi konsep if-else dan string yang lebih dalam dibahas di [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]]. Alur kerja Git ini juga menjadi rutinitas standar yang dipakai berulang sepanjang seluruh materi berikutnya, termasuk saat mengambil materi baru dengan `git pull` (lihat [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] Bab 2, bagian alur kerja Git dalam pembelajaran praktis).
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] — Sesi 1 memperkenalkan Venv/Conda dan alasan Git dibutuhkan (Bab 4.3) sebelum Sesi 2 membedah Git secara mendalam.
+- [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] — kelima soal Python di Tugas Besar 2 (konversi suhu, ganjil-genap, hapus kemunculan pertama, palindrome) dibahas ulang secara sistematis di Sesi 3.
+- [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] — alur `git pull` untuk mengambil materi kelas baru dipraktikkan langsung di awal Sesi 4 Bab 2.

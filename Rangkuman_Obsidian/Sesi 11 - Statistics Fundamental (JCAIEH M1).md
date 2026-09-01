@@ -50,7 +50,7 @@ aliases: ["Sesi 11", "Statistics Fundamental", "Statistika Fundamental"]
 
 #### A. Alur Kerja Statistika
 
-1. **Design** — Tahap perencanaan penelitian dan pengumpulan data. Aktivitas utama meliputi memformulasikan masalah penelitian (_formulate research problem_), mendefinisikan populasi dan sampel (_define population and sample_), serta melakukan pengumpulan data (_data collection_).
+1. **Design** — Tahap perencanaan penelitian dan pengumpulan data. Aktivitas utama meliputi memformulasikan masalah penelitian (_formulate research problem_), mendefinisikan [[Kamus & Cheatsheet (JCAIEH M1)#P|populasi]] dan [[Kamus & Cheatsheet (JCAIEH M1)#S|sampel]] (_define population and sample_), serta melakukan pengumpulan data (_data collection_).
 2. **Description** — Tahap merangkum dan mengeksplorasi data yang telah dikumpulkan. Aktivitas utama meliputi pembuatan visualisasi data dalam bentuk ringkasan grafis (_graphical summary_), ringkasan numerik (_numerical summary_), dan ringkasan tabel (_table summary_). Lihat [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] untuk toolkit visualnya.
 3. **Inference** — Tahap membuat prediksi dan melakukan generalisasi mengenai fenomena yang direpresentasikan oleh data tersebut. Aktivitas utama adalah menggunakan metode yang tepat untuk memecahkan masalah penelitian (_solve the problem_) dan melaporkan hasilnya (_report the result_).
 
@@ -67,8 +67,8 @@ aliases: ["Sesi 11", "Statistics Fundamental", "Statistika Fundamental"]
 
 | Cabang Statistika | Fokus Utama | Metodologi & Karakteristik |
 |:--|:--|:--|
-| **Descriptive Statistics** | Berfokus pada perangkuman dan penggambaran data yang dimiliki. | Terdiri dari metode untuk mengorganisasikan, menyederhanakan, dan merangkum informasi. |
-| **Inferential Statistics** | Berfokus pada penggunaan data sampel untuk membuat kesimpulan mengenai populasi. | Terdiri dari metode untuk menarik kesimpulan dan mengukur tingkat keandalan kesimpulan (_reliability of conclusion_) berdasarkan sampel dari populasi tersebut. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#D|Descriptive Statistics]]** | Berfokus pada perangkuman dan penggambaran data yang dimiliki. | Terdiri dari metode untuk mengorganisasikan, menyederhanakan, dan merangkum informasi. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#I|Inferential Statistics]]** | Berfokus pada penggunaan data sampel untuk membuat kesimpulan mengenai populasi. | Terdiri dari metode untuk menarik kesimpulan dan mengukur tingkat keandalan kesimpulan (_reliability of conclusion_) berdasarkan sampel dari populasi tersebut. |
 
 > [!tip] Audio Insight — Descriptive vs Inferential dalam praktik
 > - **Descriptive Statistics**: Digunakan murni untuk mendeskripsikan data yang ada, seperti menghitung rata-rata (_mean_), mengidentifikasi kategori yang paling sering muncul (modus/_mode_), atau melihat tren kenaikan dan penurunan data dari waktu ke waktu tanpa melakukan prediksi atau generalisasi lebih lanjut.
@@ -145,11 +145,11 @@ print(df.columns) # Index(['Name', 'Author', 'User Rating', 'Price']) -> masing-
 - Karakteristik atau sifat yang bervariasi dari satu orang atau objek ke orang atau objek lainnya disebut sebagai variabel (contoh: _Height_, _Weight_, _Eye Color_, dll.).
 - Variabel secara mendasar dikelompokkan menjadi dua kategori utama berdasarkan sifat datanya:
     1. **Qualitative (Categorical)** — Observasi di mana data yang dikumpulkan termasuk dalam satu set kelompok kategori yang berbeda (_distinct categories_). Terbagi menjadi dua tipe:
-        - **Nominal**: Kategori-kategori data yang tidak memiliki urutan, peringkat, atau tingkatan logis yang jelas. Contoh: _Type of fruits_ (jenis buah), _Country name_ (nama negara), _Gender_ (Male/Female), dan _Color_ (warna).
-        - **Ordinal**: Kategori-kategori data yang memiliki urutan, peringkat, atau tingkatan logis yang jelas. Contoh: _Education level_ (SD, SMP, SMA, S1, S2, S3), _Satisfaction level_ (Sangat tidak puas, Tidak puas, Biasa saja, Puas, Sangat puas), dan _Job level_ (Officer, Supervisor, Manager, General Manager).
+        - **[[Kamus & Cheatsheet (JCAIEH M1)#N|Nominal]]**: Kategori-kategori data yang tidak memiliki urutan, peringkat, atau tingkatan logis yang jelas. Contoh: _Type of fruits_ (jenis buah), _Country name_ (nama negara), _Gender_ (Male/Female), dan _Color_ (warna).
+        - **[[Kamus & Cheatsheet (JCAIEH M1)#O|Ordinal]]**: Kategori-kategori data yang memiliki urutan, peringkat, atau tingkatan logis yang jelas. Contoh: _Education level_ (SD, SMP, SMA, S1, S2, S3), _Satisfaction level_ (Sangat tidak puas, Tidak puas, Biasa saja, Puas, Sangat puas), dan _Job level_ (Officer, Supervisor, Manager, General Manager).
     2. **Quantitative (Numerical)** — Observasi di mana data berupa nilai numerik yang logis untuk dilakukan operasi matematika seperti penjumlahan atau pengurangan. Terbagi menjadi dua tipe:
-        - **Discrete**: Variabel numerik yang nilainya berupa bilangan bulat (_integer_) dan tidak dapat didefinisikan dengan bilangan desimal. Data ini biasanya diperoleh dari hasil perhitungan (_counting_). Contoh: _Number of rooms_ (jumlah ruangan), _Number of clicks_ (jumlah klik), dan _Violation frequency_ (frekuensi pelanggaran).
-        - **Continuous**: Variabel numerik yang nilainya diperoleh dari hasil pengukuran (_measurement_) sepanjang nilai kontinu (_continuum value_) dan dapat didefinisikan dengan bilangan desimal bergantung tingkat kepresisian alat pengukur. Contoh: _Height_ (tinggi badan), _Weight_ (berat badan), _Price_ (harga), dan _Age_ (usia).
+        - **[[Kamus & Cheatsheet (JCAIEH M1)#D|Discrete]]**: Variabel numerik yang nilainya berupa bilangan bulat (_integer_) dan tidak dapat didefinisikan dengan bilangan desimal. Data ini biasanya diperoleh dari hasil perhitungan (_counting_). Contoh: _Number of rooms_ (jumlah ruangan), _Number of clicks_ (jumlah klik), dan _Violation frequency_ (frekuensi pelanggaran).
+        - **[[Kamus & Cheatsheet (JCAIEH M1)#C|Continuous]]**: Variabel numerik yang nilainya diperoleh dari hasil pengukuran (_measurement_) sepanjang nilai kontinu (_continuum value_) dan dapat didefinisikan dengan bilangan desimal bergantung tingkat kepresisian alat pengukur. Contoh: _Height_ (tinggi badan), _Weight_ (berat badan), _Price_ (harga), dan _Age_ (usia).
 
 #### B. Signifikansi Penentuan Tipe Variabel dalam Data Science
 
@@ -202,10 +202,10 @@ Skala pengukuran menentukan batasan matematis dan jenis operasi analisis yang di
 
 1. **Nominal** — Skala pengukuran paling dasar yang hanya berfungsi untuk mengklasifikasikan (_classify_) data ke dalam kategori-kategori berbeda tanpa adanya jarak fisis (_distance_) maupun urutan logis (_order_).
 2. **Ordinal** — Skala yang mengklasifikasikan data dan memiliki urutan atau peringkat tingkatan fisis (_order_) yang jelas, namun jarak (_distance_) antar nilai kategori tersebut tidak dapat diukur secara kuantitatif.
-3. **Interval** — Variabel kuantitatif di mana karakteristiknya diukur sepanjang nilai kontinu, memiliki urutan, serta memiliki jarak (_distance_) antar nilai yang konsisten dan dapat diukur.
+3. **[[Kamus & Cheatsheet (JCAIEH M1)#I|Interval]]** — Variabel kuantitatif di mana karakteristiknya diukur sepanjang nilai kontinu, memiliki urutan, serta memiliki jarak (_distance_) antar nilai yang konsisten dan dapat diukur.
     - Sifat mutlak: Tidak memiliki nilai nol mutlak (_non-absolute zero_), artinya nilai nol (0) tidak menunjukkan ketiadaan absolut dari variabel tersebut (contoh: suhu 0 derajat Celsius memiliki eksistensi dingin fisis dan suhu tetap dapat turun ke angka negatif).
     - Operasi perkalian atau pembagian tidak logis (_not sensible_) untuk dilakukan pada skala ini. Contoh: Suhu 40 derajat Celsius tidak menunjukkan tingkat panas dua kali lipat dari suhu 20 derajat Celsius.
-4. **Ratio (Rasio)** — Skala pengukuran tertinggi yang memenuhi seluruh kondisi skala interval dengan tambahan kepemilikan nilai nol mutlak (_absolute zero_). Nilai nol (0) menunjukkan ketiadaan mutlak dari variabel yang diukur.
+4. **[[Kamus & Cheatsheet (JCAIEH M1)#R|Ratio]] (Rasio)** — Skala pengukuran tertinggi yang memenuhi seluruh kondisi skala interval dengan tambahan kepemilikan nilai nol mutlak (_absolute zero_). Nilai nol (0) menunjukkan ketiadaan mutlak dari variabel yang diukur.
     - Operasi perkalian atau pembagian logis (_sensible_) untuk dilakukan. Nilai rasio biasanya bernilai lebih besar dari nol. Contoh: Tinggi badan (_Height_ 180 cm). Tinggi badan 360 cm secara matematis merupakan dua kali lipat dari tinggi badan 180 cm. Jika tinggi badan bernilai 0 cm, artinya objek tersebut tidak memiliki eksistensi fisik.
 
 #### B. Ringkasan Karakteristik Skala Pengukuran
@@ -389,7 +389,7 @@ Sampel adalah bagian dari populasi yang diamati langsung untuk merepresentasikan
 #### A. Prinsip Sampling & Sampling Bias
 
 - **Sampling Frame**: Representasi fisik atau daftar seluruh anggota populasi yang dapat diakses untuk diambil sampelnya.
-- **Sampling Bias**: Kesalahan dalam pengumpulan sampel yang mengakibatkan sampel tidak representatif terhadap populasi, sehingga kesimpulan yang ditarik menjadi menyimpang.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#S|Sampling Bias]]**: Kesalahan dalam pengumpulan sampel yang mengakibatkan sampel tidak representatif terhadap populasi, sehingga kesimpulan yang ditarik menjadi menyimpang.
 
 > [!warning] Audio Insight — Bias pinggiran gosong dan kasus rumah sakit
 > - **Analogi Pinggiran Gosong**: Dosen memberikan ilustrasi bias ketika mencicipi masakan istri yang baru matang hanya pada bagian pinggir panci yang kebetulan gosong. Hal ini memicu kesimpulan bias bahwa seluruh masakan terasa pahit, padahal bagian tengahnya matang dengan sempurna.
@@ -400,10 +400,10 @@ Sampel adalah bagian dari populasi yang diamati langsung untuk merepresentasikan
 
 | Metode Sampling | Karakteristik Operasional | Contoh Kasus |
 |:--|:--|:--|
-| **Simple Random Sample** | Setiap anggota populasi memiliki peluang yang sama besar untuk terpilih secara acak murni. | Mengundi nomor induk mahasiswa untuk survei kepuasan. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#S|Simple Random Sample]]** | Setiap anggota populasi memiliki peluang yang sama besar untuk terpilih secara acak murni. | Mengundi nomor induk mahasiswa untuk survei kepuasan. |
 | **Systematic Sample** | Anggota sampel dipilih berdasarkan interval numerik tertentu setelah titik awal acak ditetapkan. | Memilih setiap orang ke-10 yang mendaftar pada platform digital. |
-| **Stratified Sample** | Populasi dibagi ke dalam kelompok-kelompok homogen yang saling lepas (_Strata_), kemudian sampel acak diambil dari setiap kelompok. | Membagi populasi berdasarkan tingkat pendidikan (SD, SMP, SMA, S1) lalu mengambil sampel secara acak dari tiap tingkatan tersebut. |
-| **Cluster Sample** | Populasi dibagi ke dalam kelompok-kelompok heterogen (_Clusters_) berdasarkan geografis, lalu beberapa kluster dipilih secara acak untuk disensus. | Memilih beberapa Tempat Pemungutan Suara (TPS) secara acak dari berbagai kecamatan untuk mewakili suara satu kota. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#S|Stratified Sample]]** | Populasi dibagi ke dalam kelompok-kelompok homogen yang saling lepas (_Strata_), kemudian sampel acak diambil dari setiap kelompok. | Membagi populasi berdasarkan tingkat pendidikan (SD, SMP, SMA, S1) lalu mengambil sampel secara acak dari tiap tingkatan tersebut. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#C|Cluster Sample]]** | Populasi dibagi ke dalam kelompok-kelompok heterogen (_Clusters_) berdasarkan geografis, lalu beberapa kluster dipilih secara acak untuk disensus. | Memilih beberapa Tempat Pemungutan Suara (TPS) secara acak dari berbagai kecamatan untuk mewakili suara satu kota. |
 
 > [!tip] Audio Insight — Cluster Sampling dan "kandang suara" pada Quick Count
 > Metode _Cluster Sampling_ sangat sering digunakan dalam hitung cepat pemilu. Di lapangan, sering kali terdapat TPS tertentu yang merupakan basis kekuatan atau "kandang" dari calon tertentu yang sangat dominan. Jika peneliti menggunakan acak sederhana tanpa klusterisasi geografis, ada risiko sampel yang terpilih menumpuk pada TPS dominan tersebut sehingga hasilnya bias. Dengan _Cluster Sampling_, peneliti dipaksa mengambil sampel dari berbagai kluster geografis yang terpisah (kecamatan atau kelurahan berbeda) untuk menjaga keterwakilan data secara nasional.
@@ -519,13 +519,13 @@ class ExperimentalDesignSimulation:
 
 #### A. Karakteristik dan Metodologi
 
-**Measures of Central Tendency** adalah cara mendeskripsikan posisi sentral atau titik tengah dari distribusi frekuensi suatu kelompok data.
+**[[Kamus & Cheatsheet (JCAIEH M1)#C|Measures of Central Tendency]]** adalah cara mendeskripsikan posisi sentral atau titik tengah dari distribusi frekuensi suatu kelompok data.
 
 | Ukuran Pemusatan | Cara Penghitungan / Karakteristik | Relevansi dan Sensitivitas Terhadap Data |
 |:--|:--|:--|
-| **Mean** (Rata-rata) | Jumlah seluruh nilai observasi dibagi dengan total jumlah observasi. | Sangat cocok untuk variabel kuantitatif dengan distribusi simetrik (_symmetric distribution_). Sangat sensitif terhadap pencilan (_outliers_). |
-| **Median** (Nilai Tengah) | Nilai tengah dari daftar data yang telah diurutkan dari terkecil ke terbesar. Posisi median dicari dengan formula `(n + 1) / 2`. | Sangat cocok untuk data dengan distribusi tidak simetrik atau miring (_skewed distribution_) karena tidak terpengaruh oleh pencilan (_outliers_). |
-| **Mode** (Modus) | Nilai dari variabel kualitatif atau kuantitatif terhitung (_countable_) yang frekuensi kemunculannya paling sering. | Sangat cocok untuk mengidentifikasi pusat data kualitatif/kategorikal. Sulit diterapkan pada variabel kontinu yang sangat presisi karena setiap nilai cenderung unik. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#M|Mean]]** (Rata-rata) | Jumlah seluruh nilai observasi dibagi dengan total jumlah observasi. | Sangat cocok untuk variabel kuantitatif dengan distribusi simetrik (_symmetric distribution_). Sangat sensitif terhadap pencilan (_[[Kamus & Cheatsheet (JCAIEH M1)#O|outliers]]_). |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#M|Median]]** (Nilai Tengah) | Nilai tengah dari daftar data yang telah diurutkan dari terkecil ke terbesar. Posisi median dicari dengan formula `(n + 1) / 2`. | Sangat cocok untuk data dengan distribusi tidak simetrik atau miring (_[[Kamus & Cheatsheet (JCAIEH M1)#S|skewed distribution]]_) karena tidak terpengaruh oleh pencilan (_outliers_). |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#M|Mode]]** (Modus) | Nilai dari variabel kualitatif atau kuantitatif terhitung (_countable_) yang frekuensi kemunculannya paling sering. | Sangat cocok untuk mengidentifikasi pusat data kualitatif/kategorikal. Sulit diterapkan pada variabel kontinu yang sangat presisi karena setiap nilai cenderung unik. |
 
 > [!warning] Audio Insight — Analogi kesenjangan gaji (Mean vs Median) dan deteksi Skewness
 > - **Kondisi Penggunaan Modus pada Data Kontinu**: Dosen menjelaskan bahwa modus sangat tidak cocok untuk data kuantitatif kontinu yang bernilai presisi tinggi (misalnya data tinggi badan dengan beberapa angka desimal di belakang koma, seperti `160.1234` cm). Hal ini dikarenakan data tersebut cenderung unik sehingga kemunculannya hampir selalu satu kali. Modus baru dapat digunakan pada data tersebut jika datanya dikelompokkan terlebih dahulu ke dalam kategori interval (misalnya kategori interval `160 - 170` cm, `170 - 180` cm).
@@ -536,7 +536,7 @@ class ExperimentalDesignSimulation:
 > - **Modus untuk Data Kualitatif**: Modus sangat efektif sebagai ukuran pemusatan data kategorikal (non-angka). Dosen memberikan contoh riil mengenai pencarian merek mobil terpopuler di Jakarta dari data `1` juta unit kendaraan. Melalui penghitungan frekuensi, ditemukan `500.000` unit merek Toyota dan `300.000` unit merek Daihatsu. Dengan demikian, modus dari variabel kualitatif merek mobil tersebut adalah Toyota.
 
 > [!tip] Analogi ini juga menjelaskan arah Box Plot
-> Analogi "10 karyawan reguler bergaji 7-9 juta vs 1 direktur bergaji 100 juta" ini persis konsep yang sama dengan arah kemiringan (_skew_) pada [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.2 (Box Plot). Mayoritas data (karyawan) menumpuk rendah, tapi ekor ditarik ke kanan oleh minoritas ekstrem (direktur) — inilah **right-skewed**. Lihat penjelasan lengkapnya di sana.
+> Analogi "10 karyawan reguler bergaji 7-9 juta vs 1 direktur bergaji 100 juta" ini persis konsep yang sama dengan arah kemiringan (_skew_) pada [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] Bab 3.2 ([[Kamus & Cheatsheet (JCAIEH M1)#B|Box Plot]]). Mayoritas data (karyawan) menumpuk rendah, tapi ekor ditarik ke kanan oleh minoritas ekstrem (direktur) — inilah **[[Kamus & Cheatsheet (JCAIEH M1)#R|right-skewed]]**. Lihat penjelasan lengkapnya di sana.
 
 **Contoh kode — membuktikan analogi gaji karyawan vs direktur secara langsung:**
 
@@ -574,11 +574,11 @@ print(merek_mobil.value_counts()) # menampilkan frekuensi tiap merek, Toyota di 
 
 | Ukuran Penyebaran | Deskripsi Metodologis | Karakteristik Utama |
 |:--|:--|:--|
-| **Range** (Rentang) | Selisih antara nilai observasi terbesar (_maximum_) dan terkecil (_minimum_). Formula: `Range = Max - Min`. | Sangat sederhana namun terlalu sensitif terhadap nilai ekstrem (_overly sensitive to extreme values_). |
-| **Percentile** (Persentil) | Nilai di mana suatu persentase tertentu `p` dari observasi berada pada atau di bawah nilai tersebut. | Membagi distribusi menjadi 100 bagian yang sama untuk menentukan posisi relatif data. |
-| **Quartile** (Kuartil) | Kasus khusus dari persentil yang membagi data terurut menjadi 4 bagian sama besar. | Terdiri dari `Q1` (persentil 25), `Q2` (persentil 50 / Median), dan `Q3` (persentil 75). |
-| **Interquartile Range** (IQR) | Jarak antara kuartil atas (_third quartile_) dan kuartil bawah (_first quartile_). Formula: `IQR = Q3 - Q1`. | Digunakan untuk menggantikan simpangan baku pada data miring dan mendeteksi pencilan (_outliers_). |
-| **Standard Deviation** (Simpangan Baku) | Akar kuadrat dari varians, menunjukkan rata-rata penyimpangan absolute data dari nilai rata-ratanya (_mean_). | Sering digunakan bersama _mean_ untuk data berdistribusi simetris (_symmetric distribution_). Sangat dipengaruhi oleh pencilan. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#R|Range]]** (Rentang) | Selisih antara nilai observasi terbesar (_maximum_) dan terkecil (_minimum_). Formula: `Range = Max - Min`. | Sangat sederhana namun terlalu sensitif terhadap nilai ekstrem (_overly sensitive to extreme values_). |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#P|Percentile]]** (Persentil) | Nilai di mana suatu persentase tertentu `p` dari observasi berada pada atau di bawah nilai tersebut. | Membagi distribusi menjadi 100 bagian yang sama untuk menentukan posisi relatif data. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#Q|Quartile]]** (Kuartil) | Kasus khusus dari persentil yang membagi data terurut menjadi 4 bagian sama besar. | Terdiri dari `Q1` (persentil 25), `Q2` (persentil 50 / Median), dan `Q3` (persentil 75). |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#I|Interquartile Range]]** (IQR) | Jarak antara kuartil atas (_third quartile_) dan kuartil bawah (_first quartile_). Formula: `IQR = Q3 - Q1`. | Digunakan untuk menggantikan simpangan baku pada data miring dan mendeteksi pencilan (_outliers_). |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#S|Standard Deviation]]** (Simpangan Baku) | Akar kuadrat dari varians, menunjukkan rata-rata penyimpangan absolute data dari nilai rata-ratanya (_mean_). | Sering digunakan bersama _mean_ untuk data berdistribusi simetris (_symmetric distribution_). Sangat dipengaruhi oleh pencilan. |
 
 > [!tip] Audio Insight — Kenapa spread penting: dua negara, gaji rata-rata sama
 > - **Ilustrasi Kebutuhan Analisis Spread**: Dosen memberikan simulasi tentang pentingnya melihat ukuran penyebaran di samping ukuran pemusatan.
@@ -750,7 +750,7 @@ outliers = df[(df['Age'] < lower_bound) | (df['Age'] > upper_bound)]
 
 #### A. Fondasi Konseptual
 
-- **Distribusi Normal**, juga dikenal sebagai **Gaussian Distribution**, adalah jenis distribusi probabilitas kontinu yang memiliki kurva kepadatan berbentuk lonceng (_bell-shaped curve_).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#N|Distribusi Normal]]**, juga dikenal sebagai **Gaussian Distribution**, adalah jenis distribusi probabilitas kontinu yang memiliki kurva kepadatan berbentuk lonceng (_bell-shaped curve_).
 - Kurva kepadatan ini memiliki karakteristik utama sebagai berikut:
     - **Simetris**: Sisi kiri dan kanan kurva merupakan cerminan satu sama lain.
     - **Terpusat**: Kurva berpusat tepat pada nilai rata-rata (_mean_) dari dataset.
@@ -808,7 +808,7 @@ print("Skewness sesudah transformasi:", stats.skew(pendapatan_log))       # mend
 
 #### A. Aturan Persentase Distribusi Lonceng
 
-Jika sebuah distribusi data terbukti berbentuk lonceng (_bell-shaped_), maka berlaku aturan empiris (_empirical rule_) untuk menentukan proporsi penyebaran data sebagai berikut:
+Jika sebuah distribusi data terbukti berbentuk lonceng (_bell-shaped_), maka berlaku [[Kamus & Cheatsheet (JCAIEH M1)#E|aturan empiris]] (_empirical rule_) untuk menentukan proporsi penyebaran data sebagai berikut:
 
 - Sekitar **68%** observasi jatuh di dalam rentang $\bar{x} - s$ hingga $\bar{x} + s$ (rata-rata plus-minus satu kali simpangan baku).
 - Sekitar **95%** observasi jatuh di dalam rentang $\bar{x} - 2s$ hingga $\bar{x} + 2s$ (rata-rata plus-minus dua kali simpangan baku).
@@ -1101,7 +1101,7 @@ class GraphicalSummary:
 
 #### B. Penanganan Imbalanced Data
 
-- Dataset dengan proporsi kelas yang sangat timpang (seperti 99% transaksi normal vs 1% transaksi fraud) disebut dengan istilah _Imbalanced Data_.
+- Dataset dengan proporsi kelas yang sangat timpang (seperti 99% transaksi normal vs 1% transaksi fraud) disebut dengan istilah _[[Kamus & Cheatsheet (JCAIEH M1)#I|Imbalanced Data]]_.
 - **Bahaya Akurasi (_Misleading Accuracy_)**: Jika model _Machine Learning_ dilatih pada data yang sangat tidak seimbang tanpa penanganan khusus, model tersebut cenderung memprediksi semua masukan ke dalam kelas mayoritas. Model yang selalu menebak "transaksi normal" pada kasus di atas akan menghasilkan akurasi sebesar 99%, namun model tersebut tidak memiliki nilai guna praktis fungsional (_not meaningful_) karena gagal mendeteksi satu pun transaksi fraud.
 - **Solusi Rekayasa Data (_Data Sampling_)**:
     - _Down-sampling_: Mengurangi jumlah sampel dari kelas mayoritas secara acak agar memiliki rasio seimbang (50:50) dengan kelas minoritas. Metode ini mengorbankan banyak volume data latih.
@@ -1226,3 +1226,11 @@ for nama, data in [("Symmetric (bale kardus)", berat_bale),
 ---
 
 **Lihat juga:** [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (implementasi `.describe()`, `.mean()`, `.std()`, `.quantile()` di Pandas) · [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] (Histogram, Box Plot, dan visualisasi distribusi) · [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (konsep agregasi yang setara dengan `GROUP BY`).
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] — Box Plot, IQR, deteksi outlier, dan arah skewness yang dijelaskan matematis di sini (Bab 4.2-4.4) divisualisasikan langsung di sana (Bab 3.2).
+- [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — method `.describe()`, `.mean()`, `.std()`, dan `.quantile()` adalah implementasi Pandas langsung dari konsep statistika deskriptif di sesi ini.
+- [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — struktur baris = unit observasi, kolom = variabel yang dibahas di Bab 2.1 persis sama dengan struktur tabel relasional SQL.

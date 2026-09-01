@@ -733,6 +733,9 @@ print(df_array)
 - Digunakan untuk menyaring data berdasarkan kondisi boolean tertentu. Operasi perbandingan seperti `df > 0` akan menguji setiap elemen di dalam DataFrame dan menghasilkan boolean mask (tabel berisi nilai True dan False).
 - Menyaring baris secara spesifik dilakukan dengan memasukkan kondisi di dalam kurung siku DataFrame utama, misalnya `df[df['W'] > 0]`. Jika ingin mengambil nilai kolom tertentu saja dari hasil filter tersebut, dapat ditambahkan nama kolom di akhir baris kode.
 
+> [!tip] Conditional filtering Pandas = `WHERE` di SQL
+> `df[df['W'] > 0]` (Bandingkan dengan [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|klausa WHERE di SQL]] — konsep sama, sintaks beda: `df[df['col'] > value]` ≈ `WHERE col > value`.)
+
 > [!warning] Audio Insight — `.loc` inklusif vs `.iloc` eksklusif
 > Dosen memperingatkan agar mahasiswa memahami perbedaan perilaku slicing antara `.loc` dan `.iloc`. Pada `.loc['A':'C']`, baris C ditampilkan karena pencarian berbasis nama label. Sedangkan pada `.iloc[0:2]`, baris pada indeks ke-2 ditiadakan karena mengandalkan perilaku eksklusif indeks integer Python standar.
 > Dosen memberikan contoh sintaks pengaksesan elemen tunggal maupun kelompok menggunakan kedua atribut tersebut.
@@ -855,6 +858,9 @@ print(df_multi.xs('Cabang1', level='Cabang'))
 - **sort_values()**: Digunakan untuk mengurutkan DataFrame berdasarkan nilai pada satu atau beberapa kolom tertentu. Defaultnya diurutkan secara menaik (ascending), namun dapat diatur menjadi menurun menggunakan parameter `ascending=False`.
 - **sort_index()**: Digunakan untuk mengurutkan baris DataFrame berdasarkan indeksnya.
 
+> [!tip] `.sort_values()` = `ORDER BY` di SQL
+> (Bandingkan dengan [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|klausa ORDER BY di SQL]] — konsep sama, sintaks beda: `df.sort_values('col', ascending=False)` ≈ `ORDER BY col DESC`.)
+
 #### B. Fungsi, Method, dan Atribut Statistik
 
 - Atribut `.shape`: Mengembalikan jumlah baris dan kolom dalam tuple.
@@ -863,7 +869,7 @@ print(df_multi.xs('Cabang1', level='Cabang'))
 - Method `.head()` dan `.tail()`: Menampilkan baris teratas dan terbawah tabel (secara default menampilkan 5 baris).
 - Method `.info()`: Menghasilkan informasi lengkap struktur DataFrame meliputi tipe data, jumlah nilai non-null, dan penggunaan memori.
 - Method `.describe()`: Menghitung statistik deskriptif otomatis (mean, std, min, max, kuartil) untuk seluruh kolom bertipe numerik — lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 4 untuk arti tiap statistiknya.
-- Method statistik spesifik: `.mean()`, `.median()`, `.std()`, `.min()`, dan `.max()`.
+- Method statistik spesifik: `.mean()`, `.median()`, `.std()`, `.min()`, dan `.max()` — padanan langsung fungsi agregat SQL `AVG()`, `MIN()`, `MAX()` yang dipelajari di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (Bandingkan: `df['col'].mean()` ≈ `SELECT AVG(col) FROM tabel`).
 - Method keunikan: `.unique()` untuk melihat nilai unik, `.nunique()` untuk menghitung jumlah nilai unik, dan `.value_counts()` untuk menghitung frekuensi kemunculan nilai pada suatu kolom.
 
 > [!tip] Audio Insight — Biasakan `.head()`/`.info()` di awal eksplorasi
@@ -1154,4 +1160,9 @@ df.groupby(['Pclass', 'Sex'])['Survived'].mean().sort_values(ascending=False)
 
 ---
 
-**Lihat juga:** [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] (List/Dict sebagai fondasi sebelum NumPy/Pandas) · [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] dan [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]] (padanan SQL untuk `.groupby()` dan `.merge()`) · [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] (arti statistik di balik `.describe()`, `.mean()`, `.std()`) · [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] (memvisualisasikan hasil DataFrame).
+## 🔗 Terkait
+
+- [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] — List/Dict sebagai fondasi sebelum NumPy/Pandas.
+- [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] dan [[Sesi 10 - SQL Working With Multiple Tables (JCAIEH M1)|Sesi 10 - SQL Working With Multiple Tables]] — padanan SQL untuk `.groupby()`, filtering, `.sort_values()`, dan `.merge()`.
+- [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] — arti statistik di balik `.describe()`, `.mean()`, `.std()`.
+- [[Sesi 13 - Data Visualization (JCAIEH M1)|Sesi 13 - Data Visualization]] — DataFrame hasil manipulasi di sesi ini jadi input langsung untuk plotting.

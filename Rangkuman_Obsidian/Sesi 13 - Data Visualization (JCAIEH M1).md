@@ -18,7 +18,7 @@ aliases: ["Sesi 13", "Data Visualization", "Visualisasi Data"]
 
 #### A. Definisi Visualisasi Data
 
-- **Data Visualization** adalah penyetelan atau penyajian data dalam format gambar atau grafis (_pictorial or graphical format_).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#D|Data Visualization]]** adalah penyetelan atau penyajian data dalam format gambar atau grafis (_pictorial or graphical format_).
 - Bidang ini merupakan suatu disiplin ilmu untuk memahami data dengan menyajikannya secara visual agar pola (_patterns_), tren (_trends_), komposisi (_composition_), perbandingan (_comparison_), dan hubungan (_relationship_) dapat terungkap (_exposed_).
 
 > [!tip] Audio Insight — Otak manusia lebih cepat memproses gambar daripada spreadsheet
@@ -146,12 +146,12 @@ Tipe visualisasi data dikelompokkan ke dalam empat kategori utama sesuai dengan 
 - Digunakan untuk membandingkan nilai kuantitatif antar item atau melacak perubahannya seiring waktu.
 - **Comparison Among Items (Perbandingan Antar Item)**:
     - Satu variabel per item (_One variables per items_):
-        - Kategori sedikit (_Few items_): Menggunakan **Bar Chart** atau **Bar Plot**.
+        - Kategori sedikit (_Few items_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#B|Bar Chart]]** atau **Bar Plot**.
         - Kategori banyak (_Many items_): Menggunakan **Table with embedded chart**.
     - Dua variabel per item (_Two variables per items_): Menggunakan **Variable with column chart** (grafik kolom berkelompok).
 - **Comparison Over Time (Perbandingan Seiring Waktu)**:
     - Satu variabel (_One variable_):
-        - Periode banyak (_Many Periods_): Menggunakan **Line Chart**.
+        - Periode banyak (_Many Periods_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#L|Line Chart]]**.
         - Periode sedikit (_Few Periods_): Menggunakan **Bar Chart** atau **Bar Plot**.
     - Banyak variabel / Kategori berbeda pada variabel sama (_Many variables / Same variables different categories_): Menggunakan **Multiple Line Chart**.
 
@@ -164,10 +164,10 @@ Tipe visualisasi data dikelompokkan ke dalam empat kategori utama sesuai dengan 
 
 - Digunakan untuk menunjukkan bagian-bagian atau kontribusi komponen yang membentuk satu kesatuan utuh.
 - **Composition Static (Komposisi Statis)**:
-    - Menunjukkan bagian dari total (_Share of total_): Menggunakan **Pie Chart**.
+    - Menunjukkan bagian dari total (_Share of total_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#P|Pie Chart]]**.
     - Akumulasi atau pengurangan nilai dari total (_Accumulation or subtraction of total_): Menggunakan **Waterfall Chart**.
-    - Proporsi bagian per item atau kategori (_Share of total per items or category_): Menggunakan **Stacked Bar Chart**.
-    - Struktur proporsi dengan kategori yang sangat banyak (_Share of total many items or category_): Menggunakan **Tree Map**.
+    - Proporsi bagian per item atau kategori (_Share of total per items or category_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#S|Stacked Bar Chart]]**.
+    - Struktur proporsi dengan kategori yang sangat banyak (_Share of total many items or category_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#T|Tree Map]]**.
 - **Composition Over Time (Komposisi Seiring Waktu)**:
     - Periode sedikit (_Few Periods_): Menggunakan **Stacked Bar Chart**.
     - Periode banyak (_Many Periods_): Menggunakan **Stacked Area Chart**.
@@ -179,8 +179,8 @@ Tipe visualisasi data dikelompokkan ke dalam empat kategori utama sesuai dengan 
 #### C. Relationship (Hubungan)
 
 - Digunakan untuk menemukan korelasi, interaksi, atau keterkaitan antara variabel numerik kontinu.
-- **Dua variabel** (_Two variables_): Menggunakan **Scatter Plot**.
-- **Tiga variabel** (_Three variables_): Menggunakan **Bubble Plot**.
+- **Dua variabel** (_Two variables_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#S|Scatter Plot]]**.
+- **Tiga variabel** (_Three variables_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#B|Bubble Plot]]**.
 
 > [!tip] Audio Insight — Contoh hubungan total bill vs tip
 > Contoh kasus hubungan dua variabel: Digunakan untuk memetakan hubungan antara total tagihan (_total bill_) dan besaran uang tip (_tip_) yang diberikan oleh pelanggan restoran. Sumbu X merepresentasikan _total bill_ dan sumbu Y merepresentasikan _tip_. Scatter plot akan memplot titik-titik koordinat untuk melihat tren positif (apakah semakin besar nilai tagihan berkolerasi dengan semakin besarnya tip yang diberikan).
@@ -188,7 +188,7 @@ Tipe visualisasi data dikelompokkan ke dalam empat kategori utama sesuai dengan 
 #### D. Distribution (Distribusi)
 
 - Digunakan untuk melihat sebaran data, kerapatan data, atau frekuensi kemunculan nilai numerik.
-- **Satu variabel** (_One variable_): Menggunakan **Histogram** atau **Box Plot**.
+- **Satu variabel** (_One variable_): Menggunakan **[[Kamus & Cheatsheet (JCAIEH M1)#H|Histogram]]** atau **[[Kamus & Cheatsheet (JCAIEH M1)#B|Box Plot]]**.
 - **Dua variabel** (_Two variables_): Menggunakan **Scatter Plot**.
 
 > [!tip] Audio Insight — Kombinasi Histogram + Box Plot, dan Violin Plot
@@ -210,7 +210,7 @@ Keempat kategori ini (Comparison, Composition, Relationship, Distribution) berhu
 |:--|:--|:--|
 | **Matplotlib** | Mandiri | Library komprehensif untuk membuat visualisasi statis, animasi, dan interaktif di Python. Berfungsi sebagai pondasi dasar bagi library visualisasi lainnya. |
 | **Seaborn** | Matplotlib | Library visualisasi data berbasis Matplotlib yang menyediakan high-level interface untuk menggambar grafik statistik yang menarik (_attractive_) dan informatif. |
-| **Pandas** | Python murni (Numpy) | Tool analisis dan manipulasi data open-source yang cepat, bertenaga, fleksibel, serta mudah digunakan. Memiliki fungsi plotting dasar bawaan untuk visualisasi cepat langsung dari objek DataFrame. |
+| **Pandas** | Python murni (Numpy) | Tool analisis dan manipulasi data open-source yang cepat, bertenaga, fleksibel, serta mudah digunakan. Memiliki fungsi plotting dasar bawaan untuk visualisasi cepat langsung dari objek [[Kamus & Cheatsheet (JCAIEH M1)#D|DataFrame]]. |
 | **Plotly** | Mandiri | Library khusus untuk membuat visualisasi data yang bersifat interaktif. |
 
 > [!tip] Audio Insight — Matplotlib vs Seaborn vs Pandas plotting
@@ -246,7 +246,7 @@ Keempat kategori ini (Comparison, Composition, Relationship, Distribution) berhu
 
 | Kategori Perkakas | Contoh Perangkat Lunak | Fungsi Utama di Industri |
 |:--|:--|:--|
-| **Business Intelligence (BI)** | Power BI, Tableau, Microstrategy, Qlik | Digunakan untuk menyusun dasbor interaktif berskala perusahaan yang terhubung langsung ke sumber data bisnis untuk mendukung pengambilan keputusan. |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#B|Business Intelligence (BI)]]** | Power BI, Tableau, Microstrategy, Qlik | Digunakan untuk menyusun dasbor interaktif berskala perusahaan yang terhubung langsung ke sumber data bisnis untuk mendukung pengambilan keputusan. |
 
 > [!tip] Audio Insight — Python untuk eksplorasi, BI untuk dashboard final
 > Alat-alat BI seperti Power BI dan Tableau sangat populer di dunia bisnis karena memudahkan pembuatan laporan interaktif tanpa harus menulis baris kode pemrograman visualisasi yang rumit dari awal. Penggunaannya melengkapi visualisasi Python; Python biasanya digunakan oleh analis atau engineer di tahap eksplorasi awal (_exploratory data analysis_) dan persiapan model, sementara perkakas BI digunakan untuk menyajikan dasbor final yang interaktif ke pengambil keputusan tingkat tinggi (_manager_ atau _VP_).
@@ -291,7 +291,7 @@ plt.show()
 ```
 
 > [!tip] Audio Insight — `kde=True` dan cara memilih jumlah bins
-> Dosen menekankan bahwa parameter **kde** (Kernel Density Estimation) bernilai `True` pada library Seaborn sangat berguna untuk menggambarkan garis perkiraan mulus sebaran data (_density curve_) di atas batang histogram.
+> Dosen menekankan bahwa parameter **kde** ([[Kamus & Cheatsheet (JCAIEH M1)#K|Kernel Density Estimation]]) bernilai `True` pada library Seaborn sangat berguna untuk menggambarkan garis perkiraan mulus sebaran data (_density curve_) di atas batang histogram.
 > Mengatur ukuran **bins** yang pas sangat penting. Jika bins terlalu sedikit, pola sebaran tidak terlihat; jika bins terlalu banyak, grafik akan tampak berantakan karena terlalu detail. Bentuk-bentuk sebaran yang bisa dibaca dari histogram (symmetric, right-skewed, left-skewed, bimodal, uniform) dibahas tuntas dengan contoh industri di [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Lampiran.
 
 ---
@@ -302,23 +302,23 @@ plt.show()
 
 - **Box Plot** (atau _Box-and-Whisker Plot_) adalah visualisasi grafis untuk menyajikan ringkasan statistik deskriptif lima angka dari kumpulan data numerik.
 - Lima angka statistik ringkasan tersebut adalah:
-    1. **Minimum**: Batas nilai terkecil bukan pencilan (ditandai oleh ujung garis bawah/_whisker_).
+    1. **Minimum**: Batas nilai terkecil bukan pencilan (ditandai oleh ujung garis bawah/_[[Kamus & Cheatsheet (JCAIEH M1)#W|whisker]]_).
     2. **First Quartile (Q1 / Kuartil Bawah)**: Batas bawah kotak yang menandakan persentil ke-25 dari data.
     3. **Median (Q2 / Kuartil Tengah)**: Garis horizontal di dalam kotak yang menandai nilai tengah atau persentil ke-50.
     4. **Third Quartile (Q3 / Kuartil Atas)**: Batas atas kotak yang menandakan persentil ke-75 dari data.
     5. **Maximum**: Batas nilai terbesar bukan pencilan (ditandai oleh ujung garis atas/_whisker_).
-- Jarak antara Q1 dan Q3 disebut **Interquartile Range (IQR)**. Batas garis _whisker_ bawah dihitung dengan rumus `Q1 - 1.5 * IQR` dan batas atas dihitung dengan `Q3 + 1.5 * IQR`. Lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 4.4 untuk penjelasan lengkap kenapa `1.5 * IQR` adalah aturan TERPISAH dari IQR itu sendiri.
-- Nilai data yang berada di luar batas garis _whisker_ didefinisikan secara matematis sebagai **outliers** (pencilan) dan digambarkan dalam bentuk titik atau berlian terpisah di luar grafik kotak.
+- Jarak antara Q1 dan Q3 disebut **[[Kamus & Cheatsheet (JCAIEH M1)#I|Interquartile Range (IQR)]]**. Batas garis _whisker_ bawah dihitung dengan rumus `Q1 - 1.5 * IQR` dan batas atas dihitung dengan `Q3 + 1.5 * IQR`. Lihat [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] Bab 4.4 untuk penjelasan lengkap kenapa `1.5 * IQR` adalah aturan TERPISAH dari IQR itu sendiri.
+- Nilai data yang berada di luar batas garis _whisker_ didefinisikan secara matematis sebagai **[[Kamus & Cheatsheet (JCAIEH M1)#O|outliers]]** (pencilan) dan digambarkan dalam bentuk titik atau berlian terpisah di luar grafik kotak.
 
 #### B. Membaca Skewness (Kemiringan Distribusi Data)
 
-Analisis kemiringan distribusi (_skewness_) sebaran data dapat dibaca langsung dari Box Plot berdasarkan posisi garis median terhadap kotak IQR:
+Analisis kemiringan distribusi (_[[Kamus & Cheatsheet (JCAIEH M1)#S|skewness]]_) sebaran data dapat dibaca langsung dari Box Plot berdasarkan posisi garis median terhadap kotak IQR:
 
 | Posisi Garis Median | Karakteristik Skewness | Interpretasi Distribusi Data |
 |:--|:--|:--|
 | **Garis median berada tepat di tengah-tengah kotak** | Distribusi Simetris (_Normal Distribution_) | Sebaran data merata dan seimbang di sekitar nilai tengah. |
-| **Garis median lebih dekat ke bagian bawah kotak (Q1)** | Kemiringan Positif (_Right-Skewed_) | Ekor sebaran data memanjang ke arah kanan (nilai besar), mayoritas data terkonsentrasi di nilai rendah. |
-| **Garis median lebih dekat ke bagian atas kotak (Q3)** | Kemiringan Negatif (_Left-Skewed_) | Ekor sebaran data memanjang ke arah kiri (nilai kecil), mayoritas data terkonsentrasi di nilai tinggi. |
+| **Garis median lebih dekat ke bagian bawah kotak (Q1)** | Kemiringan Positif (_[[Kamus & Cheatsheet (JCAIEH M1)#R|Right-Skewed]]_) | Ekor sebaran data memanjang ke arah kanan (nilai besar), mayoritas data terkonsentrasi di nilai rendah. |
+| **Garis median lebih dekat ke bagian atas kotak (Q3)** | Kemiringan Negatif (_[[Kamus & Cheatsheet (JCAIEH M1)#L|Left-Skewed]]_) | Ekor sebaran data memanjang ke arah kiri (nilai kecil), mayoritas data terkonsentrasi di nilai tinggi. |
 
 #### Fokus Klarifikasi: kenapa "median dekat Q1" = right-skewed (bukan sebaliknya)
 
@@ -394,7 +394,7 @@ plt.show()
 
 #### A. Definisi dan Kegunaan
 
-- **Violin Plot** adalah tipe visualisasi kombo yang secara teknis menggabungkan seluruh elemen statistik pada Box Plot dengan representasi kepadatan frekuensi sebaran data dari **Kernel Density Plot**.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#V|Violin Plot]]** adalah tipe visualisasi kombo yang secara teknis menggabungkan seluruh elemen statistik pada Box Plot dengan representasi kepadatan frekuensi sebaran data dari **Kernel Density Plot**.
 - Bentuk lekukan luar mirip biola menggambarkan pola kerapatan data (_density estimate_); semakin lebar penampang lekukannya, semakin banyak data yang terkonsentrasi pada tingkat nilai tersebut.
 
 #### B. Cara Membaca Violin Plot
@@ -549,7 +549,7 @@ plt.show()
 ```
 
 > [!tip] Audio Insight — Parameter `explode` dan `autopct`
-> Dosen merekomendasikan penambahan parameter **explode** untuk memisahkan atau menonjolkan irisan kategori tertentu agar keluar sedikit dari lingkaran utama. Menambahkan parameter `autopct` sangat krusial guna menampilkan label teks persentase nilai kuantitatif secara eksplisit di atas masing-masing irisan diagram.
+> Dosen merekomendasikan penambahan parameter **[[Kamus & Cheatsheet (JCAIEH M1)#E|explode]]** untuk memisahkan atau menonjolkan irisan kategori tertentu agar keluar sedikit dari lingkaran utama. Menambahkan parameter `autopct` sangat krusial guna menampilkan label teks persentase nilai kuantitatif secara eksplisit di atas masing-masing irisan diagram.
 
 ---
 
@@ -557,7 +557,7 @@ plt.show()
 
 #### A. Definisi dan Kegunaan
 
-- **Heatmap** adalah peta visualisasi data dua dimensi dalam format tabel kisi (matriks) kompleks yang menggunakan kode warna (_color coding_) untuk mempresentasikan nilai ukuran numeriknya.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#H|Heatmap]]** adalah peta visualisasi data dua dimensi dalam format tabel kisi (matriks) kompleks yang menggunakan kode warna (_color coding_) untuk mempresentasikan nilai ukuran numeriknya.
 - Representasi nilai numerik digambarkan lewat gradasi atau intensitas warna; warna yang lebih pekat atau mencolok merepresentasikan nilai korelasi atau angka kuantitatif yang lebih kuat/tinggi.
 
 #### B. Aturan Pembacaan dan Skala Warna
@@ -690,7 +690,7 @@ plt.show()
 #### A. Kompleksitas Visual Berlebih pada Plot tunggal
 
 - Memasukkan terlalu banyak komponen visual seperti garis (_lines_), penanda titik (_markers_), legenda, teks, dan elemen dekoratif tambahan (_clutter_) ke dalam satu area grafik akan mengaburkan pola sebaran data asli.
-- Kondisi ini dikenal sebagai _Overloading Info_ yang mengakibatkan beban kognitif berlebih bagi audiens (_overwhelming the viewer_) sehingga tujuan penyampaian wawasan utama gagal dicapai.
+- Kondisi ini dikenal sebagai _[[Kamus & Cheatsheet (JCAIEH M1)#O|Overloading Info]]_ yang mengakibatkan beban kognitif berlebih bagi audiens (_overwhelming the viewer_) sehingga tujuan penyampaian wawasan utama gagal dicapai.
 
 > [!warning] Audio Insight — Marker berlebih dan kombinasi hue+style yang membingungkan
 > Dosen mencontohkan sebuah grafik tren penjualan produk di mana satu garis tunggal diberi penanda (_marker_) yang berbeda-beda untuk setiap titiknya (misalnya titik berwarna biru bulat, titik orange kotak, dan titik ungu silang). Penambahan variasi bentuk _marker_ ini dinilai tidak berguna (_useless_) dan merusak kerapian visual (_decluttering_) karena perbedaan warna garis saja sebenarnya sudah sangat memadai untuk membedakan kategori produk tersebut.
@@ -708,7 +708,7 @@ plt.show()
 > [!warning] Audio Insight — Solusi: sumbu Y sekunder (secondary axis)
 > Dosen memaparkan contoh kasus konkrit di mana analis mencoba menggambarkan hubungan antara data Penjualan Bulanan (_Monthly Sales_ dalam satuan dolar yang bernilai ratusan hingga ribuan) dan data Suhu Rata-rata (_Average Temperature_ dalam derajat Celsius yang bernilai kecil antara 20 hingga 40) pada satu grafik sumbu Y yang sama.
 > Akibat penyatuan sumbu Y ini, kurva _Average Temperature_ tampak berupa garis lurus horizontal yang flat di dekat angka 0 karena skalanya terdistorsi oleh angka penjualan bulanan yang mencapai ratusan dolar.
-> Solusi teknis mutlak untuk mengatasi masalah ini adalah dengan menerapkan sumbu sekunder (_secondary axis_). Sumbu Y sebelah kiri dikonfigurasi khusus untuk skala Penjualan Bulanan (_Monthly Sales_), sedangkan sumbu Y sebelah kanan (_secondary Y-axis_) dikonfigurasi untuk skala Suhu Rata-rata (_Average Temperature_). Dengan demikian, kedua pola fluktuasi data dapat ter-render secara proporsional dan korelasinya dapat dianalisis dengan akurat.
+> Solusi teknis mutlak untuk mengatasi masalah ini adalah dengan menerapkan sumbu sekunder (_[[Kamus & Cheatsheet (JCAIEH M1)#S|secondary axis]]_). Sumbu Y sebelah kiri dikonfigurasi khusus untuk skala Penjualan Bulanan (_Monthly Sales_), sedangkan sumbu Y sebelah kanan (_secondary Y-axis_) dikonfigurasi untuk skala Suhu Rata-rata (_Average Temperature_). Dengan demikian, kedua pola fluktuasi data dapat ter-render secara proporsional dan korelasinya dapat dianalisis dengan akurat.
 
 **Contoh kode — implementasi secondary Y-axis di Matplotlib (belum ada di sumber, ditambahkan agar lengkap):**
 
@@ -877,8 +877,8 @@ Bagian ini berisi catatan kelas versi ringkas/mentah yang melengkapi Bab 1-5 di 
 ### Catatan Cepat per Jenis Grafik
 
 - **Heatmap**: Melihat korelasi data melalui _color code_.
-- **Word Clouds**: Melihat kata-kata apa yang paling sering muncul, memakai rasio ukuran.
-- **Sankey**: Melihat _flow_ (aliran).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#W|Word Clouds]]**: Melihat kata-kata apa yang paling sering muncul, memakai rasio ukuran.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#S|Sankey]]**: Melihat _flow_ (aliran).
 - **Seaborn**: Visualisasi data berbasis Matplotlib yang menyediakan _high level interface_.
 - **Box Plot**:
 
@@ -917,3 +917,11 @@ Bagian ini berisi catatan kelas versi ringkas/mentah yang melengkapi Bab 1-5 di 
 ---
 
 **Lihat juga:** [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] (dasar statistik di balik Box Plot, IQR, skewness, dan empirical rule) · [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] (persiapan/manipulasi DataFrame sebelum divisualisasikan) · [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] (konsep agregasi `GROUP BY` yang mendasari Bar Chart hasil agregasi).
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]] — dasar matematis Box Plot, IQR, batas outlier (1.5×IQR), dan arah skewness yang divisualisasikan di sesi ini dijelaskan rumusnya di sana (Bab 4.2-4.4).
+- [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — DataFrame hasil manipulasi Pandas/Numpy adalah input langsung untuk seluruh contoh plotting di sesi ini.
+- [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — agregasi `GROUP BY` yang mendasari logika Bar Chart hasil agregasi per kategori.

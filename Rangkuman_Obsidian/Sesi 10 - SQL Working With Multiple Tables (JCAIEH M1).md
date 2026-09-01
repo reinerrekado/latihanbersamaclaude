@@ -1075,3 +1075,11 @@ LIMIT 10;
 ```
 
 Latihan Sakila ini menutup Module 1's SQL track. Langkah berikutnya beralih ke fondasi statistika di [[Sesi 11 - Statistics Fundamental (JCAIEH M1)|Sesi 11 - Statistics Fundamental]], lalu kembali ke Python untuk manipulasi data tabular di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — di mana `pd.DataFrame` hasil `sql_df()` di Bab 4 session ini akan sering muncul lagi sebagai titik awal analisis.
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — fondasi DDL/DML/WHERE/GROUP BY yang jadi dasar sebelum masuk ke JOIN multi-tabel di sesi ini.
+- [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — `pd.merge()`/`.join()` adalah padanan langsung dari INNER/LEFT/RIGHT/FULL JOIN yang dibahas di sesi ini.
+- [[Sesi 07 - Object Oriented Programming (JCAIEH M1)|Sesi 07 - Object Oriented Programming]] — Primary/Foreign Key mirip konsep referensi antar-object, meski relasinya di level tabel bukan object.

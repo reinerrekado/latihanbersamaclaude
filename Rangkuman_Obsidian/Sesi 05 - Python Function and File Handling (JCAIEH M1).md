@@ -8,7 +8,7 @@ aliases: ["Sesi 5"]
 
 # Session 5 — Python Function & File Handling
 
-Study guide ini membahas konsep dasar dan lanjutan mengenai *function* di Python (definisi, parameter, `return`, `lambda`, *nested/callback/recursive function*), konsep *namespace* dan *scope* (`global`, `nonlocal`), serta manipulasi berkas eksternal (*file handling*) menggunakan `open()` dan `with` statement.
+Study guide ini membahas konsep dasar dan lanjutan mengenai *[[Kamus & Cheatsheet (JCAIEH M1)#F|function]]* di Python (definisi, [[Kamus & Cheatsheet (JCAIEH M1)#P|parameter]], `return`, `lambda`, *nested/callback/recursive function*), konsep *[[Kamus & Cheatsheet (JCAIEH M1)#N|namespace]]* dan *[[Kamus & Cheatsheet (JCAIEH M1)#S|scope]]* (`global`, `nonlocal`), serta manipulasi berkas eksternal (*file handling*) menggunakan `open()` dan `with` statement.
 
 ---
 
@@ -126,11 +126,11 @@ Untuk meningkatkan fleksibilitas sehingga fungsi dapat menghasilkan keluaran yan
 | Istilah Teknis | Definisi dan Karakteristik |
 |:--|:--|
 | *Parameter* | Variabel penampung (*placeholder*) yang dideklarasikan di dalam tanda kurung pada bagian definisi fungsi. |
-| *Argument* | Nilai nyata (*actual value*) yang dikirimkan ke fungsi saat fungsi tersebut dipanggil. |
+| *[[Kamus & Cheatsheet (JCAIEH M1)#A|Argument]]* | Nilai nyata (*actual value*) yang dikirimkan ke fungsi saat fungsi tersebut dipanggil. |
 
 #### B. Nilai Bawaan (Default Value)
 
-- **Fungsi Default**: Kita dapat menentukan nilai bawaan (*default value*) pada parameter fungsi. Jika kita tidak mengirimkan argumen apa pun saat memanggil fungsi tersebut, Python secara otomatis akan menggunakan nilai bawaan yang telah didefinisikan.
+- **Fungsi Default**: Kita dapat menentukan nilai bawaan (*[[Kamus & Cheatsheet (JCAIEH M1)#D|default value]]*) pada parameter fungsi. Jika kita tidak mengirimkan argumen apa pun saat memanggil fungsi tersebut, Python secara otomatis akan menggunakan nilai bawaan yang telah didefinisikan.
 - **Sintaks Default Value**: Ditulis dengan format `parameter = value` di dalam kurung definisi fungsi.
 
 **Contoh kode untuk studi kasus `greet(name="Bob", time=None)` (ditambahkan — di sumber hanya dijelaskan dalam prosa):**
@@ -188,7 +188,7 @@ print(hasil_2)                     # Output: 5  <- nilai asli berhasil ditangkap
 
 #### A. Karakteristik Anonymous Function
 
-- **Fungsi Anonim**: Fungsi yang dibuat menggunakan kata kunci `lambda` adalah fungsi khusus yang tidak memiliki nama (*anonymous function*).
+- **Fungsi Anonim**: Fungsi yang dibuat menggunakan kata kunci `lambda` adalah fungsi khusus yang tidak memiliki nama (*[[Kamus & Cheatsheet (JCAIEH M1)#L|anonymous function]]*).
 - **Batasan Satu Baris**: Fungsi ini hanya dapat digunakan jika logika di dalamnya sangat sederhana dan dapat dituliskan secara lengkap dalam satu baris ekspresi saja (*single-line expression*).
 - **Sintaksis Penulisan**:
 
@@ -246,8 +246,8 @@ Untuk menghasilkan kode program yang mudah dibaca (*readable*), mudah diuji (*te
 
 1. Menggunakan nama fungsi yang deskriptif (*descriptive function name*).
 2. Menggunakan nama parameter yang bermakna (*meaningful parameter name*).
-3. Menentukan petunjuk tipe data (*type hint*) untuk parameter input dan nilai kembalian (*return value*).
-4. Menyediakan dokumentasi deskriptif yang jelas (*docstring*) untuk menerangkan fungsionalitas blok kode tersebut.
+3. Menentukan petunjuk tipe data (*[[Kamus & Cheatsheet (JCAIEH M1)#T|type hint]]*) untuk parameter input dan nilai kembalian (*return value*).
+4. Menyediakan dokumentasi deskriptif yang jelas (*[[Kamus & Cheatsheet (JCAIEH M1)#D|docstring]]*) untuk menerangkan fungsionalitas blok kode tersebut.
 
 #### B. Studi Kasus Perbandingan Keterbacaan
 
@@ -328,8 +328,8 @@ print(process_data_aman(5))            # Output: Error: input tidak bisa diprose
 #### B. Tiga Tingkatan Namespace
 
 - **Built-in Namespace**: Berisi nama bawaan yang disediakan langsung oleh Python. *Namespace* ini otomatis dibuat saat interpreter Python dijalankan dan langsung tersedia di seluruh bagian program tanpa memerlukan konfigurasi atau impor modul eksternal (contoh: `print()`, `range()`, `input()`, `len()`).
-- **Global Namespace**: Berisi nama-nama variabel, fungsi, atau kelas yang didefinisikan secara umum di tingkat program utama (tingkat modul atau file aktif).
-- **Local Namespace**: Berisi nama-nama yang didefinisikan secara khusus di dalam tubuh suatu fungsi. *Namespace* ini bersifat sementara; hanya dibuat saat fungsi dieksekusi dan akan dihapus dari memori begitu fungsi selesai dijalankan.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#G|Global Namespace]]**: Berisi nama-nama variabel, fungsi, atau kelas yang didefinisikan secara umum di tingkat program utama (tingkat modul atau file aktif).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#L|Local Namespace]]**: Berisi nama-nama yang didefinisikan secara khusus di dalam tubuh suatu fungsi. *Namespace* ini bersifat sementara; hanya dibuat saat fungsi dieksekusi dan akan dihapus dari memori begitu fungsi selesai dijalankan.
 
 ---
 
@@ -370,7 +370,7 @@ print(message)                     # Output: Halo dari global (tidak berubah)
 
 #### A. Fungsi global Keyword
 
-- **Tujuan Penggunaan**: Di dalam Python, *global keyword* digunakan untuk memberikan instruksi eksplisit kepada interpreter agar menggunakan dan memodifikasi variabel yang berada di lingkup global (*global scope*) dari dalam konteks lokal fungsi.
+- **Tujuan Penggunaan**: Di dalam Python, *[[Kamus & Cheatsheet (JCAIEH M1)#G|global keyword]]* digunakan untuk memberikan instruksi eksplisit kepada interpreter agar menggunakan dan memodifikasi variabel yang berada di lingkup global (*global scope*) dari dalam konteks lokal fungsi.
 - **Sintaksis Deklarasi**:
 
 ```python
@@ -465,7 +465,7 @@ print(f"x di luar (global), muncul karena 'global x' tadi: {x}")  # Output: 15
 
 #### A. Konsep Dasar dan Lingkup Akses
 
-- **Definisi**: *Nested Function* adalah praktik mendefinisikan suatu fungsi pembantu (*helper function*) di dalam tubuh fungsi utama (*enclosing function*).
+- **Definisi**: *[[Kamus & Cheatsheet (JCAIEH M1)#N|Nested Function]]* adalah praktik mendefinisikan suatu fungsi pembantu (*helper function*) di dalam tubuh fungsi utama (*[[Kamus & Cheatsheet (JCAIEH M1)#E|enclosing function]]*).
 - **Alokasi dan Lingkup**: Fungsi bagian dalam (*inner function*) hanya akan diciptakan dan dialokasikan di memori saat fungsi utama sedang dieksekusi. Begitu fungsi utama selesai dijalankan, fungsi bagian dalam tersebut akan dihapus dari memori.
 - **Batasan Akses**: Karena didefinisikan di dalam lingkup lokal fungsi utama, *nested function* murni bersifat lokal dan tidak dapat diakses atau dipanggil secara langsung dari lingkup global (di luar fungsi utama).
 - **Studi Kasus Perhitungan Pajak**: Implementasi fungsi pembantu `add_tax` yang didefinisikan di dalam fungsi utama `calculate_total` untuk menambahkan komponen pajak sebesar 11% pada setiap harga barang.
@@ -504,7 +504,7 @@ print(calculate_total([100, 200, 300]))   # Output: 666.0
 
 #### A. Konsep Dasar dan Fleksibilitas Kode
 
-- **Definisi**: *Callback Function* adalah sebuah fungsi yang dilewatkan sebagai argumen atau nilai input ke dalam fungsi lain.
+- **Definisi**: *[[Kamus & Cheatsheet (JCAIEH M1)#C|Callback Function]]* adalah sebuah fungsi yang dilewatkan sebagai argumen atau nilai input ke dalam fungsi lain.
 - **Mekanisme Kerja**: Fungsi penerima bertindak sebagai pengontrol aliran utama, sementara logika operasi spesifik didelegasikan kepada fungsi callback yang dikirimkan. Fungsi penerima dapat mengeksekusi fungsi callback tersebut kapan saja di dalam tubuh logikanya saat diperlukan.
 - **Studi Kasus Kalkulator Multi-Operasi**: Fungsi `kalkulator` dirancang sebagai pengendali utama yang menerima parameter `operasi` berupa fungsi callback, serta dua operand `a` dan `b`.
 
@@ -546,11 +546,11 @@ kalkulator(tambah, 1, 3)     # BENAR: mengirim fungsi 'tambah' sebagai referensi
 
 #### A. Konsep Dasar dan Cara Kerja
 
-- **Definisi**: *Recursive Function* adalah fungsi yang memecahkan masalah komputasi dengan cara memanggil dirinya sendiri secara berulang-ulang.
+- **Definisi**: *[[Kamus & Cheatsheet (JCAIEH M1)#R|Recursive Function]]* adalah fungsi yang memecahkan masalah komputasi dengan cara memanggil dirinya sendiri secara berulang-ulang.
 - **Strategi Penyelesaian**: Pendekatan rekursif membagi satu masalah besar menjadi serangkaian sub-masalah sejenis yang berukuran lebih kecil, menyelesaikannya secara bertahap, lalu menggabungkan kembali hasilnya.
 - **Komponen Mutlak**: Setiap fungsi rekursif wajib memiliki dua komponen utama:
-    1. *Base Case* (*Stopping Condition*): Kondisi batas dasar yang dievaluasi menggunakan percabangan `if` untuk menghentikan pemanggilan diri sendiri.
-    2. *Recursive Case*: Bagian logika di mana fungsi memanggil dirinya sendiri dengan argumen yang nilainya semakin mendekati *Base Case*.
+    1. *[[Kamus & Cheatsheet (JCAIEH M1)#B|Base Case]]* (*Stopping Condition*): Kondisi batas dasar yang dievaluasi menggunakan percabangan `if` untuk menghentikan pemanggilan diri sendiri.
+    2. *[[Kamus & Cheatsheet (JCAIEH M1)#R|Recursive Case]]*: Bagian logika di mana fungsi memanggil dirinya sendiri dengan argumen yang nilainya semakin mendekati *Base Case*.
 - **Studi Kasus Hitung Mundur (Countdown)**: Fungsi `countdown` menerima sebuah bilangan, mencetaknya, lalu memanggil dirinya sendiri dengan nilai bilangan yang dikurangi 1 hingga menyentuh angka 1.
 
 ```python
@@ -572,13 +572,13 @@ countdown(3)
 |:--|:--|:--|
 | **Mekanisme Pengulangan** | Pemanggilan fungsi ke dirinya sendiri secara berulang. | Menggunakan instruksi `for` atau `while`. |
 | **Kondisi Berhenti** | Ditentukan secara eksplisit pada pernyataan *Base Case*. | Ditentukan oleh kondisi terminasi loop yang bernilai `False`. |
-| **Efisiensi Memori** | Lebih boros memori (membutuhkan ruang untuk *Call Stack*). | Sangat efisien (variabel kontrol diperbarui pada alamat memori yang sama). |
+| **Efisiensi Memori** | Lebih boros memori (membutuhkan ruang untuk *[[Kamus & Cheatsheet (JCAIEH M1)#C|Call Stack]]*). | Sangat efisien (variabel kontrol diperbarui pada alamat memori yang sama). |
 | **Risiko Kegagalan** | Menyebabkan crash sistem akibat kehabisan memori *stack*. | Mengakibatkan program berjalan tanpa henti (*infinite loop*). |
 
 > [!warning] Audio Insight — Bahaya Konsumsi Memori (Stack Overflow) & Tower of Hanoi
 > Dalam sesi pemaparan, dosen mengingatkan dampak fatal apabila fungsi rekursif ditulis tanpa memiliki *stopping condition* yang valid. Setiap kali fungsi memanggil dirinya sendiri, Python akan membuka bingkai memori baru di dalam *call stack*. Jika pemanggilan terjadi tanpa batas (*infinite call*), memori RAM komputer akan terkuras habis dengan sangat cepat, yang mengakibatkan program langsung mengalami crash atau hang.
 >
-> Masalah pemindahan cakram klasik seperti *Tower of Hanoi* yang sempat dibahas merupakan contoh nyata di mana pendekatan rekursif memberikan solusi penulisan kode yang jauh lebih sederhana, elegan, dan mudah dipahami dibandingkan dengan perulangan iteratif yang membutuhkan logika pelacakan posisi sangat rumit.
+> Masalah pemindahan cakram klasik seperti *[[Kamus & Cheatsheet (JCAIEH M1)#T|Tower of Hanoi]]* yang sempat dibahas merupakan contoh nyata di mana pendekatan rekursif memberikan solusi penulisan kode yang jauh lebih sederhana, elegan, dan mudah dipahami dibandingkan dengan perulangan iteratif yang membutuhkan logika pelacakan posisi sangat rumit.
 
 **Contoh recursion tanpa base case yang valid (ditambahkan, JANGAN dijalankan — hanya ilustrasi bahaya `RecursionError`):**
 
@@ -723,7 +723,7 @@ print(is_prime(9))         # Output BENAR: False
 
 #### B. Alur Interaksi File di Python
 
-- **Membuka (Open)**: Menghubungkan program Python dengan sistem penyimpanan sistem operasi menggunakan fungsi bawaan `open()`. Langkah ini menghasilkan objek file (*file object*) atau penunjuk (*file handler*) di memori.
+- **Membuka (Open)**: Menghubungkan program Python dengan sistem penyimpanan sistem operasi menggunakan fungsi bawaan `open()`. Langkah ini menghasilkan objek file (*[[Kamus & Cheatsheet (JCAIEH M1)#F|file object]]*) atau penunjuk (*file handler*) di memori.
 - **Memproses (Read/Write)**: Melakukan manipulasi isi file seperti mengambil data (*reading*) atau memasukkan data baru (*writing*).
 - **Menutup (Close)**: Memutuskan koneksi berkas eksternal menggunakan metode `.close()` untuk membebaskan sumber daya memori dan mengunci kembali berkas agar tidak terjadi korupsi data (*data corruption*).
 
@@ -744,7 +744,7 @@ file_object = open(filepath, mode)
 
 | Mode | Nama Operasi | Deskripsi Karakteristik | Perilaku terhadap Berkas |
 |:--|:--|:--|:--|
-| `"r"` | *Read* | Membuka file khusus untuk dibaca. | Berkas yang dituju wajib sudah ada sebelumnya di direktori. Jika tidak ada, Python akan memicu kesalahan *FileNotFoundError*. |
+| `"r"` | *Read* | Membuka file khusus untuk dibaca. | Berkas yang dituju wajib sudah ada sebelumnya di direktori. Jika tidak ada, Python akan memicu kesalahan *[[Kamus & Cheatsheet (JCAIEH M1)#F|FileNotFoundError]]*. |
 | `"w"` | *Write* | Membuka file khusus untuk ditulis. | Jika berkas sudah ada, seluruh isi lamanya akan dihapus total (*truncated* / ditimpa). Jika berkas belum ada, berkas baru akan otomatis dibuat. |
 | `"a"` | *Append* | Membuka file untuk ditambahkan datanya di bagian paling akhir. | Nilai baru akan ditulis mulai dari baris akhir tanpa merusak atau menghapus data lama. Jika berkas belum ada, berkas baru otomatis dibuat. |
 
@@ -770,7 +770,7 @@ file.close()
 ```
 
 > [!warning] Audio Insight — Karakter Newline `\n`
-> Dalam sesi demonstrasi kelas, mahasiswa menanyakan perihal penggunaan karakter garis miring terbalik (*backslash*) diikuti huruf n (`\n`) yang disisipkan di dalam kode string. Dosen menjelaskan bahwa itu adalah karakter khusus (*escape character*) untuk merepresentasikan instruksi pindah baris (*enter* / *newline*). Jika karakter ini tidak disertakan, teks yang ditulis berikutnya akan menempel pada baris yang sama.
+> Dalam sesi demonstrasi kelas, mahasiswa menanyakan perihal penggunaan karakter garis miring terbalik (*backslash*) diikuti huruf n (`\n`) yang disisipkan di dalam kode string. Dosen menjelaskan bahwa itu adalah karakter khusus (*[[Kamus & Cheatsheet (JCAIEH M1)#E|escape character]]*) untuk merepresentasikan instruksi pindah baris (*enter* / *newline*). Jika karakter ini tidak disertakan, teks yang ditulis berikutnya akan menempel pada baris yang sama.
 
 **Contoh perbandingan langsung (ditambahkan):**
 
@@ -821,7 +821,7 @@ Di akhir sesi kuliah, mahasiswa ditantang untuk menyelesaikan skenario dunia nya
 Mahasiswa diminta membuat program interaktif yang menanyakan jumlah buah yang dibeli, meminta nama buah, harga, serta kuantitasnya, lalu menyimpan kalkulasi tersebut secara terstruktur ke dalam file bernama `invoice.txt`.
 
 > [!warning] Audio Insight — Strategi List of Dictionary & Kustomisasi Layout Penulisan
-> Dalam sesi demo pengerjaan oleh mahasiswa (Ivo), data input dibungkus terlebih dahulu ke dalam tipe data terstruktur berupa list yang berisi kamus (*list of dictionary*). Struktur ini mempermudah pelacakan data sebelum ditulis ke media fisik.
+> Dalam sesi demo pengerjaan oleh mahasiswa (Ivo), data input dibungkus terlebih dahulu ke dalam tipe data terstruktur berupa list yang berisi kamus (*[[Kamus & Cheatsheet (JCAIEH M1)#L|list of dictionary]]*). Struktur ini mempermudah pelacakan data sebelum ditulis ke media fisik.
 >
 > Untuk memisahkan visualisasi antar item buah di dalam berkas teks, mahasiswa menggunakan logika pemeriksaan pengkondisian. Jika item yang sedang diproses dalam perulangan bukan merupakan item terakhir (`item != items[-1]`), maka program akan menyisipkan karakter enter ganda (`\n\n`) untuk menciptakan jarak pemisah yang rapi. Penulisan ke file dieksekusi secara efisien menggunakan blok `with open("invoice.txt", "w")`.
 
@@ -875,3 +875,11 @@ print(read_prices_and_get_total("invoice.txt", discount=10))
 
 > [!tip] Lihat juga
 > Pola parsing baris "Total" dengan langkah 3 baris (`range(2, len(lines), 3)`) di atas persis sama dengan pola yang dipakai untuk soal *invoice* di [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] Bab 1 — keduanya adalah dua versi latihan dari kasus yang sama.
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub (JCAIEH M1)|Sesi 01 - Introduction to DS Python Statistics SQL Git and GitHub]] — Recursive Function di sesi ini memakai pola Base Case/Recursive Case yang sama persis dengan studi kasus Tower of Hanoi di Sesi 01.
+- [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] — latihan file handling (`get_total`) dan dasar `lambda` di sesi ini langsung dilanjutkan dan dipraktikkan lebih jauh di Sesi 06 (parsing invoice, multi-criteria sorting).
+- [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — pola "buka koneksi → proses → tutup koneksi" pada `open()`/`with` di sesi ini muncul lagi dalam bentuk mirip saat menyambungkan Python ke database.

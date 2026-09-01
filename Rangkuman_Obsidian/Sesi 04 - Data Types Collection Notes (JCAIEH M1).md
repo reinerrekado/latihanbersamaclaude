@@ -106,7 +106,7 @@ else:
 
 ### 2.1 Definisi dan Kategori Collection Data Types
 
-Collection Data Types adalah objek yang menampung nol atau lebih objek anggota yang disebut sebagai elemen. Python menyediakan berbagai macam tipe koleksi bawaan (_built-in_) maupun pembantu (_auxiliary_) untuk efisiensi penyimpanan data.
+[[Kamus & Cheatsheet (JCAIEH M1)#C|Collection Data Types]] adalah objek yang menampung nol atau lebih objek anggota yang disebut sebagai elemen. Python menyediakan berbagai macam tipe koleksi bawaan (_built-in_) maupun pembantu (_auxiliary_) untuk efisiensi penyimpanan data.
 
 Secara garis besar, Collection Data Types di Python dibagi ke dalam 3 kategori utama: **Sequences** (Urutan), **Mappings** (Pemetaan), dan **Sets** (Himpunan).
 
@@ -123,8 +123,8 @@ Secara garis besar, Collection Data Types di Python dibagi ke dalam 3 kategori u
 
 Sifat _mutability_ mengacu pada kemampuan suatu tipe data untuk diubah nilainya setelah objek dideklarasikan di dalam memori komputer:
 
-- **Mutable (Bisa Diubah):** elemen-elemen di dalam objek dapat dimodifikasi, ditambah, dihapus, atau diganti setelah objek berhasil dibuat. Contoh: `list`, `dict`, `set`.
-- **Immutable (Tidak Bisa Diubah / Read-Only):** elemen-elemen bersifat statis dan sama sekali tidak dapat diubah, diganti, atau dimodifikasi setelah deklarasi awal. Contoh: `range`, `tuple`, `frozenset`.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#M|Mutable]] (Bisa Diubah):** elemen-elemen di dalam objek dapat dimodifikasi, ditambah, dihapus, atau diganti setelah objek berhasil dibuat. Contoh: `list`, `dict`, `set`.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#I|Immutable]] (Tidak Bisa Diubah / Read-Only):** elemen-elemen bersifat statis dan sama sekali tidak dapat diubah, diganti, atau dimodifikasi setelah deklarasi awal. Contoh: `range`, `tuple`, `frozenset`.
 
 ```python
 # Demonstrasi cepat mutable vs immutable
@@ -156,7 +156,7 @@ angka_tuple = (1, 2, 3)
 
 ### 3.1 Konsep Dasar List
 
-List adalah salah satu tipe data koleksi bawaan di Python yang digunakan untuk menyimpan beberapa nilai (elemen) dalam satu variabel tunggal. Penggunaan list bertujuan untuk menghindari pembuatan banyak variabel individual secara tidak praktis (misalnya menghindari deklarasi `student_1`, `student_2`, hingga `student_100` secara manual).
+[[Kamus & Cheatsheet (JCAIEH M1)#L|List]] adalah salah satu tipe data koleksi bawaan di Python yang digunakan untuk menyimpan beberapa nilai (elemen) dalam satu variabel tunggal. Penggunaan list bertujuan untuk menghindari pembuatan banyak variabel individual secara tidak praktis (misalnya menghindari deklarasi `student_1`, `student_2`, hingga `student_100` secara manual).
 
 **Karakteristik teknis tipe data List:**
 
@@ -233,7 +233,7 @@ print(angka)  # Output: []
 
 Dalam Python, melakukan penugasan langsung variabel list baru ke variabel list lama (`new_list = old_list`) tidak melakukan penggandaan objek secara fisik di memori. Kedua variabel tersebut akan merujuk (_point_) ke alamat memori (_memory address_) yang sama.
 
-Untuk menduplikasi list secara aman ke alamat memori yang berbeda, wajib menggunakan metode `.copy()` untuk menghasilkan salinan dangkal (_shallow copy_).
+Untuk menduplikasi list secara aman ke alamat memori yang berbeda, wajib menggunakan metode `.copy()` untuk menghasilkan salinan dangkal (_[[Kamus & Cheatsheet (JCAIEH M1)#S|shallow copy]]_).
 
 | Metode Pendekatan | Sintaks Kode | Karakteristik Perubahan Data | Dampak pada Objek Memori |
 | --- | --- | --- | --- |
@@ -269,7 +269,7 @@ print(angka)           # Output: [5, 2, 9, 1] -> list asli TIDAK berubah
 
 ### 3.3 Konsep List Comprehension
 
-_List comprehension_ adalah fitur Python yang menawarkan sintaksis lebih ringkas untuk membuat list baru berdasarkan elemen-elemen dari list atau objek iterable yang sudah ada.
+_[[Kamus & Cheatsheet (JCAIEH M1)#L|List comprehension]]_ adalah fitur Python yang menawarkan sintaksis lebih ringkas untuk membuat list baru berdasarkan elemen-elemen dari list atau objek iterable yang sudah ada.
 
 **Sintaksis dasar:**
 
@@ -360,7 +360,7 @@ print(fruit_with_a)
 
 ### 4.1 Konsep Dasar dan Karakteristik Tuple
 
-Tuple adalah tipe data koleksi di Python yang digunakan untuk menyimpan beberapa nilai di dalam satu variabel tunggal, mirip dengan List. Perbedaan mendasar antara List dan Tuple terletak pada sifat keterubahannya (_mutability_). Tuple bersifat _immutable_ — nilai atau elemen di dalamnya bersifat _read-only_ dan tidak dapat diubah, ditambah, atau dihapus setelah objek Tuple dideklarasikan di dalam memori komputer.
+[[Kamus & Cheatsheet (JCAIEH M1)#T|Tuple]] adalah tipe data koleksi di Python yang digunakan untuk menyimpan beberapa nilai di dalam satu variabel tunggal, mirip dengan List. Perbedaan mendasar antara List dan Tuple terletak pada sifat keterubahannya (_mutability_). Tuple bersifat _immutable_ — nilai atau elemen di dalamnya bersifat _read-only_ dan tidak dapat diubah, ditambah, atau dihapus setelah objek Tuple dideklarasikan di dalam memori komputer.
 
 **Kasus Penggunaan Utama** — Tuple ideal untuk menampung kumpulan data yang nilainya bersifat konstan atau tidak boleh mengalami modifikasi sepanjang program berjalan:
 
@@ -380,7 +380,7 @@ Tuple kosong dapat dideklarasikan menggunakan fungsi pembantu `tuple()` atau kur
 
 ### 4.2 Deklarasi Khusus Single Item Tuple
 
-Dalam menulis Tuple yang hanya memiliki satu elemen (_single item tuple_), terdapat aturan penulisan sintaksis khusus yang wajib dipenuhi agar interpreter Python dapat mengenali objek tersebut sebagai Tuple, bukan sebagai tipe data primitif biasa.
+Dalam menulis Tuple yang hanya memiliki satu elemen (_[[Kamus & Cheatsheet (JCAIEH M1)#S|single item tuple]]_), terdapat aturan penulisan sintaksis khusus yang wajib dipenuhi agar interpreter Python dapat mengenali objek tersebut sebagai Tuple, bukan sebagai tipe data primitif biasa.
 
 - **Aturan Tanda Koma Akhir:** wajib menambahkan tanda koma `,` langsung setelah elemen pertama di dalam tanda kurung.
 - **Contoh Sintaksis Valid:** `my_tuple = (5,)`.
@@ -463,10 +463,10 @@ else:
 
 Setiap elemen di dalam tipe data `list` dan `tuple` memiliki posisi spesifik yang disebut sebagai indeks, digunakan untuk menunjuk dan mengakses elemen tunggal secara langsung.
 
-**Aturan Pengindeksan Python** — Python menggunakan sistem pengindeksan berbasis nol (_zero-based indexing_), yang berarti elemen pertama selalu dimulai dari indeks `0`. Python juga mendukung pengindeksan negatif untuk mempermudah akses elemen dari arah belakang.
+**Aturan Pengindeksan Python** — Python menggunakan sistem pengindeksan berbasis nol (_[[Kamus & Cheatsheet (JCAIEH M1)#Z|zero-based indexing]]_), yang berarti elemen pertama selalu dimulai dari indeks `0`. Python juga mendukung pengindeksan negatif untuk mempermudah akses elemen dari arah belakang.
 
 - **Indeks Positif:** dimulai dari `0` untuk elemen pertama di sebelah kiri, bergerak maju ke kanan (`1`, `2`, `3`, dst).
-- **Indeks Negatif:** dimulai dari `-1` untuk elemen terakhir di sebelah kanan, bergerak mundur ke kiri (`-2`, `-3`, `-4`, dst).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#N|Indeks Negatif]]:** dimulai dari `-1` untuk elemen terakhir di sebelah kanan, bergerak mundur ke kiri (`-2`, `-3`, `-4`, dst).
 
 **Tabel Skema Indeks Positif dan Negatif** untuk `students = ["andi", "budi", "cinta", "doni"]`:
 
@@ -494,7 +494,7 @@ print(nama_terakhir)  # Output: "doni"
 
 ### 5.2 Slicing (Pemotongan Bagian) Data
 
-Slicing digunakan apabila program memerlukan sebagian porsi data (_portion_) atau sub-koleksi dari `list` atau `tuple`, bukan hanya satu elemen tunggal.
+[[Kamus & Cheatsheet (JCAIEH M1)#S|Slicing]] digunakan apabila program memerlukan sebagian porsi data (_portion_) atau sub-koleksi dari `list` atau `tuple`, bukan hanya satu elemen tunggal.
 
 **Format Sintaksis Slicing:**
 
@@ -539,7 +539,7 @@ Hasil akhirnya: `["andi", "cinta"]` — elemen di indeks 1 ("budi") sengaja **di
 
 ### 5.3 Penanganan Kasus Out-of-Range (Batas Indeks)
 
-Python memiliki karakteristik unik yang sangat berbeda dalam menangani kondisi batas indeks yang melampaui kapasitas elemen (_out-of-range_) antara operasi indexing langsung dan slicing.
+Python memiliki karakteristik unik yang sangat berbeda dalam menangani kondisi batas indeks yang melampaui kapasitas elemen (_[[Kamus & Cheatsheet (JCAIEH M1)#O|out-of-range]]_) antara operasi indexing langsung dan slicing.
 
 - **Akses Indexing Langsung:** jika program mencoba mengakses satu indeks tertentu yang nilainya melebihi kapasitas elemen yang ada (misalnya mengakses indeks ke-10 pada list yang hanya memiliki 4 elemen), Python akan segera menghentikan program dan memicu error `IndexError: list index out of range`.
 - **Akses Slicing:** jika operasi slicing dideklarasikan melewati batas indeks elemen yang tersedia (misalnya slicing mulai dari indeks ke-10), Python tidak akan memicu error apa pun. Interpreter Python secara aman akan mengembalikan koleksi kosong (`[]` untuk list atau `()` untuk tuple).
@@ -574,7 +574,7 @@ print(slicing_kosong)  # Output: []
 
 ### 6.1 Konsep Dasar Set
 
-Set adalah tipe data koleksi di Python yang digunakan untuk menyimpan elemen-elemen unik secara otomatis dengan menghapus seluruh nilai duplikat. Sifat ini sangat berguna dalam menyaring data yang terdaftar lebih dari satu kali secara tidak sengaja.
+[[Kamus & Cheatsheet (JCAIEH M1)#S|Set]] adalah tipe data koleksi di Python yang digunakan untuk menyimpan elemen-elemen unik secara otomatis dengan menghapus seluruh nilai duplikat. Sifat ini sangat berguna dalam menyaring data yang terdaftar lebih dari satu kali secara tidak sengaja.
 
 **Karakteristik Utama Set:**
 
@@ -589,7 +589,7 @@ Set adalah tipe data koleksi di Python yang digunakan untuk menyimpan elemen-ele
 | Set dengan elemen | `{val1, val2, ...}` | Ditulis menggunakan kurung kurawal `{...}` dengan pemisah koma antar elemen. |
 | Set kosong | `set()` | Wajib dideklarasikan menggunakan fungsi `set()`. |
 | Kurung kurawal kosong | `{}` | **DILARANG** untuk Set kosong karena Python otomatis mendeteksinya sebagai Dictionary kosong. |
-| Set Bersarang (_Nested Set_) | `frozenset()` | Set tidak dapat langsung menampung Set lain sebagai elemennya karena elemen Set harus bersifat _hashable_ (_immutable_). Set bagian dalam wajib dibungkus dengan `frozenset()`. |
+| Set Bersarang (_Nested Set_) | `frozenset()` | Set tidak dapat langsung menampung Set lain sebagai elemennya karena elemen Set harus bersifat _[[Kamus & Cheatsheet (JCAIEH M1)#H|hashable]]_ (_immutable_). Set bagian dalam wajib dibungkus dengan `frozenset()`. |
 
 ```python
 data_duplikat = {1, 2, 2, 3}
@@ -647,10 +647,10 @@ Set di Python mendukung operasi aljabar himpunan matematika, baik menggunakan me
 
 | Operasi | Deskripsi Himpunan | Metode Bawaan | Operator | Contoh Hasil (`A` dan `B`) |
 | --- | --- | --- | --- | --- |
-| **Union** | Menggabungkan seluruh elemen unik dari kedua himpunan. | `A.union(B)` | `A \| B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'a','b','c'}` |
-| **Intersection** | Mengambil elemen yang ada di kedua himpunan secara bersamaan. | `A.intersection(B)` | `A & B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'b'}` |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#U|Union]]** | Menggabungkan seluruh elemen unik dari kedua himpunan. | `A.union(B)` | `A \| B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'a','b','c'}` |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#I|Intersection]]** | Mengambil elemen yang ada di kedua himpunan secara bersamaan. | `A.intersection(B)` | `A & B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'b'}` |
 | **Difference** | Mengambil elemen himpunan pertama yang tidak ada di himpunan kedua. | `A.difference(B)` | `A - B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'a'}` |
-| **Symmetric Difference** | Mengambil elemen unik dari masing-masing himpunan yang tidak saling beririsan. | `A.symmetric_difference(B)` | `A ^ B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'a','c'}` |
+| **[[Kamus & Cheatsheet (JCAIEH M1)#S|Symmetric Difference]]** | Mengambil elemen unik dari masing-masing himpunan yang tidak saling beririsan. | `A.symmetric_difference(B)` | `A ^ B` | `A={'a','b'}, B={'b','c'}` → Hasil: `{'a','c'}` |
 
 **Hubungan dan Perbandingan Antar Himpunan:**
 
@@ -723,7 +723,7 @@ print("Siswa kelas Python saja:", pure_python)  # Output: {'andi', 'budi'}
 
 ### 7.1 Konsep Dasar dan Karakteristik Dictionary
 
-Python Dictionary adalah tipe data koleksi yang menyimpan data dalam bentuk pasangan _key-value_ (kunci-nilai). Struktur ini dirancang untuk mempermudah pencarian dan pengambilan data secara cepat menggunakan sebuah _key_ sebagai pencari, berbeda dengan List atau Tuple yang mengandalkan posisi indeks angka.
+Python [[Kamus & Cheatsheet (JCAIEH M1)#D|Dictionary]] adalah tipe data koleksi yang menyimpan data dalam bentuk pasangan _key-value_ (kunci-nilai). Struktur ini dirancang untuk mempermudah pencarian dan pengambilan data secara cepat menggunakan sebuah _key_ sebagai pencari, berbeda dengan List atau Tuple yang mengandalkan posisi indeks angka.
 
 **Aturan Penulisan dan Karakteristik Key-Value:**
 
@@ -922,7 +922,7 @@ Notasi kurung siku dengan _string key_ di dalamnya ini adalah cara paling dasar 
 
 ### 8.1 Pengenalan Platform HackerRank
 
-HackerRank adalah platform evaluasi kode daring (_online code evaluation platform_) yang digunakan oleh pengembang untuk melatih logika pemrograman secara interaktif, serta digunakan oleh industri sebagai instrumen penyaringan kandidat teknis.
+[[Kamus & Cheatsheet (JCAIEH M1)#H|HackerRank]] adalah platform evaluasi kode daring (_online code evaluation platform_) yang digunakan oleh pengembang untuk melatih logika pemrograman secara interaktif, serta digunakan oleh industri sebagai instrumen penyaringan kandidat teknis.
 
 **Prosedur Pendaftaran Akun (Sign Up):**
 
@@ -980,3 +980,11 @@ HackerRank adalah platform evaluasi kode daring (_online code evaluation platfor
 ## Ringkasan Sesi
 
 Sesi 4 menuntaskan pembahasan tipe data koleksi Python: List (_mutable_, `.append`/`.insert`/`.extend`/`.pop`/`.remove`/`.copy`, list comprehension), Tuple (_immutable_, `.index`/`.count`, aturan koma _single item tuple_), Indexing & Slicing (`[start:stop:step]`, indeks negatif, perilaku _out-of-range_), Set (elemen unik, operasi himpunan union/intersection/difference/symmetric difference), dan Dictionary (_key-value_, `.get`/`.update`/`.setdefault`/`.items`). Sesi ini juga membuka pintu ke latihan mandiri di [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] dan menjadi fondasi konseptual langsung untuk struktur data relasional di [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] serta manipulasi data tabular di [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]].
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] — Bab 1 di sini me-review ulang algoritma bilangan prima dan slicing `[::-1]` yang pertama kali muncul di Sesi 3.
+- [[Sesi 06 - Hackerrank Exercise (JCAIEH M1)|Sesi 06 - Hackerrank Exercise]] — platform HackerRank yang diperkenalkan di Bab 8 di sini menjadi tempat praktik langsung soal-soal List/Set/Dict pada Sesi 6.
+- [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — List comprehension (Bab 3.3) dan struktur Dictionary (Bab 7) di sini adalah nenek moyang langsung dari operasi vektor NumPy dan pembuatan Series/DataFrame di Sesi 12.

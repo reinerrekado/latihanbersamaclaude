@@ -16,7 +16,7 @@ Catatan sesi pertama ini mencakup pengenalan konsep Artificial Intelligence (AI)
 
 ### 1.1 Definisi & Konseptual Dasar Artificial Intelligence (AI)
 
-**Artificial Intelligence (AI)** secara formal didefinisikan sebagai bidang dalam **Ilmu Komputer (Computer Science)** yang berfokus pada penciptaan sistem yang mampu melakukan tugas-tugas yang biasanya membutuhkan kecerdasan manusia.
+**[[Kamus & Cheatsheet (JCAIEH M1)#A|Artificial Intelligence (AI)]]** secara formal didefinisikan sebagai bidang dalam **Ilmu Komputer (Computer Science)** yang berfokus pada penciptaan sistem yang mampu melakukan tugas-tugas yang biasanya membutuhkan kecerdasan manusia.
 
 #### Posisi AI dalam Ranah Ilmu Komputer
 
@@ -186,7 +186,7 @@ Secara formal, algoritma adalah serangkaian instruksi langkah-demi-langkah untuk
 
 ### 3.1 Pengenalan Tower of Hanoi & Aturan Main (Rules)
 
-_Tower of Hanoi_ adalah masalah klasik dalam matematika dan ilmu komputer yang sering digunakan untuk menguji kemampuan pemecahan masalah secara logis.
+_[[Kamus & Cheatsheet (JCAIEH M1)#T|Tower of Hanoi]]_ adalah masalah klasik dalam matematika dan ilmu komputer yang sering digunakan untuk menguji kemampuan pemecahan masalah secara logis.
 
 **Komponen Utama:** _N_ buah piringan (_disks_) dengan ukuran berbeda-beda dan 3 tiang (_pegs/rods_):
 
@@ -215,8 +215,8 @@ Fungsi utama biasanya didefinisikan sebagai `Hanoi(N, Source, Target, Helper)`. 
 
 ### 3.3 Pembedahan Langkah-demi-Langkah (Step-by-Step Trace)
 
-- **Base Case:** terjadi ketika **N = 1** — pindahkan satu piringan tunggal langsung dari _Source_ ke _Target_ tanpa bantuan tiang lain.
-- **Recursive Case:** untuk setiap **N > 1**, algoritma mengikuti pola tiga langkah:
+- **[[Kamus & Cheatsheet (JCAIEH M1)#B|Base Case]]:** terjadi ketika **N = 1** — pindahkan satu piringan tunggal langsung dari _Source_ ke _Target_ tanpa bantuan tiang lain.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#R|Recursive Case]]:** untuk setiap **N > 1**, algoritma mengikuti pola tiga langkah:
   1. Pindahkan **N-1** piringan dari _Source_ ke _Helper_ (menggunakan _Target_ sebagai bantuan sementara).
   2. Pindahkan piringan terbesar (ke-N) langsung dari _Source_ ke _Target_.
   3. Pindahkan **N-1** piringan yang tadi di _Helper_ ke _Target_ (menggunakan _Source_ sebagai bantuan sementara).
@@ -282,13 +282,13 @@ hanoi(3, "A", "C", "B")
 
 Python adalah bahasa pemrograman yang sangat fleksibel dan populer untuk berbagai domain: AI, _web development_, _backend development_, _data analysis_, hingga otomasi tugas repetitif.
 
-- **High-Level Language (Python):** sintaksisnya dirancang mendekati bahasa alami manusia (Inggris), sehingga relatif mudah dipelajari, dibaca, dan dipahami.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#H|High-Level Language]] (Python):** sintaksisnya dirancang mendekati bahasa alami manusia (Inggris), sehingga relatif mudah dipelajari, dibaca, dan dipahami.
 - **Low-Level Language:** seperti bahasa mesin (0 dan 1), sangat sulit dimengerti langsung oleh manusia, berinteraksi langsung dengan perangkat keras tanpa abstraksi luas.
 
 ### 4.2 Deep Dive: Interpreted vs Compiled Programming Language
 
-- **Interpreted Language (Python):** Python bekerja menggunakan _Interpreter_, mengeksekusi kode secara langsung baris-demi-baris (_line-by-line_) secara sekuensial saat program dijalankan. Karena bekerja sekuensial, perancangan algoritma melalui flowchart harus logis dan berurutan agar selaras dengan cara kerja _interpreter_.
-- **Compiled Language (C/C++):** seluruh kode program harus diterjemahkan sekaligus oleh _Compiler_ menjadi kode mesin mandiri (_standalone executable binary_) sebelum dijalankan.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#I|Interpreted Language]] (Python):** Python bekerja menggunakan _[[Kamus & Cheatsheet (JCAIEH M1)#I|Interpreter]]_, mengeksekusi kode secara langsung baris-demi-baris (_line-by-line_) secara sekuensial saat program dijalankan. Karena bekerja sekuensial, perancangan algoritma melalui flowchart harus logis dan berurutan agar selaras dengan cara kerja _interpreter_.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#C|Compiled Language]] (C/C++):** seluruh kode program harus diterjemahkan sekaligus oleh _[[Kamus & Cheatsheet (JCAIEH M1)#C|Compiler]]_ menjadi kode mesin mandiri (_standalone executable binary_) sebelum dijalankan.
 
 | Karakteristik | Interpreted (Python) | Compiled (C/C++) |
 | --- | --- | --- |
@@ -303,7 +303,7 @@ Python adalah bahasa pemrograman yang sangat fleksibel dan populer untuk berbaga
 - **IDE / Code Editor:** Visual Studio Code (VSCode).
 - **Ekstensi VSCode Esensial:** **Python** (dukungan penuh bahasa Python), **Jupyter** (notebook interaktif), **Pylance** (_intellectual language support_ seperti auto-complete), **Gitlens** (opsional, visualisasi riwayat kode).
 
-**Virtual Environment (Venv & Conda)** — mengisolasi paket-paket yang dibutuhkan proyek tertentu agar tidak berbenturan dengan proyek lain.
+**Virtual Environment ([[Kamus & Cheatsheet (JCAIEH M1)#C|Venv]] & Conda)** — mengisolasi paket-paket yang dibutuhkan proyek tertentu agar tidak berbenturan dengan proyek lain.
 
 - **Venv:** modul bawaan Python untuk membuat lingkungan virtual.
 - **Conda/Miniconda:** pengelola lingkungan dan paket yang lebih luas.
@@ -311,7 +311,7 @@ Python adalah bahasa pemrograman yang sangat fleksibel dan populer untuk berbaga
 > [!tip] Wawasan Penting — Venv Tidak Diperlukan Jika Sudah Ada Conda
 > Jika pengguna telah menginstal Anaconda atau Conda, maka instalasi venv secara terpisah tidak lagi diperlukan. Hal ini dikarenakan Conda sudah memaketkan instalasi Python dan pengelola lingkungannya sendiri secara terintegrasi.
 
-**Source Code Management (Git)** — alat wajib untuk manajemen riwayat kode: **Versioning** (melacak setiap perubahan kode dari waktu ke waktu) dan **Kolaborasi** (memungkinkan tim bekerja pada bagian kode berbeda secara paralel tanpa merusak pekerjaan satu sama lain). Lihat pembahasan lengkap di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]].
+**Source Code Management ([[Kamus & Cheatsheet (JCAIEH M1)#G|Git]])** — alat wajib untuk manajemen riwayat kode: **Versioning** (melacak setiap perubahan kode dari waktu ke waktu) dan **Kolaborasi** (memungkinkan tim bekerja pada bagian kode berbeda secara paralel tanpa merusak pekerjaan satu sama lain). Lihat pembahasan lengkap di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]].
 
 > [!tip] Tips Verifikasi — Cek Instalasi Git
 > Untuk memastikan Git sudah terpasang, ketik perintah `git` di dalam terminal VSCode. Jika muncul daftar bantuan perintah, berarti Git telah dikenali oleh sistem.
@@ -391,7 +391,7 @@ _count = 0
 - **Float:** nilai desimal/pecahan (contoh: 19.99, 3.14).
 - **Bool (Boolean):** hanya memiliki dua nilai: `True` atau `False`.
 - **Str (String):** teks/urutan karakter dibungkus tanda kutip tunggal (`'`) atau ganda (`"`).
-- **NoneType:** tipe data khusus untuk merepresentasikan ketiadaan nilai (`None`).
+- **[[Kamus & Cheatsheet (JCAIEH M1)#N|NoneType]]:** tipe data khusus untuk merepresentasikan ketiadaan nilai (`None`).
 
 > [!warning] Audio Insight — Perbedaan 'None' vs '0'
 > Terdapat perbedaan fundamental antara angka 0 dan `None`. Angka 0 tetap merupakan sebuah nilai numerik dengan tipe data Integer. Sedangkan `None` adalah representasi kosong atau tidak adanya nilai sama sekali (NoneType). Analoginya, 0 adalah laci yang berisi angka nol, sedangkan `None` adalah laci yang benar-benar kosong tanpa barang di dalamnya.
@@ -409,10 +409,10 @@ print(angka_nol == nilai_kosong)  # Output: False -> nilainya beda secara konsep
 
 Wadah untuk struktur organisasi data, memungkinkan penyimpanan banyak nilai dalam satu variabel:
 
-- **List:** koleksi terurut yang bersifat _mutable_ (isinya dapat diubah, ditambah, atau dihapus setelah dibuat). Dideklarasikan dengan `[]`.
-- **Tuple:** koleksi terurut yang bersifat _immutable_ (isinya tidak dapat diubah setelah didefinisikan). Dideklarasikan dengan `()`.
-- **Set:** koleksi tidak terurut dari elemen yang unik — data duplikat otomatis dihapus. Dideklarasikan dengan `{}`.
-- **Dict (Dictionary):** koleksi pasangan kunci-nilai (_key-value pairs_), sangat efisien untuk pencarian data berdasarkan kata kunci. Format: `{key: value}`.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#L|List]]:** koleksi terurut yang bersifat _mutable_ (isinya dapat diubah, ditambah, atau dihapus setelah dibuat). Dideklarasikan dengan `[]`.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#T|Tuple]]:** koleksi terurut yang bersifat _immutable_ (isinya tidak dapat diubah setelah didefinisikan). Dideklarasikan dengan `()`.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#S|Set]]:** koleksi tidak terurut dari elemen yang unik — data duplikat otomatis dihapus. Dideklarasikan dengan `{}`.
+- **[[Kamus & Cheatsheet (JCAIEH M1)#D|Dict (Dictionary)]]:** koleksi pasangan kunci-nilai (_key-value pairs_), sangat efisien untuk pencarian data berdasarkan kata kunci. Format: `{key: value}`.
 
 ```python
 message = "Hello"
@@ -476,7 +476,7 @@ print("Python3".isalnum())   # Output: True (huruf + angka saja, tanpa spasi/sim
 
 ### 5.6 Formatted String Literals (f-Strings)
 
-f-Strings adalah cara termudah dan paling efisien untuk menyisipkan variabel ke dalam teks.
+[[Kamus & Cheatsheet (JCAIEH M1)#F|f-Strings]] adalah cara termudah dan paling efisien untuk menyisipkan variabel ke dalam teks.
 
 - **Konsep:** tambahkan huruf `f` sebelum tanda kutip pembuka dan bungkus variabel/ekspresi dengan `{}`.
 - **Kelebihan vs Concatenation:** dibandingkan penggabungan manual dengan `+` (yang memerlukan konversi tipe data manual seperti `str(age)`), f-String lebih bersih, ringkas, dan performanya lebih cepat.
@@ -539,7 +539,7 @@ print(math.nan)              # Output: nan
 
 - **String Conversion:** `str()`.
 - **Numeric Conversion:** `int()` atau `float()`. Perlu dicatat bahwa `int(3.99)` menghasilkan `3` karena fungsi ini memangkas (_truncation_) bagian desimal, **bukan** membulatkannya.
-- **Boolean Conversion (Truthy & Falsy):**
+- **Boolean Conversion ([[Kamus & Cheatsheet (JCAIEH M1)#T|Truthy]] & [[Kamus & Cheatsheet (JCAIEH M1)#F|Falsy]]):**
   - **Falsy** (menghasilkan `False`): angka `0`, string kosong `""`, list kosong `[]`, tuple kosong `()`, set kosong `{}`, dan `None`.
   - **Truthy** (menghasilkan `True`): angka selain 0 (positif maupun negatif), string berisi (termasuk spasi atau teks `"False"`), dan koleksi dengan minimal satu elemen.
 
@@ -558,9 +558,9 @@ print(bool([0]))     # Output: True  -> list berisi [0] tetap truthy karena ada 
 
 ### 5.10 Operator Dasar Pemrograman
 
-**Operator Aritmatika:** `+`, `-`, `*`, `/` (tambah, kurang, kali, bagi), `%` (Modulo — sisa bagi), `**` (perpangkatan), `//` (Floor Division — pembagian bulat, menghilangkan desimal).
+**Operator Aritmatika:** `+`, `-`, `*`, `/` (tambah, kurang, kali, bagi), `%` ([[Kamus & Cheatsheet (JCAIEH M1)#M|Modulo]] — sisa bagi), `**` (perpangkatan), `//` ([[Kamus & Cheatsheet (JCAIEH M1)#F|Floor Division]] — pembagian bulat, menghilangkan desimal).
 
-**Augmented Assignment Operators** — menyingkat penulisan operasi aritmatika sekaligus penugasan nilai kembali ke variabel:
+**[[Kamus & Cheatsheet (JCAIEH M1)#A|Augmented Assignment Operators]]** — menyingkat penulisan operasi aritmatika sekaligus penugasan nilai kembali ke variabel:
 
 ```python
 n = 8
@@ -854,3 +854,11 @@ print("Baris ini yang dieksekusi")  # komentar juga bisa di akhir baris
 ## Ringkasan Sesi
 
 Sesi 1 membangun fondasi mengenai: (1) apa itu AI dan mengapa Applied AI Engineering relevan, (2) cara berpikir algoritmik lewat flowchart dan studi kasus Tower of Hanoi (rekursi), (3) instalasi lingkungan kerja Python + Git, (4) sintaks dasar Python (variabel, tipe data, string, f-string, operator), dan (5) pseudocode sebagai jembatan berpikir sebelum menulis kode. Materi ini menjadi fondasi langsung bagi [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] (Git mendalam), [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] (if-else & loop), dan [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] (list/tuple/set/dict mendalam).
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] — Sesi 1 memperkenalkan Git/GitHub sekilas di Bab 4.3, lalu Sesi 2 membahasnya secara mendalam (empat istilah kunci, alur commit, branching).
+- [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] — rekursi Tower of Hanoi (Bab 3) di sini menjadi pembanding langsung untuk perbedaan Recursion vs Looping yang dibahas di Sesi 3 Bab 5.
+- [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] — pengenalan singkat List/Tuple/Set/Dict di Bab 5.4 di sini dibahas jauh lebih mendalam (metode, mutability, indexing/slicing) di Sesi 4.

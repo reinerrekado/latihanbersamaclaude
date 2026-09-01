@@ -8,7 +8,7 @@ aliases: ["Sesi 7"]
 
 # Session 7 — Object Oriented Programming
 
-Study guide ini membahas fondasi *Object-Oriented Programming* (OOP) di Python: apa itu *class* dan *object*, konstruktor `__init__`, atribut `self`, *methods*, hingga *basic inheritance* (`super().__init__()`). Materi ditutup dengan latihan praktis membangun `class BankAccount` dan mekanisme `if __name__ == '__main__'`.
+Study guide ini membahas fondasi *[[Kamus & Cheatsheet (JCAIEH M1)#O|Object-Oriented Programming]]* (OOP) di Python: apa itu *[[Kamus & Cheatsheet (JCAIEH M1)#C|class]]* dan *[[Kamus & Cheatsheet (JCAIEH M1)#O|object]]*, konstruktor `__init__`, atribut `self`, *methods*, hingga *basic inheritance* (`super().__init__()`). Materi ditutup dengan latihan praktis membangun `class BankAccount` dan mekanisme `if __name__ == '__main__'`.
 
 > [!tip] Catatan cakupan
 > Sesuai penekanan instruktur, sesi ini sengaja membatasi diri pada fondasi OOP (*class*, *object*, *attributes*, *methods*, *basic inheritance*) karena itulah yang paling sering dipakai dalam pekerjaan AI Engineering sehari-hari. Pilar OOP lanjutan (*encapsulation*, *abstraction*, *polymorphism*) disebut tapi tidak didalami — lihat catatan singkat di akhir Bab 1.
@@ -28,8 +28,8 @@ Study guide ini membahas fondasi *Object-Oriented Programming* (OOP) di Python: 
 #### B. Attributes dan Methods dalam OOP
 
 Setiap *object* didefinisikan oleh dua karakteristik utama:
-- *Attributes*: *Data* yang merepresentasikan *state* atau identitas dari sebuah *object* (misalnya: *name*, *age*, *email* pada *object* *user*).
-- *Methods*: *Function* yang menggambarkan kemampuan atau *behavior* dari *object* tersebut, yang menempel pada *object* yang bersangkutan (misalnya: *update_info*, *get_info*, *greet*).
+- *[[Kamus & Cheatsheet (JCAIEH M1)#A|Attributes]]*: *Data* yang merepresentasikan *[[Kamus & Cheatsheet (JCAIEH M1)#S|state]]* atau identitas dari sebuah *object* (misalnya: *name*, *age*, *email* pada *object* *user*).
+- *[[Kamus & Cheatsheet (JCAIEH M1)#M|Methods]]*: *Function* yang menggambarkan kemampuan atau *behavior* dari *object* tersebut, yang menempel pada *object* yang bersangkutan (misalnya: *update_info*, *get_info*, *greet*).
 
 > [!warning] Audio Insight — Mengapa OOP Penting Meski Sering Dilewati
 > Dalam program *AI engineering*, materi terkait OOP sering kali dilewati karena pembelajaran Python dilakukan secara sekilas. Padahal, pemahaman konsep dasar OOP sangat krusial agar tidak membingungkan saat masuk ke dalam implementasi praktis yang banyak menggunakan *paradigm* ini.
@@ -37,9 +37,9 @@ Setiap *object* didefinisikan oleh dua karakteristik utama:
 > Untuk kebutuhan *AI engineering*, fokus utama ditekankan pada penguasaan dasar-dasar OOP seperti *class* (sebagai *blueprint*), *object* (sebagai *instance*), *attributes*, dan *methods*. Konsep tingkat lanjut yang sangat mendalam seperti *encapsulation*, *abstraction*, dan *polymorphism* jarang digunakan secara intensif dalam pekerjaan sehari-hari di bidang ini.
 
 > [!tip] Sekilas tiga pilar lanjutan (ditambahkan sebagai konteks ringan, di luar cakupan wajib sesi ini)
-> - **Encapsulation**: menyembunyikan detail internal object, biasanya dengan awalan `_` atau `__` pada atribut (contoh: `self.__balance`) supaya tidak diubah langsung dari luar.
-> - **Abstraction**: menyembunyikan kompleksitas implementasi dan hanya menampilkan antarmuka (*interface*) yang sederhana ke pengguna class.
-> - **Polymorphism**: kemampuan *method* dengan nama sama berperilaku berbeda tergantung class-nya, contoh singkat:
+> - **[[Kamus & Cheatsheet (JCAIEH M1)#E|Encapsulation]]**: menyembunyikan detail internal object, biasanya dengan awalan `_` atau `__` pada atribut (contoh: `self.__balance`) supaya tidak diubah langsung dari luar.
+> - **[[Kamus & Cheatsheet (JCAIEH M1)#A|Abstraction]]**: menyembunyikan kompleksitas implementasi dan hanya menampilkan antarmuka (*interface*) yang sederhana ke pengguna class.
+> - **[[Kamus & Cheatsheet (JCAIEH M1)#P|Polymorphism]]**: kemampuan *method* dengan nama sama berperilaku berbeda tergantung class-nya, contoh singkat:
 > ```python
 > class Kucing:
 >     def suara(self):
@@ -61,7 +61,7 @@ Setiap *object* didefinisikan oleh dua karakteristik utama:
 
 #### A. Paradigm Organisasi Code
 
-Perbedaan struktural utama antara *procedural programming* dan *object-oriented programming* terletak pada pemisahan dan pengelompokan *data* serta *functions*:
+Perbedaan struktural utama antara *[[Kamus & Cheatsheet (JCAIEH M1)#P|procedural programming]]* dan *object-oriented programming* terletak pada pemisahan dan pengelompokan *data* serta *functions*:
 
 | Karakteristik | Procedural Programming | Object-Oriented Programming (OOP) |
 |:--|:--|:--|
@@ -129,7 +129,7 @@ print(user1.get_user_info())
 ```
 
 > [!warning] Audio Insight — Built-in Data Types Sudah Berbasis OOP
-> Tanpa disadari, ketika memprogram menggunakan Python, kita sudah sering menggunakan *built-in data types* berbasis *OOP paradigm*. Contohnya adalah *data type* *list* atau *dictionary*, di mana setiap kali kita melakukan *instantiation* (seperti membuat *list* kosong), kita sebenarnya sedang memanggil *constructor* dari *class* *list*.
+> Tanpa disadari, ketika memprogram menggunakan Python, kita sudah sering menggunakan *built-in data types* berbasis *OOP paradigm*. Contohnya adalah *data type* *list* atau *dictionary*, di mana setiap kali kita melakukan *[[Kamus & Cheatsheet (JCAIEH M1)#I|instantiation]]* (seperti membuat *list* kosong), kita sebenarnya sedang memanggil *[[Kamus & Cheatsheet (JCAIEH M1)#C|constructor]]* dari *class* *list*.
 >
 > *Built-in data types* tersebut memiliki *methods* eksklusif yang menempel padanya (seperti `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, dan `.clear()`) yang tidak dapat digunakan oleh *data type* lain yang berbeda *class* *blueprint*-nya.
 
@@ -197,7 +197,7 @@ account_2.withdraw(30)
 ```
 
 > [!warning] Audio Insight — Independensi Alamat Memori Antar-Object
-> Implementasi OOP memisahkan alamat memori (*memory address*) untuk setiap *object* secara terpisah. Ketika kita membuat `account_1` and `account_2` dari *class* `Account` yang sama, kedua *objects* tersebut tetap merupakan entitas yang terpisah secara independen di memori. Segala perubahan keadaan (*state change*) seperti penambahan *balance* pada satu akun tidak akan memengaruhi *balance* akun lainnya.
+> Implementasi OOP memisahkan alamat memori (*[[Kamus & Cheatsheet (JCAIEH M1)#M|memory address]]*) untuk setiap *object* secara terpisah. Ketika kita membuat `account_1` and `account_2` dari *class* `Account` yang sama, kedua *objects* tersebut tetap merupakan entitas yang terpisah secara independen di memori. Segala perubahan keadaan (*state change*) seperti penambahan *balance* pada satu akun tidak akan memengaruhi *balance* akun lainnya.
 
 ```python
 # Pembuktian independensi memori (ditambahkan)
@@ -256,7 +256,7 @@ class Car:
 
 #### A. Instance dari Class
 
-- *Object* merupakan instansiasi spesifik (*specific instance*) dari sebuah *class*.
+- *Object* merupakan instansiasi spesifik (*[[Kamus & Cheatsheet (JCAIEH M1)#I|specific instance]]*) dari sebuah *class*.
 - Ketika kita telah memiliki *blueprint* (*class*), kita memerlukan objek nyata yang dibangun berdasarkan cetak biru tersebut untuk dapat digunakan di dalam program.
 - *Object* yang dibuat dari *class* yang sama akan berbagi *attributes* dan *behaviors* yang didefinisikan oleh *class* tersebut, namun masing-masing *object* memiliki data keadaan (*state*) sendiri.
 
@@ -630,9 +630,9 @@ print(sedan.fuel)                 # Output: 8.0
 
 #### A. Conceptual Foundation
 
-- *Inheritance* merupakan sebuah mekanisme di mana suatu *class* baru yang lebih spesifik (*child class* atau *derived class*) dibangun berdasarkan *class* umum yang sudah ada (*parent class* atau *base class*).
+- *[[Kamus & Cheatsheet (JCAIEH M1)#I|Inheritance]]* merupakan sebuah mekanisme di mana suatu *class* baru yang lebih spesifik (*[[Kamus & Cheatsheet (JCAIEH M1)#C|child class]]* atau *derived class*) dibangun berdasarkan *class* umum yang sudah ada (*[[Kamus & Cheatsheet (JCAIEH M1)#P|parent class]]* atau *base class*).
 - *Child class* akan mewarisi semua properti, *attributes*, dan *behaviors* (*methods*) yang didefinisikan oleh *parent class*, sehingga tidak perlu mendefinisikan ulang elemen-elemen dasar tersebut dari awal.
-- Konsep ini merepresentasikan hubungan "is-a" (misalnya: *RegressionModel* "is-a" *MachineLearningModel*, atau *Sedan* "is-a" *Car*).
+- Konsep ini merepresentasikan hubungan "[[Kamus & Cheatsheet (JCAIEH M1)#I|is-a]]" (misalnya: *RegressionModel* "is-a" *MachineLearningModel*, atau *Sedan* "is-a" *Car*).
 
 #### B. Alasan Penggunaan dan Reusability
 
@@ -890,3 +890,11 @@ if __name__ == "__main__":
 
 > [!tip] Lihat juga
 > Mekanisme `if __name__ == "__main__"` ini dibahas jauh lebih dalam (termasuk *name guard* untuk melindungi modul saat diimpor) di [[Sesi 08 - Python and Modular Programming (JCAIEH M1)|Sesi 08 - Python and Modular Programming]] Bab 4 — sesi ini hanya memperkenalkan konsepnya lewat contoh `class BankAccount`.
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] — `global` keyword yang dijelaskan lengkap di Sesi 05 adalah alasan konkret mengapa pendekatan prosedural repot mengelola state, dan menjadi motivasi utama OOP di sesi ini.
+- [[Sesi 08 - Python and Modular Programming (JCAIEH M1)|Sesi 08 - Python and Modular Programming]] — class yang dibuat di sesi ini (`BankAccount`, `MachineLearningModel`) idealnya diletakkan di file modul terpisah, dan `if __name__ == "__main__"` diperdalam sebagai *name guard* di Sesi 08.
+- [[Sesi 12 - Python Data Manipulation With Pandas and Numpy (JCAIEH M1)|Sesi 12 - Python Data Manipulation With Pandas and Numpy]] — objek `DataFrame` yang dipakai di Sesi 12 adalah instansiasi dari `class DataFrame` milik Pandas, contoh nyata dari konsep Class/Object yang dibahas di sesi ini.

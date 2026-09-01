@@ -8,7 +8,7 @@ aliases: ["Sesi 6"]
 
 # Session 6 — Hackerrank Exercise
 
-Study guide ini merangkum pembahasan lima latihan pemrograman Python bergaya HackerRank yang dibahas di kelas: pemrosesan file invoice, Runner-Up Score, Nested List (skor terendah kedua), List Commands, dan Company Logo. Latihan-latihan ini melatih manipulasi *list*, *set*, dan *dictionary*, serta teknik *sorting* lanjutan dengan `lambda`.
+Study guide ini merangkum pembahasan lima latihan pemrograman Python bergaya [[Kamus & Cheatsheet (JCAIEH M1)#H|HackerRank]] yang dibahas di kelas: pemrosesan file invoice, Runner-Up Score, Nested List (skor terendah kedua), List Commands, dan Company Logo. Latihan-latihan ini melatih manipulasi *[[Kamus & Cheatsheet (JCAIEH M1)#L|list]]*, *[[Kamus & Cheatsheet (JCAIEH M1)#S|set]]*, dan *[[Kamus & Cheatsheet (JCAIEH M1)#D|dictionary]]*, serta teknik *sorting* lanjutan dengan `lambda`.
 
 > [!tip] Prasyarat
 > Latihan-latihan di sesi ini menggabungkan konsep *function*, *file handling* ([[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]]), dan tipe data koleksi (*list*, *set*, *dictionary* — lihat [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]]).
@@ -66,7 +66,7 @@ Masalah ini melatih kemampuan dalam mengolah Array/List untuk menemukan nilai te
 
 ### A. Alur Logika dan Constraints
 
-- **Constraints:**
+- **[[Kamus & Cheatsheet (JCAIEH M1)#C|Constraints]]:**
     - Jumlah skor (N): 2 ≤ N ≤ 10.
     - Rentang skor: −100 hingga 100.
 - **Logika Penyelesaian:**
@@ -110,7 +110,7 @@ print(arr_sorted_tanpa_set[-2])       # Output: 6  <- SALAH! ini masih skor tert
 
 ### 1. Deskripsi Tantangan (Problem Description)
 
-Tantangan **Nested Lists** pada HackerRank dirancang untuk menguji pemahaman Anda dalam mengelola struktur data list di dalam list (sub-list). Tujuan utama dari latihan ini adalah:
+Tantangan **[[Kamus & Cheatsheet (JCAIEH M1)#N|Nested Lists]]** pada HackerRank dirancang untuk menguji pemahaman Anda dalam mengelola struktur data list di dalam list (sub-list). Tujuan utama dari latihan ini adalah:
 
 - Menerima input berupa nama mahasiswa (string) dan nilai (float/integer) untuk sejumlah N mahasiswa.
 - Menyimpan data tersebut ke dalam struktur data yang terorganisir.
@@ -148,7 +148,7 @@ Dalam platform kompetitif seperti HackerRank, batasan masalah adalah **Test Case
 
 1. **Inisialisasi:** Buat list kosong `students = []`.
 2. **Input Loop:** Gunakan perulangan untuk memasukkan sub-list `[nama, nilai]` ke dalam list utama menggunakan `append()`.
-3. **Ekstraksi Nilai:** Ambil semua skor saja dari list utama (bisa menggunakan *list comprehension*).
+3. **Ekstraksi Nilai:** Ambil semua skor saja dari list utama (bisa menggunakan *[[Kamus & Cheatsheet (JCAIEH M1)#L|list comprehension]]*).
 4. **Unique & Sort:** Gunakan `set()` pada list skor untuk membuang duplikasi, lalu urutkan dengan `sorted()`.
 5. **Identifikasi Target:** Ambil skor pada indeks ke-1 dari list skor unik. Ini adalah nilai terendah kedua.
 6. **Filtering:** Filter list `students` untuk mengambil nama mahasiswa yang memiliki skor tersebut, lalu diurutkan secara alfabetis.
@@ -182,7 +182,7 @@ if __name__ == '__main__':
 
 Pendekatan ini sangat disarankan untuk skenario data yang lebih besar karena memetakan satu skor ke banyak nama secara efisien.
 
-1. **Struktur Data:** Gunakan dictionary dengan **Skor** sebagai *Key* dan **List Nama** sebagai *Value*.
+1. **Struktur Data:** Gunakan dictionary dengan **Skor** sebagai *[[Kamus & Cheatsheet (JCAIEH M1)#K|Key]]* dan **List Nama** sebagai *[[Kamus & Cheatsheet (JCAIEH M1)#V|Value]]*.
 2. **Pemetaan:** Saat iterasi input, cek apakah skor sudah ada di dictionary. Jika belum, buat entri baru; jika sudah ada, tambahkan nama ke dalam list value-nya.
 3. **Sorting Keys:** Ambil semua *keys* (skor) dari dictionary, kemudian urutkan.
 4. **Identifikasi Skor:** Pilih skor pada posisi indeks ke-1 (terendah kedua).
@@ -230,11 +230,11 @@ result_names = sorted(['Harry', 'Berry'])  # ['Berry', 'Harry']
 Program menerima sejumlah N perintah (seperti `insert`, `append`, `remove`, `pop`, `reverse`). Logika menggunakan `if-elif` untuk mengecek jenis perintah pada indeks `[0]` setelah string di-split. Lihat implementasi lengkap di [[#Bab 4 — Latihan HackerRank List Commands (Topik 3)|Bab 4]] sesi ini.
 
 > [!warning] Audio Insight — Lazy Operator, Efisiensi Dictionary, Tuple Trick, dan Constraints
-> **Lazy Operator:** Fungsi `map()` adalah *lazy operator*. Artinya, Python tidak langsung memproses pemetaan di memori sampai data tersebut benar-benar diminta (misalnya saat dikonversi menjadi `set` atau `list`). Ini sangat efisien untuk menangani dataset besar.
+> **Lazy Operator:** Fungsi `map()` adalah *[[Kamus & Cheatsheet (JCAIEH M1)#L|lazy operator]]*. Artinya, Python tidak langsung memproses pemetaan di memori sampai data tersebut benar-benar diminta (misalnya saat dikonversi menjadi `set` atau `list`). Ini sangat efisien untuk menangani dataset besar.
 >
 > **Efisiensi Dictionary:** Dictionary jauh lebih intuitif untuk memetakan hubungan *one-to-many* (satu skor milik banyak mahasiswa). Hal ini mencerminkan cara kerja pengindeksan data di dunia nyata.
 >
-> **Kustomisasi Sorting (The Tuple Trick):** Dalam kasus lebih kompleks seperti soal "Company Logo", kita sering menggunakan `lambda` untuk multi-kriteria sorting. Contoh: `sorted(data, key=lambda x: (-x[1], x[0]))`.
+> **Kustomisasi Sorting (The [[Kamus & Cheatsheet (JCAIEH M1)#T|Tuple Trick]]):** Dalam kasus lebih kompleks seperti soal "Company Logo", kita sering menggunakan `lambda` untuk multi-kriteria sorting. Contoh: `sorted(data, key=lambda x: (-x[1], x[0]))`.
 > - `-x[1]` (negatif) memaksa angka diurutkan secara **descending** (terbesar ke terkecil).
 > - `x[0]` memastikan string diurutkan secara **ascending** (A ke Z).
 > - Ini adalah teknik "Senior Instructor" untuk menangani dua aturan pengurutan dalam satu baris kode.
@@ -274,7 +274,7 @@ Tantangan ini mengharuskan pengembang untuk menginisialisasi sebuah list kosong 
 
 - **Format Input:** Baris pertama berisi integer N yang menyatakan jumlah perintah. N baris berikutnya berisi perintah-perintah yang disebutkan dalam tabel di atas.
 - **Batasan:** Perintah harus diproses secara berurutan sesuai urutan input.
-- **Tipe Data:** Input yang diterima dari keyboard awalnya berupa string, sehingga diperlukan konversi tipe data (*casting*) untuk parameter angka.
+- **Tipe Data:** Input yang diterima dari keyboard awalnya berupa string, sehingga diperlukan konversi tipe data (*[[Kamus & Cheatsheet (JCAIEH M1)#T|casting]]*) untuk parameter angka.
 
 ### 4. Alur Logika Penyelesaian
 
@@ -362,7 +362,7 @@ Masalah utama dalam _Company Logo_ adalah menghitung frekuensi kemunculan setiap
 
 #### 1.1 Pendekatan Dictionary
 
-Dictionary digunakan sebagai instrumen penghitung (*counter*) karena efisiensinya dalam memetakan kunci (Key) ke nilai (Value).
+Dictionary digunakan sebagai instrumen penghitung (*[[Kamus & Cheatsheet (JCAIEH M1)#D|counter]]*) karena efisiensinya dalam memetakan kunci (Key) ke nilai (Value).
 
 - **Key:** Menyimpan karakter unik dari String (huruf).
 - **Value:** Menyimpan jumlah kemunculan karakter tersebut (integer).
@@ -459,7 +459,15 @@ if __name__ == '__main__':
 >
 > **Handling Constraints:** Di HackerRank, batasan (constraints) adalah acuan untuk test case. Programmer tidak perlu membuat pengecekan `if` manual untuk memvalidasi apakah input sudah sesuai batasan, karena sistem dijamin memberikan input yang masuk dalam rentang batasan tersebut.
 >
-> **Logika Slicing dan Sorting:** Penggunaan indeks negatif (seperti `[-2]`) adalah cara cepat di Python untuk mengakses elemen dari urutan paling belakang tanpa perlu menghitung panjang List secara manual.
+> **Logika Slicing dan Sorting:** Penggunaan [[Kamus & Cheatsheet (JCAIEH M1)#N|indeks negatif]] (seperti `[-2]`) adalah cara cepat di Python untuk mengakses elemen dari urutan paling belakang tanpa perlu menghitung panjang List secara manual.
 
 > [!tip] Lihat juga
 > Teknik `lambda x: (-x[1], x[0])` di atas dibangun di atas dasar `lambda` yang dijelaskan di [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] Bab 1.6 — kalau masih ragu dengan sintaks `lambda parameter: expression`, kembali ke sana dulu sebelum mendalami *multi-criteria sorting* ini.
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 05 - Python Function and File Handling (JCAIEH M1)|Sesi 05 - Python Function and File Handling]] — dasar `lambda` dan pola file handling (`with open`, `.readlines()`) yang dipakai berulang di sesi ini pertama kali dijelaskan di Sesi 05.
+- [[Sesi 04 - Data Types Collection Notes (JCAIEH M1)|Sesi 04 - Data Types Collection Notes]] — seluruh latihan di sesi ini bertumpu pada manipulasi List, Set, dan Dictionary yang fondasinya dibahas di Sesi 04.
+- [[Sesi 03 - Conditional and Loop Statement (JCAIEH M1)|Sesi 03 - Conditional and Loop Statement]] — latihan List Commands (Bab 4) memakai struktur `if-elif` dan looping yang sama seperti yang diajarkan di Sesi 03.

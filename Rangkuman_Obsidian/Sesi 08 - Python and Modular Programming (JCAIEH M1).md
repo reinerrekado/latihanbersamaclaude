@@ -8,7 +8,7 @@ aliases: ["Sesi 8"]
 
 # Session 8 — Python & Modular Programming
 
-Study guide ini membahas pemrograman modular di Python: mengapa kode monolitik bermasalah saat proyek membesar, cara membuat dan mengimpor modul (`import` vs `from ... import ...`), alias impor, struktur hierarki Project → Package → Module, pelindung eksekusi `if __name__ == "__main__"`, konsep *Package* (`__init__.py`, *Deep Import* vs *Shallow Import*), tips praktik terbaik, hingga tiga latihan bertingkat (basic, intermediate, advanced).
+Study guide ini membahas [[Kamus & Cheatsheet (JCAIEH M1)#M|pemrograman modular]] di Python: mengapa [[Kamus & Cheatsheet (JCAIEH M1)#M|kode monolitik]] bermasalah saat proyek membesar, cara membuat dan mengimpor [[Kamus & Cheatsheet (JCAIEH M1)#M|modul]] (`import` vs `from ... import ...`), [[Kamus & Cheatsheet (JCAIEH M1)#A|alias impor]], struktur hierarki [[Kamus & Cheatsheet (JCAIEH M1)#P|Project]] → [[Kamus & Cheatsheet (JCAIEH M1)#P|Package]] → Module, pelindung eksekusi `if __name__ == "__main__"`, konsep *Package* (`__init__.py`, *[[Kamus & Cheatsheet (JCAIEH M1)#D|Deep Import]]* vs *[[Kamus & Cheatsheet (JCAIEH M1)#S|Shallow Import]]*), tips praktik terbaik, hingga tiga latihan bertingkat (basic, intermediate, advanced).
 
 ---
 
@@ -33,7 +33,7 @@ Ketika program bertumbuh menjadi lebih besar (misalnya mencapai 500 baris kode a
 2. **Sulit Dipelihara (*Difficult to Maintain*)**: Kode monolitik menjadi sangat rapuh seiring waktu. Satu perubahan kecil atau kesalahan ketik (*typo*) pada satu bagian dapat merusak bagian lain yang tidak berhubungan (*break unrelated features*).
 3. **Sulit Didebug (*Difficult to Debug*)**: Proses pelacakan sumber kesalahan (*error*) menjadi sangat rumit karena seluruh jalannya program berada di dalam satu ruang lingkup file yang sama.
 4. **Sulit Digunakan Kembali (*Difficult to Reuse*)**: Fungsi yang didefinisikan dalam kode monolitik tidak dapat dipanggil oleh file lain secara langsung. Untuk menggunakannya kembali, developer terpaksa melakukan salin-tempel (*copy-paste*) kode secara manual.
-5. **Sulit Berkolaborasi (*Difficult to Collaborate*)**: Ketika beberapa developer bekerja pada file monolitik yang sama, proses integrasi kode akan sering mengalami konflik penggabungan (*merge conflict*) di repositori Git/GitHub.
+5. **Sulit Berkolaborasi (*Difficult to Collaborate*)**: Ketika beberapa developer bekerja pada file monolitik yang sama, proses integrasi kode akan sering mengalami konflik penggabungan (*[[Kamus & Cheatsheet (JCAIEH M1)#M|merge conflict]]*) di repositori Git/GitHub.
 
 | Karakteristik | Kode Monolitik (*Monolithic Code*) | Pemrograman Modular (*Modular Programming*) |
 |:--|:--|:--|
@@ -48,7 +48,7 @@ Ketika program bertumbuh menjadi lebih besar (misalnya mencapai 500 baris kode a
 >
 > **Kerentanan Berantai**: Satu *typo* kecil pada fungsi di file monolitik dapat menghentikan jalannya seluruh program (*break the whole file*) secara total.
 >
-> **Mekanisme Kolaborasi Tim**: Jika proyek dikelola secara modular, pembagian tugas menjadi lebih jelas. Sebagai contoh, developer A dapat fokus mengerjakan tahap *preprocessing*, developer B pada *model training*, dan developer C pada pemuatan data (*load results*). Setiap developer bekerja pada file modul terpisah dan membuat cabang (*branch*) Git masing-masing. Saat dilakukan penggabungan (*merge*), sistem Git akan mengenalinya sebagai file baru atau perubahan terpisah, sehingga dapat melakukan penggabungan otomatis (*auto-merge*) tanpa memicu konflik terus-menerus. Sebaliknya, jika bekerja pada satu file yang sama, baris-baris kode akan saling tumpang tindih dan memicu *conflict* yang harus diresolusi manual (*resolve conflict*) secara berulang.
+> **Mekanisme Kolaborasi Tim**: Jika proyek dikelola secara modular, pembagian tugas menjadi lebih jelas. Sebagai contoh, developer A dapat fokus mengerjakan tahap *preprocessing*, developer B pada *model training*, dan developer C pada pemuatan data (*load results*). Setiap developer bekerja pada file modul terpisah dan membuat cabang (*[[Kamus & Cheatsheet (JCAIEH M1)#B|branch]]*) Git masing-masing. Saat dilakukan penggabungan (*merge*), sistem Git akan mengenalinya sebagai file baru atau perubahan terpisah, sehingga dapat melakukan penggabungan otomatis (*auto-merge*) tanpa memicu konflik terus-menerus. Sebaliknya, jika bekerja pada satu file yang sama, baris-baris kode akan saling tumpang tindih dan memicu *conflict* yang harus diresolusi manual (*resolve conflict*) secara berulang.
 
 > [!tip] Lihat juga
 > *Merge conflict* dan konsep *branch* di atas sudah diperkenalkan di [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] — pemrograman modular adalah salah satu alasan konkret mengapa struktur branch/merge Git menjadi jauh lebih efektif digunakan.
@@ -215,11 +215,11 @@ print(result_sub)
 
 ### C. Teknik Penggunaan Alias dalam Impor
 
-- **Definisi Alias**: Mekanisme mempersingkat nama modul yang diimpor menggunakan kata kunci `as`.
+- **Definisi [[Kamus & Cheatsheet (JCAIEH M1)#A|Alias]]**: Mekanisme mempersingkat nama modul yang diimpor menggunakan kata kunci `as`.
 - **Manfaat Utama**:
     - Mempersingkat penulisan kode saat memanggil fungsi dari modul dengan nama yang panjang.
     - Menghindari konflik ruang nama (*namespace conflict*) di dalam berkas aktif.
-- **Konstruksi Konflik Ruang Nama (*Namespace Conflict*)**: Konflik ini terjadi apabila sebuah nama variabel yang dideklarasikan di dalam file utama memiliki nama yang persis sama dengan nama modul yang diimpor. Python akan mengalami tumpang tindih nama sehingga menyebabkan kesalahan eksekusi program (*NameError* atau kegagalan pemanggilan fungsi).
+- **Konstruksi Konflik Ruang Nama (*[[Kamus & Cheatsheet (JCAIEH M1)#N|Namespace Conflict]]*)**: Konflik ini terjadi apabila sebuah nama variabel yang dideklarasikan di dalam file utama memiliki nama yang persis sama dengan nama modul yang diimpor. Python akan mengalami tumpang tindih nama sehingga menyebabkan kesalahan eksekusi program (*NameError* atau kegagalan pemanggilan fungsi).
 
 > [!tip] Dua Jenis Alasan Memakai Alias — Jangan Tertukar
 > Materi ini menyebut alias untuk dua tujuan yang berbeda. Keduanya sama-sama pakai `as`, tapi motivasinya beda — jangan disamakan:
@@ -291,7 +291,7 @@ model.train_model()        # -> AttributeError: 'str' object has no attribute 't
 ### A. Fondasi Konseptual
 
 - **Masalah Eksekusi Otomatis**: Saat sebuah file Python diimpor sebagai modul oleh file lain, interpreter Python akan mengeksekusi seluruh baris kode di dalam modul tersebut dari atas ke bawah. Jika di dalam file modul tersebut terdapat kode pengujian, deklarasi variabel uji coba, atau fungsi cetak (*print statement*), baris-baris tersebut akan ikut dijalankan secara otomatis saat proses impor dilakukan. Hal ini menghasilkan eksekusi yang tidak diinginkan pada berkas utama (*main program*).
-- **Definisi `__name__ == "__main__"`**: Konstruksi kondisional ini bertindak sebagai pelindung eksekusi (*name guard*) yang mengontrol aliran eksekusi berkas Python. Kondisional ini memberikan instruksi kepada Python untuk hanya mengeksekusi blok kode di bawahnya apabila berkas tersebut dijalankan secara langsung sebagai proses utama (*main process* atau *main execution*) melalui terminal.
+- **Definisi `__name__ == "__main__"`**: Konstruksi kondisional ini bertindak sebagai pelindung eksekusi (*[[Kamus & Cheatsheet (JCAIEH M1)#N|name guard]]*) yang mengontrol aliran eksekusi berkas Python. Kondisional ini memberikan instruksi kepada Python untuk hanya mengeksekusi blok kode di bawahnya apabila berkas tersebut dijalankan secara langsung sebagai proses utama (*main process* atau *main execution*) melalui terminal.
 - **Karakteristik Perilaku**: Jika berkas tersebut hanya diimpor ke berkas lain sebagai modul pustaka, pemeriksaan kondisional ini akan bernilai salah (*False*) dan blok kode di dalamnya akan diabaikan sehingga tidak ikut dieksekusi.
 
 > [!tip] Lihat juga
@@ -500,7 +500,7 @@ from preprocessing import standardize_text, categorical_encoder
 
 ### A. Prinsip Desain dan Pengorganisasian (*Design Principles*)
 
-- **Patuhi Prinsip Single Responsibility (*Single Responsibility Principle*)**: Setiap file modul atau fungsi hanya boleh bertanggung jawab atas satu tugas atau pekerjaan spesifik. Jangan menggabungkan logika yang tidak berkaitan (seperti pembersihan data dan pelatihan model) ke dalam satu modul tunggal.
+- **Patuhi Prinsip Single Responsibility (*[[Kamus & Cheatsheet (JCAIEH M1)#S|Single Responsibility Principle]]*)**: Setiap file modul atau fungsi hanya boleh bertanggung jawab atas satu tugas atau pekerjaan spesifik. Jangan menggabungkan logika yang tidak berkaitan (seperti pembersihan data dan pelatihan model) ke dalam satu modul tunggal.
 - **Atur dengan Struktur Folder yang Jelas (*Clear Folder Structure*)**: Kelompokkan berkas-berkas modul secara logis di dalam direktori proyek agar alur navigasi proyek mudah dipahami oleh anggota tim pengembang lainnya.
 - **Gunakan Pelindung `if __name__ == "__main__"`**: Selalu bungkus kode eksekusi utama atau kode pengujian unit di dalam file modul utilitas menggunakan blok pelindung ini. Hal ini memastikan kode uji coba tersebut tidak berjalan secara otomatis saat modul diimpor oleh berkas lain.
 
@@ -511,8 +511,8 @@ from preprocessing import standardize_text, categorical_encoder
 
 ### B. Praktik Terbaik Menghindari Masalah Teknis (*Technical Best Practices*)
 
-- **Hindari Impor Melingkar (*Avoid Circular Imports*)**: Impor melingkar terjadi ketika `file_A.py` mengimpor `file_B.py`, sementara pada saat yang sama `file_B.py` juga mengimpor `file_A.py`. Hal ini harus dihindari karena akan membingungkan interpreter Python dan memicu kesalahan urutan eksekusi (*execution order errors*).
-- **Gunakan Parameter dan Hindari Hardcoding (*Pass Parameters & Avoid Hardcoding*)**: Jangan menuliskan nilai, nama berkas, atau konfigurasi secara statis (*hardcoding*) di dalam modul fungsional. Sebaliknya, gunakan argumen atau parameter dinamis agar modul dapat digunakan kembali secara fleksibel untuk berbagai kumpulan data yang berbeda.
+- **Hindari Impor Melingkar (*[[Kamus & Cheatsheet (JCAIEH M1)#C|Avoid Circular Imports]]*)**: Impor melingkar terjadi ketika `file_A.py` mengimpor `file_B.py`, sementara pada saat yang sama `file_B.py` juga mengimpor `file_A.py`. Hal ini harus dihindari karena akan membingungkan interpreter Python dan memicu kesalahan urutan eksekusi (*execution order errors*).
+- **Gunakan Parameter dan Hindari Hardcoding (*Pass Parameters & Avoid Hardcoding*)**: Jangan menuliskan nilai, nama berkas, atau konfigurasi secara statis (*[[Kamus & Cheatsheet (JCAIEH M1)#H|hardcoding]]*) di dalam modul fungsional. Sebaliknya, gunakan argumen atau parameter dinamis agar modul dapat digunakan kembali secara fleksibel untuk berbagai kumpulan data yang berbeda.
 - **Tambahkan Berkas `__init__.py` untuk Packages**: Selalu sertakan berkas inisialisasi `__init__.py` di dalam folder modul Anda. Hal ini dilakukan untuk mendeklarasikan folder tersebut secara eksplisit sebagai sebuah *Package* resmi dan mengaktifkan metode pengimporan yang rapi (*cleaner import*).
 
 | Aturan Praktis | Tujuan Utama | Contoh Penerapan / Solusi |
@@ -854,3 +854,11 @@ Pada sesi berikutnya, materi perkuliahan akan beralih ke pembahasan SQL (*Struct
 
 > [!tip] Lihat juga
 > Kedua perkakas ini menjadi pintu masuk pembahasan [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — sesi berikutnya setelah sesi ini.
+
+---
+
+## 🔗 Terkait
+
+- [[Sesi 07 - Object Oriented Programming (JCAIEH M1)|Sesi 07 - Object Oriented Programming]] — class seperti `BankAccount` yang dibuat di Sesi 07 idealnya diletakkan di file modul terpisah, dan mekanisme `if __name__ == "__main__"` yang diperkenalkan sekilas di sana dibahas menyeluruh di sesi ini sebagai *name guard*.
+- [[Sesi 02 - Intro to Git and GitHub (JCAIEH M1)|Sesi 02 - Intro to Git and GitHub]] — konsep branch/merge Git yang dibahas di Sesi 02 menjadi jauh lebih efektif digunakan justru karena pemrograman modular (kerja paralel per file mengurangi merge conflict).
+- [[Sesi 09 - Intro to Database and SQL (JCAIEH M1)|Sesi 09 - Intro to Database and SQL]] — pola `import mysql.connector`/`import sqlite3` di Sesi 09 adalah package pihak ketiga yang strukturnya mengikuti konsep Deep Import/Shallow Import di sesi ini.
