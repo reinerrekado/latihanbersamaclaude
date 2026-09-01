@@ -51,6 +51,8 @@ Panduan end-to-end supaya sesi belajar bisa lanjut mulus dari perangkat mana pun
 
 **Progress: 13 / 13 sesi solid (100%) — TUNTAS di hari H Exam! 🎉**
 
+**🏆 HASIL EXAM 1 ASLI: 17/20 (85%) — LULUS, jauh di atas nilai minimum (60%).** Dikerjakan Selasa 2026-09-01 malam, murni mandiri tanpa nyontek. Screenshot lengkap dianalisis & di-cross-check dengan catatan mandiri user — 100% cocok, skor terkonfirmasi akurat. Cuma 3 soal meleset (statistik Inferential vs "Predictive", `np.random.randn()` vs `randint()`, arah LEFT vs RIGHT JOIN) — 2 dari 3 itu PERSIS masuk "Pola #2: Konsep Berpasangan Ketuker" yang udah dipetakan di `CHEATSHEET.md` sebelum exam, validasi kuat bahwa analisis pola kognitif hari ini akurat.
+
 - [x] Sesi 1 — Intro DS, Python, Statistics, SQL, Git & GitHub *(self-test web 90%)*
 - [x] Sesi 2 — Intro to Git & GitHub *(quiz+retest Claude Code, solid)*
 - [x] Sesi 3 — Conditional & Loop Statement *(konsep solid, self-test web 50%→ditambal→retest sukses. Jalur paralel — kode praktik `conditional-and-loop-statements/`: 0/11 file)*
