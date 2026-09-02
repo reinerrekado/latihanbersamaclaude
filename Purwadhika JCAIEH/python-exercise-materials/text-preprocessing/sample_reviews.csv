@@ -1,0 +1,13 @@
+id,"review",sentiment
+1,"GREAT movie!!! <br> I loved it so much.",positive
+2,"great movie, would watch again",positive
+3,"This    was NOT good at all.",negative
+4,"<p>Terrible product, waste of money.</p>",negative
+5,"Best purchase ever!! Check it out here: http://example.com/product",positive
+6,"not what I expected...  disappointing",negative
+7,"Amazing service, highly recommend!!!",positive
+8,"Running shoes were comfortable for runners like me",positive
+9,"worst experience.    Would NOT buy again",negative
+10,"Great, GREAT, great value for the price :)",positive
+11,"The movie was boring and too long.",negative
+12,"Absolutely fantastic!! <b>5 stars</b> www.example.com",positive
