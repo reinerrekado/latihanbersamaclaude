@@ -14,7 +14,7 @@ Peta navigasi untuk seluruh catatan Module 1 (13 sesi). Tiap sesi berisi ringkas
 
 **Mulai dari sini:**
 - 📚 [[Kamus & Cheatsheet (JCAIEH M1)|Kamus & Cheatsheet]] — kamus A-Z (~440 istilah) + ringkasan trap per sesi + Peta Pola Kesalahan Pribadi. Baca ini duluan sebelum review sesi satu-satu.
-- 📋 [PANDUAN_LANJUT_BELAJAR.md](../PANDUAN_LANJUT_BELAJAR.md) — tracker progress, jadwal, dan status simulasi/quiz (di luar vault Obsidian, di root repo).
+- 📋 [PANDUAN_LANJUT_BELAJAR.md](../../PANDUAN_LANJUT_BELAJAR.md) — tracker progress, jadwal, dan status simulasi/quiz (di luar vault Obsidian, di folder `Purwadhika JCAIEH/`).
 
 ---
 

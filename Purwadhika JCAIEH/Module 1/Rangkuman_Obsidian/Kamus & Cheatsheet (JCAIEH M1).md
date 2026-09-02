@@ -1233,21 +1233,21 @@ Quantitative: Discrete (hasil MENGHITUNG) | Continuous (hasil MENGUKUR)
 
 | Modul | Sesi terkait | Status |
 |---|---|---|
-| `collection-data-type/` | Sesi 4 | ✅ 12/12 file selesai |
-| `conditional-and-loop-statements/` | Sesi 3 | ⬜ 0/11 file |
-| `python-function-and-file-handling/` | Sesi 5 | ⬜ 0/5 file |
-| `object-oriented-programming/` | Sesi 7 | ⬜ 0/4 file |
-| `python-modular-programming/` | Sesi 8 | sebagian kesentuh (lihat [PANDUAN_LANJUT_BELAJAR.md](../PANDUAN_LANJUT_BELAJAR.md)) |
-| `data-manipulation-pandas-numpy/` | Sesi 12 | ⬜ 0/11 file |
-| `sql-exercise-materials-/9` | Sesi 9 | ⬜ 0/14 file |
-| `sql-exercise-materials-/10` | Sesi 10 | ⬜ 0/6 file |
+| `python-exercise-materials/collection-data-type/` | Sesi 4 | ✅ 12/12 file selesai |
+| `python-exercise-materials/conditional-and-loop-statements/` | Sesi 3 | ⬜ 0/11 file |
+| `python-exercise-materials/python-function-and-file-handling/` | Sesi 5 | ⬜ 0/5 file |
+| `python-exercise-materials/object-oriented-programming/` | Sesi 7 | ⬜ 0/4 file |
+| `python-exercise-materials/python-modular-programming/` | Sesi 8 | sebagian kesentuh (lihat [PANDUAN_LANJUT_BELAJAR.md](../../PANDUAN_LANJUT_BELAJAR.md)) |
+| `python-exercise-materials/data-manipulation-pandas-numpy/` | Sesi 12 | ⬜ 0/11 file |
+| `sql-exercise-materials-/9 - Introduction to Databases and SQL` | Sesi 9 | ⬜ 0/14 file |
+| `sql-exercise-materials-/10 - SQL Working with Multiple Tables` | Sesi 10 | ⬜ 0/6 file |
 
 ### Code Challenge 1 (CC1) — LeetCode, deadline 2026-09-03
 
 - Status: **1/4 soal** — Convert the Temperature ✅ Accepted, proof submitted.
 - Sedang dikerjakan: **Two Sum** (dict/complement approach).
 - Sisa rencana: **Contains Duplicate** (`set`, paling simpel), lalu opsional **Remove Duplicates from Sorted Array**.
-- Submit: link profil LeetCode + screenshot "Accepted" per soal → form resmi (lihat [PANDUAN_LANJUT_BELAJAR.md](../PANDUAN_LANJUT_BELAJAR.md)).
+- Submit: link profil LeetCode + screenshot "Accepted" per soal → form resmi (lihat [PANDUAN_LANJUT_BELAJAR.md](../../PANDUAN_LANJUT_BELAJAR.md)).
 
 ### Catatan verifikasi silang (cek ke PDF resmi kalau ragu)
 
