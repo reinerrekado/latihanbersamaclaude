@@ -11,7 +11,6 @@ Purwadhika JCAIEH/
 ├── python-exercise-materials/         <- demo & exercise .py/.ipynb dari kelas (tumbuh terus, lintas-module)
 ├── sql-exercise-materials-/           <- demo & exercise SQL dari kelas
 ├── Module 1/
-│   ├── RANGKUMAN_MODULE_1.md          <- sumber mentah rangkuman 13 sesi
 │   └── Rangkuman_Obsidian/            <- vault Obsidian: catatan per sesi + Kamus & Cheatsheet + MOC
 └── Module 2/                          <- (akan diisi seiring materi baru)
 ```
